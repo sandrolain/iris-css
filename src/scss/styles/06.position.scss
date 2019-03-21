@@ -1,0 +1,35 @@
+
+// Relative positioning
+.ir-rel {
+	position: relative;
+}
+
+// Absolute positioning
+.ir-abs {
+	position: absolute;
+}
+
+// Sticky positioning
+.ir-sticky {
+	position: sticky;
+}
+.ir-sticky-top {
+	position: sticky;
+	top: 0;
+}
+.ir-sticky-bottom {
+	position: sticky;
+	bottom: 0;
+}
+
+// Fixed positioning
+.ir-fix {
+	position: fixed;
+}
+
+// Z-Index
+@for $i from 0 through 20 {
+	.ir-z#{$i * 10} {
+		z-index: 10 * $i;
+	}
+}

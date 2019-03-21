@@ -1,0 +1,6 @@
+{
+	"splitCodeBlocks": true,
+	"irisCssFilePath": "./build/iris.min.css",
+	"outputDirPath": "./docs",
+	"inputFilesPatterns": ["./src/scss/*.scss", "./src/scss/*/*.scss"]
+}

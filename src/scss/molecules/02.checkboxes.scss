@@ -1,0 +1,21 @@
+.ir-checkboxes {
+	label,
+	.ir-label {
+		display: inline-block;
+		margin-right: 1.5em;
+		cursor: pointer;
+
+		input {
+			margin-right: 0.5em;
+		}
+	}
+
+	&.vertical {
+		label,
+		.ir-label {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 0.5em;
+		}
+	}
+}

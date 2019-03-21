@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Iris CSS Guide</title>
+		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
+		<script type="text/javascript" src="./prism.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+	</head>
+	<body>
+		<div class="ird-page ir-w-80">
+			<div class="ird-page__head">
+				<h1 class="ird-page__title">Iris CSS Guide</h1>
+			</div>
+			<div class="ir-flex">
+				<div class="ir-mr-1"><div class="ird-page__menu ir-sticky-top ir-cnt-folio"><div class="ir-menu ir-menu--vertical ir-bg-transparent"><div class="ir-menu__item ">
+					<a href="Elements.html">Elements</a>
+					
+				</div><div class="ir-menu__item ir-menu__item--open ">
+					<a href="Typo.html">Typo</a>
+					
+				</div><div class="ir-menu__item ">
+					Form
+					<div class="ir-menu"><div class="ir-menu__item ">
+					<a href="Form-Buttons.html">Buttons</a>
+					
+				</div></div>
+				</div><div class="ir-menu__item ">
+					<i class="fas fa-spinner"></i> Animations
+					<div class="ir-menu"><div class="ir-menu__item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+					
+				</div></div>
+				</div><div class="ir-menu__item ">
+					Layout
+					<div class="ir-menu"><div class="ir-menu__item ">
+					<a href="Layout-Containers.html">Containers</a>
+					
+				</div></div>
+				</div><div class="ir-menu__item ">
+					Styles
+					<div class="ir-menu"><div class="ir-menu__item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+					
+				</div></div>
+				</div><div class="ir-menu__item ">
+					Motion
+					<div class="ir-menu"><div class="ir-menu__item ">
+					<a href="Motion-Animations.html">Animations</a>
+					
+				</div></div>
+				</div></div></div></div>
+				<div class="ird-page__body ir-cnt-folio ir-flex__flexible"><div class="ird-category">
+			<h2>Typo</h2>
+			<p class="ird-category__path">Path: <em>Typo</em></p>
+			
+			<div class="ird-category__items"><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Bold Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>strong, b, .ir-b</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;strong&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/strong&gt;&lt;br/&gt;
+&lt;b&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/b&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-b&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><strong>Consectetur Ipsum Mollis Venenatis Purus</strong><br/>
+<b>Consectetur Ipsum Mollis Venenatis Purus</b><br/>
+<span class="ir-b">Consectetur Ipsum Mollis Venenatis Purus</span></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Italic Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>en, i, .ir-i</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;em&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/em&gt;&lt;br/&gt;
+&lt;i&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/i&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-i&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><em>Consectetur Ipsum Mollis Venenatis Purus</em><br/>
+<i>Consectetur Ipsum Mollis Venenatis Purus</i><br/>
+<span class="ir-i">Consectetur Ipsum Mollis Venenatis Purus</span></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Press Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-txt-press</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;ir-cnt-folio ir-bg-noise&quot;&gt;
+&lt;h3 class=&quot;ir-txt-press&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/h3&gt;
+&lt;/div&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><div class="ir-cnt-folio ir-bg-noise">
+<h3 class="ir-txt-press">Consectetur Ipsum Mollis Venenatis Purus</h3>
+</div></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Underline Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>u, .ir-u</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;u&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/u&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-u&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><u>Consectetur Ipsum Mollis Venenatis Purus</u><br/>
+<span class="ir-u">Consectetur Ipsum Mollis Venenatis Purus</span></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Backpress Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-txt-backpress</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;ir-cnt-folio&quot;&gt;
+&lt;h3 class=&quot;ir-txt-backpress&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/h3&gt;
+&lt;/div&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><div class="ir-cnt-folio">
+<h3 class="ir-txt-backpress">Consectetur Ipsum Mollis Venenatis Purus</h3>
+</div></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Stroke Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>s, .ir-s</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;s&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/s&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-s&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><s>Consectetur Ipsum Mollis Venenatis Purus</s><br/>
+<span class="ir-s">Consectetur Ipsum Mollis Venenatis Purus</span></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Glass Text</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-txt-glass</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;h3 class=&quot;ir-txt-glass&quot;&gt;Consectetur Ipsum Mollis Venenatis Purus&lt;/h3&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><h3 class="ir-txt-glass">Consectetur Ipsum Mollis Venenatis Purus</h3></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Abbreviation</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>abbr, .ir-abbr</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;abbr title=&quot;Cascade Style Sheet&quot;&gt;CSS&lt;/abbr&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-abbr&quot; title=&quot;Hyper Text Mauquee Language&quot;&gt;HTML&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><abbr title="Cascade Style Sheet">CSS</abbr><br/>
+<span class="ir-abbr" title="Hyper Text Mauquee Language">HTML</span></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Definition</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>dfn, .ir-dfn</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;dfn&gt;CSS&lt;/dfn&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-dfn&quot;&gt;HTML&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><dfn>CSS</dfn><br/>
+<span class="ir-dfn">HTML</span></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Citation</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>cite, .ir-cite</code></p>
+</div><div class="ird-example">
+				<h5 class="ird-example__title">Example Code</h5>
+				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;cite&gt;William Shakespeare&lt;/cite&gt;&lt;br/&gt;
+&lt;span class=&quot;ir-cite&quot;&gt;William Shakespeare&lt;/span&gt;</code></pre></div>
+				<h5 class="ird-example__title">Example Render</h5>
+				<div class="ird-example__render ir-cnt-border ir-bg-chess"><cite>William Shakespeare</cite><br/>
+<span class="ir-cite">William Shakespeare</span></div>
+			</div></div>
+		</div></div>
+		</div></div>
+			</div>
+			<div class="ird-page__foot">
+				<p class="ird-page__disclaimer">
+			Generated with Iris Docs v 0.1.0<br/>
+			Styled with Iris CSS<br/>
+			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+		</p>
+			</div>
+		</div>
+	</body>
+</html>
+		

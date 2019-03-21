@@ -1,0 +1,16 @@
+// Background
+.ir-bg-cover {
+	background-size: cover;
+}
+.ir-bg-contain {
+	background-size: contain;
+}
+.ir-bg-padding {
+	background-clip: padding-box;
+	background-origin: padding-box;
+}
+.ir-bg-content {
+	background-clip: content-box;
+	background-origin: content-box;
+}
+

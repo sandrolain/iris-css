@@ -1,0 +1,135 @@
+// MESSAGE & STYLES
+.ir-message {
+	padding: 0.75em 1em;
+	margin-bottom: 1em;
+	background-color: var(--ir-message-color-l);
+	color: var(--ir-message-color-m);
+	border-bottom: 0.1em solid currentColor;
+	position: relative;
+
+	b,
+	strong,
+	a,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--ir-message-color-d);
+		font-weight: 600;
+	}
+
+	&.ir-message--success {
+		background-color: var(--ir-success-color-l);
+		color: var(--ir-success-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-success-color-d);
+		}
+	}
+
+	&.ir-message--info {
+		background-color: var(--ir-info-color-l);
+		color: var(--ir-info-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-info-color-d);
+		}
+	}
+
+	&.ir-message--warning {
+		background-color: var(--ir-warning-color-l);
+		color: var(--ir-warning-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-warning-color-d);
+		}
+	}
+
+	&.ir-message--danger,
+	&.ir-message--critical,
+	&.ir-message--error {
+		background-color: var(--ir-danger-color-l);
+		color: var(--ir-danger-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-danger-color-d);
+		}
+	}
+
+	&.ir-message--wicon {
+		min-height: 0.75em + 3em + 0.75em + 0.1em;
+		padding-left: 1em + 3em + 1em;
+		padding-top: 0.75em + 1em;
+
+		&::before {
+			font-family: "Font Awesome 5 Free";
+			content: '\f192';
+			font-weight: 900;
+			width: 1em;
+			height: 1em;
+			line-height: 1em;
+			position: absolute;
+			left: 0.25em;
+			top: 0.25em;
+			font-size: 3em;
+			text-align: center;
+			opacity: 0.5;
+		}
+
+		&.ir-message--info::before {
+			content: '\f05a';
+			font-weight: 900;
+		}
+
+		&.ir-message--success::before {
+			content: '\f058';
+			font-weight: 900;
+		}
+
+		&.ir-message--warning::before {
+			content: '\f06a';
+			font-weight: 900;
+		}
+
+		&.ir-message--danger::before,
+		&.ir-message--critical::before,
+		&.ir-message--error::before {
+			content: '\f071';
+			font-weight: 900
+		}
+	}
+}

@@ -1,0 +1,46 @@
+figure {
+	margin: 0 0 1rem;
+}
+
+caption {
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	color: var(--ir-secondary-fg-color);
+}
+
+img {
+	vertical-align: top;
+	border-style: none;
+
+	&.ir-img--max {
+		max-width: 100%;
+		height: auto;
+	}
+
+	&.ir-img--left {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+
+	&.ir-img--right {
+		float: right;
+		margin: 0 0 1em 1em;
+	}
+
+	&.ir-img--frame {
+		border: 1px solid var(--ir-frame-color);
+		padding: 0.25em;
+		background: #000000;
+		background-clip: content-box;;
+
+		&:hover {
+			border-color: var(--ir-action-active-color);
+		}
+	}
+}
+
+
+
+svg:not(:root) {
+	overflow: hidden;
+}

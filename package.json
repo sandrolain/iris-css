@@ -1,0 +1,32 @@
+{
+  "name": "iris-css",
+  "version": "1.0.0",
+  "description": "Iris CSS Framework",
+  "main": "build.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "docs": "node docs"
+  },
+  "keywords": [
+    "iris",
+    "css",
+    "scss",
+    "framework",
+    "library",
+    "layout"
+  ],
+  "author": "Sandro Lain",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "opn": "^5.4.0",
+    "serve-handler": "^5.0.5"
+  },
+  "dependencies": {
+    "ncp": "^2.0.0"
+  }
+}

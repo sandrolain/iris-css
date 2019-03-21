@@ -1,0 +1,77 @@
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i');
+
+:root {
+	//--ir-base-font-family: 'Open Sans', sans-serif;
+	--ir-base-font-family: 'Open Sans', sans-serif;
+	--ir-base-font-size: 14px;
+
+	--ir-bg-color: #000000;
+	--ir-fg-color: #FFFFFF;
+	--ir-dark-bg-color: #CCCCCC;
+	--ir-dark-fg-color: #000000;
+	--ir-secondary-fg-color: #999999;
+	--ir-action-color: #0066CC;
+	--ir-action-active-color: #0099FF;
+	--ir-action-fg-color: #FFFFFF;
+	--ir-code-color: #FF6600;
+
+	--ir-heading-color: #CCCCCC;
+	--ir-heading-inverse-color: #333333;
+
+	--ir-blockquote-border-color: #333333;
+
+	--ir-table-border-color: #333333;
+	--ir-table-inverse-border-color: #CCCCCC;
+	--ir-table-striped-color: #222222;
+
+	--ir-message-color-l: darken(#999999, 30%);
+	--ir-message-color-m: lighten(#999999, 10%);
+	--ir-message-color-d: lighten(#999999, 20%);
+
+	--ir-success-color-l: darken(#339900, 20%);
+	--ir-success-color-m: lighten(#339900, 5%);
+	--ir-success-color-d: lighten(#339900, 10%);
+
+	--ir-info-color-l: darken(#0033CC, 25%);
+	--ir-info-color-m: lighten(#0033CC, 30%);
+	--ir-info-color-d: lighten(#0033CC, 40%);
+
+	--ir-warning-color-l: darken(#CC9900, 30%);
+	--ir-warning-color-m: lighten(#CC9900, 5%);
+	--ir-warning-color-d: lighten(#CC9900, 10%);
+	
+	--ir-danger-color-l: darken(#FF3300, 40%);
+	--ir-danger-color-m: lighten(#FF3300, 10%);
+	--ir-danger-color-d: lighten(#FF3300, 20%);
+
+	--ir-tag-bg-color: #AABBCC;
+	--ir-tag-fg-color: #000000;
+
+	--ir-input-border-color: #666666;
+	--ir-input-bg-color: #111111;
+	--ir-input-fg-color: #FFFFFF;
+	--ir-label-bg-color: #333333;
+	--ir-label-fg-color: #CCCCCC;
+	--ir-placeholder-color: #999999;
+
+	--ir-bar-bg-color: #222222;
+	--ir-bar-fg-color: #999999;
+	--ir-bar-hover-bg-color: #333333;
+	--ir-bar-hover-fg-color: #FFFFFF;
+
+	--ir-shadow-color: #000000;
+	--ir-frame-color: #CCCCCC;
+
+	--ir-tooltip-bg-color: #CCCCCC;
+	--ir-tooltip-fg-color: #000000;
+
+	--ir-progress-bg-color: #222222;
+
+	--ir-pagination-border-color: #666666;
+
+	--ir-panel-border-color: #666666; 
+	--ir-panel-header-color: #222222;
+}
+
+// TODO: to complete

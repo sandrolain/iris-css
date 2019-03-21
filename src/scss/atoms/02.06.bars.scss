@@ -1,0 +1,59 @@
+// bars and menus
+body {
+	&.ir-w-bar-top {
+		padding-top: 3em;
+	}
+	&.ir-w-bar-bottom {
+		padding-bottom: 3em;
+	}
+	&.ir-noscroll {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+.ir-bar {
+	height: 3em;
+	line-height: 3em;
+	background-color: var(--ir-bar-bg-color);
+	color: var(--ir-bar-fg-color);
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+
+	&.ir-bar--fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		box-shadow: 0 0.1em 0.3em var(--ir-shadow-color);
+
+		&.ir-bar--bottom {
+			top: auto;
+			bottom: 0;
+			box-shadow: 0 -0.1em 0.3em var(--ir-shadow-color);
+		}
+	}
+
+	&.ir-bar--inverse,
+	.ir-bar--inverse & {
+		background-color: var(--ir-bar-fg-color);
+		color: var(--ir-bar-bg-color);
+	}
+
+	h1, h2 {
+		margin: 0;
+		font-size: 2em;
+		line-height: inherit;
+	}
+
+	& > * {
+		flex: 0 1 auto;
+	}
+
+	& > .ir-bar__spacer {
+		flex: 1 1 auto;
+	}
+}

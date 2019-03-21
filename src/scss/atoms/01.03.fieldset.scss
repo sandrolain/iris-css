@@ -1,0 +1,8 @@
+.ir-form fieldset,
+.ir-fieldset {
+	margin: 2em 0 1em 0;
+	border: 1px solid var(--ir-light-border-color);
+	padding: 1em 0.5em;
+	border-radius: var(--ir-border-radius);
+	background-color: var(--ir-bg-color);
+}

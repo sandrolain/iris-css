@@ -1,0 +1,118 @@
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1em;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: auto;
+
+	&.striped {
+		tbody {
+			tr:nth-of-type(even) {
+				th, td {
+					background-color: var(--ir-table-striped-color);
+				}
+			}
+		}
+	}
+
+	&.bordered {
+		th, td {
+			border-right-width: 0.1em;
+
+			&:last-child {
+				border-right-width: 0;
+			}
+		}
+	}
+
+	&.small {
+		th, td {
+			padding: 0.25em 0.5em;
+		}
+	}
+
+	caption {
+		text-align: left;
+		caption-side: bottom;
+	}
+
+	td, th {
+		padding: 0.5em 1em;		
+		border-style: solid;
+		border-color: var(--ir-table-border-color);
+		border-bottom-width: 0.1em;
+		vertical-align: middle;
+		text-align: inherit;
+
+		&:only-child {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	th {
+		vertical-align: bottom;
+	}
+	
+
+	thead {
+		th {
+			border-bottom-width: 0.2em;
+			background-color: var(--ir-table-head-color);
+		}
+	}
+
+	tbody {
+		th {
+			background-color: var(--ir-table-border-color) !important;
+		}
+		tr:hover {
+			td, th {
+				background-color: var(--ir-table-border-color) !important;
+				border-bottom-color: var(--ir-table-head-color) !important;
+			}
+			th {
+				background-color: var(--ir-table-head-color) !important;
+			}
+		}
+	}
+
+	// TODO: inverse
+	.inverse &,
+	&.inverse {
+		th, td {
+			background-color: var(--ir-fg-color);
+			color: var(--ir-bg-color);
+			border-color: var(--ir-table-inverse-border-color);
+		}
+
+		&.striped {
+			tbody {
+				tr:nth-of-type(odd) {
+					th, td {
+						background-color: var(--ir-table-inverse-striped-color);
+					}
+				}
+			}
+		}
+
+		thead th {
+			background-color: var(--ir-table-inverse-head-color);
+		}
+
+		tbody {
+			th {
+				background-color: var(--ir-table-inverse-border-color) !important;
+			}
+			tr:hover {
+				td, th {
+					background-color: var(--ir-table-inverse-border-color) !important;
+					border-bottom-color: var(--ir-table-inverse-head-color) !important;
+				}
+				th {
+					background-color: var(--ir-table-inverse-head-color) !important;
+				}
+			}
+		}
+	}
+}

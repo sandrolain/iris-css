@@ -1,0 +1,230 @@
+/*--
+
+@title:		Paragraph
+@category:	Typography / Textblocks
+@sequence:	3
+
+**selector**: `p, .p`
+
+```example:html
+<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+```
+
+--*/
+
+p,
+address,
+blockquote,
+.p,
+.address,
+.blockquote {
+	margin: 1em 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/*--
+
+@title:		Pre-formatted
+@category:	Typography / Textblocks
+@sequence:	4
+
+**selector**: `pre, .pre`
+
+```example:html
+<pre>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+
+Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</pre>
+```
+
+--*/
+
+.pre,
+pre {
+	max-width: 100%;
+	overflow: auto;
+	white-space: pre-wrap;
+	font-size: 1em;
+	-moz-tab-size: 4;
+	tab-size: 4;
+
+	&:not(:only-child) {
+		margin-bottom: 1rem;
+	}
+}
+
+/*--
+
+@title:		Inline Code
+@category:	Typography / Format
+@sequence:	5
+
+**selector**: `code, .code`
+
+```example:html
+	<code>&lt;html&gt;Hello World!&lt;/html&gt;</code>
+```
+--*/
+
+
+/*--
+
+@title:		Code Block
+@category:	Typography / Textblocks
+@sequence:	6
+
+**selector**: `pre code, .pre .code`
+
+```example:html
+<pre>
+	<code data-lang="javascript">
+(async () =>
+{
+	const res = await fetch("...");
+
+	// ... etc.
+});
+	</code>
+</pre>
+```
+
+--*/
+
+.code,
+code {
+	padding: 0em 0.25em;
+	background-color: var(--ir-code-bg-color);
+	color: var(--ir-code-fg-color);
+	font-family: var(--ir-code-font-family);
+	font-size: var(--ir-code-font-size);
+	border-radius: var(--ir-border-radius);
+}
+
+pre code {
+	display: block;
+	position: relative;
+	padding: 1em;
+	border-radius: none;
+
+	&::before {
+		content: attr(data-lang);
+		position: absolute;
+		top: 0;
+		right: 0;
+		line-height: 1em;
+		color: var(--ir-code-lang-color);
+		padding: 0.25em 0.5em;
+	}
+}
+
+
+/*--
+
+@title:		Blockquote
+@category:	Typography / Textblocks
+@sequence:	3.1
+
+**selector**: `blockquote`
+**selector**: `blockquote p`
+**selector**: `blockquote cite`
+
+```example:html
+<blockquote>
+	<p>We know what we are, but know not what we may be.</p>
+	<cite>William Shakespeare</cite>
+</blockquote>
+```
+
+--*/
+
+/*--
+
+@title:		Blockquote Right
+@category:	Typography / Textblocks
+@sequence:	3.1
+
+**selector**: `blockquote.blockquote-right`
+**selector**: `blockquote.blockquote-right p`
+**selector**: `blockquote.blockquote-right cite`
+
+```example:html
+<blockquote class="blockquote-right">
+	<p>We know what we are, but know not what we may be.</p>
+	<cite>William Shakespeare</cite>
+</blockquote>
+```
+
+--*/
+
+/*--
+
+@title:		Blockquote Center
+@category:	Typography / Textblocks
+@sequence:	3.1
+
+**selector**: `blockquote.blockquote-center`
+**selector**: `blockquote.blockquote-center p`
+**selector**: `blockquote.blockquote-center cite`
+
+```example:html
+<blockquote class="blockquote-center">
+	<p>We know what we are, but know not what we may be.</p>
+	<cite>William Shakespeare</cite>
+</blockquote>
+```
+
+--*/
+
+blockquote,
+.blockquote {
+	font-size: 1.5em;
+	padding: 0.5em 1em;
+	margin-bottom: 1em;
+	border-left: 0.25em solid var(--ir-blockquote-border-color);
+	background-color: var(--ir-bg-color);
+	quotes: none;
+
+	&:before,
+	&:after {
+		content: '';
+		content: none;
+	}
+
+	p,
+	.blockquote-quote {
+		margin: 0;
+
+		&:before {
+			content: '“'
+		}
+		&:after {
+			content: '”';
+		}
+	}
+
+	cite,
+	.blockquote-cite {
+		display: block;
+		font-size: 0.75em;
+		color: var(--ir-secondary-color-m);
+		margin-top: 1em;
+	}
+
+	&.blockquote-right {
+		border-left: none;
+		border-right: 0.25em solid var(--ir-blockquote-border-color);
+		text-align: right;
+	}
+
+	&.blockquote-center {
+		border-left: none;
+		border-bottom: 0.25em solid var(--ir-blockquote-border-color);
+		text-align: center;
+	}
+}

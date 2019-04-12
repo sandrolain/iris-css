@@ -1,7 +1,8 @@
 const fs	= require("fs");
 const path	= require("path");
 const sass	= require("node-sass");
-const ncp	= require('ncp').ncp;
+const ncp	= require("ncp").ncp;
+const CleanCSS	= require("clean-css");
 
 
 const buildDirPath			= path.join(__dirname, "build");
@@ -48,23 +49,38 @@ const buildExpanded = () =>
 	buildMinified({
 		sourcePath: sourcePath,
 		destPath: minDestPath,
-		mapDestPath: minMapDestPath
+		mapDestPath: minMapDestPath,
+		plainDestPath: norDestPath
 	}, buildThemes);
 };
 
 const buildMinified = (opts, cb) =>
 {
-	const result = sass.renderSync({
-		file: opts.sourcePath,
-		// data
-		outFile: opts.destPath,
-		outputStyle: "compressed",
-		sourceMap: opts.mapDestPath,
-		//sourceMapRoot: minDirPath
+	// const result = sass.renderSync({
+	// 	file: opts.sourcePath,
+	// 	// data
+	// 	outFile: opts.destPath,
+	// 	outputStyle: "compressed",
+	// 	sourceMap: opts.mapDestPath,
+	// 	//sourceMapRoot: minDirPath
+	// });
+
+	// fs.writeFileSync(opts.destPath, result.css);
+	// fs.writeFileSync(opts.mapDestPath, result.map);
+
+	const cleaner = new CleanCSS({
+		level: 2,
+		sourceMap: true
 	});
 
-	fs.writeFileSync(opts.destPath, result.css);
-	fs.writeFileSync(opts.mapDestPath, result.map);
+	const source = fs.readFileSync(opts.plainDestPath);
+
+	var result = cleaner.minify(source);
+
+	result.warnings && console.warn(result.warnings.join("\n"));
+
+	fs.writeFileSync(opts.destPath, result.styles);
+	fs.writeFileSync(opts.mapDestPath, result.sourceMap);
 
 	console.log("minified build success");
 
@@ -75,7 +91,7 @@ const buildThemes = () =>
 {
 	const filesList = fs.readdirSync(themesDirPath);
 
-	console.log(filesList);
+	// console.log(filesList);
 
 	for(let themeFile of filesList)
 	{
@@ -100,12 +116,13 @@ const buildThemes = () =>
 		buildMinified({
 			sourcePath: themeFilePath,
 			destPath: themeMinDestPath,
-			mapDestPath: themeMinMapPath
+			mapDestPath: themeMinMapPath,
+			plainDestPath: themeDestPath
 		});
 	}
 
 	copyThirdyDirectory();
-}
+};
 
 const copyThirdyDirectory = () =>
 {
@@ -114,9 +131,9 @@ const copyThirdyDirectory = () =>
 		if (err)
 		{
 			return console.error(err);
-		}		
+		}
 	});
-};	
+};
 
 buildExpanded();
 

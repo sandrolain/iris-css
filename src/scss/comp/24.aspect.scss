@@ -1,0 +1,101 @@
+
+@mixin aspect($w: 16, $h: 9) {
+	width: 100%;
+	padding: 0;
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 100%;
+		padding-top: 100% / $w * $h;
+	}
+
+	& > *:first-child {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+
+/*--
+
+@title:		Aspect 21 : 9
+@category:	Aspect
+
+**selector**: `.aspect-21x9`
+
+```example:html
+<div class="aspect-21x9 cnt-folio">
+	<div>...</div>
+</div>
+```
+
+--*/
+
+.aspect-21x9 {
+	@include aspect(21, 9);
+}
+
+
+/*--
+
+@title:		Aspect 16 : 9
+@category:	Aspect
+
+**selector**: `.aspect-16x9`
+
+```example:html
+<div class="aspect-16x9 cnt-folio">
+	<div>...</div>
+</div>
+```
+
+--*/
+
+.aspect-16x9 {
+	@include aspect(16, 9);
+}
+
+
+/*--
+
+@title:		Aspect 4 : 3
+@category:	Aspect
+
+**selector**: `.aspect-4x3`
+
+```example:html
+<div class="aspect-4x3 cnt-folio">
+	<div>...</div>
+</div>
+```
+
+--*/
+
+.aspect-4x3 {
+	@include aspect(4, 3);
+}
+
+
+/*--
+
+@title:		Aspect 1 : 1
+@category:	Aspect
+
+**selector**: `.aspect-1x1`
+
+```example:html
+<div class="aspect-1x1 cnt-folio">
+	<div>...</div>
+</div>
+```
+
+--*/
+
+.aspect-1x1 {
+	@include aspect(1, 1);
+}

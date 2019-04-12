@@ -1,0 +1,102 @@
+
+/*--
+
+@title: 	Breadcrumbs
+@category:	Breadcrumbs
+
+**selector**: `.crumbs`
+
+```example:html
+<div class="crumbs">
+	<a href="#">Main</a>
+	»
+	<span>Child</span>
+	»
+	<a href="#">Sub Child</a>
+</div>
+```
+
+--*/
+
+/*--
+
+@title: 	Breadcrumbs Centerd
+@category:	Breadcrumbs
+
+**selector**: `.crumbs.center`
+
+```example:html
+<div class="crumbs center">
+	<a href="#">Main</a>
+	»
+	<span>Child</span>
+	»
+	<a href="#">Sub Child</a>
+</div>
+```
+
+--*/
+
+/*--
+
+@title: 	Breadcrumbs Right
+@category:	Breadcrumbs
+
+**selector**: `.crumbs.right`
+
+```example:html
+<div class="crumbs right">
+	<a href="#">Main</a>
+	»
+	<span>Child</span>
+	»
+	<a href="#">Sub Child</a>
+</div>
+```
+
+--*/
+
+/*--
+
+@title: 	Breadcrumbs Active Item
+@category:	Breadcrumbs
+
+**selector**: `.active`
+
+```example:html
+<div class="crumbs">
+	<a href="#">Main</a>
+	»
+	<span>Child</span>
+	»
+	<a href="#" class="active">Sub Child</a>
+</div>
+```
+
+--*/
+
+
+.crumbs {
+	background-color: var(--ir-bar-bg-color);
+	color: var(--ir-secondary-color-m);
+	border-radius: var(--ir-border-radius);
+	padding: 0.5em 1em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&.center {
+		justify-content: center;
+	}
+	&.right {
+		justify-content: flex-end;
+	}
+
+	& > * {
+		margin: 0 0.75em;
+
+		&.active {
+			color: inherit;
+		}
+	}
+}

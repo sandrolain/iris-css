@@ -1,0 +1,222 @@
+@keyframes blink {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	50% {
+		visibility: visible;
+		opacity: 0;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+
+@keyframes fadeUp {
+	0% {
+		visibility: visible;
+		opacity: 0;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+
+@keyframes fadeDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeTopUp {
+	0% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateY(1em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0em);
+	}
+}
+
+@keyframes fadeTopDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateY(1em);
+	}
+}
+
+@keyframes fadeBottomUp {
+	0% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateY(-1em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0em);
+	}
+}
+
+@keyframes fadeBottoDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateY(-1em);
+	}
+}
+
+@keyframes fadeLeftUp {
+	0% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateX(1em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0em);
+	}
+}
+
+@keyframes fadeLeftDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateX(1em);
+	}
+}
+
+@keyframes fadeRightUp {
+	0% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateX(-1em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0em);
+	}
+}
+
+@keyframes fadeRightDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0em);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateX(-1em);
+	}
+}
+
+@keyframes fadeZoomUp {
+	0% {
+		visibility: visible;
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeZoomDown {
+	0% {
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+
+/*--
+
+@title:		Blink
+@category:	Motion / Animations
+
+**selector**: `.ir-ani-blink`
+
+```example:html
+<div class="ir-ani-blink">Nullam Justo Fringilla</div>
+```
+
+--*/
+
+.ir-ani-blink {
+	animation: blink 1000ms steps(1) infinite;
+}
+
+/*--
+
+@title:		Blink Down
+@category:	Motion / Animations
+
+**selector**: `.ir-ani-blinkdown`
+
+```example:html
+<div class="ir-ani-blinkdown">Nullam Justo Fringilla</div>
+```
+
+--*/
+
+.ir-ani-blinkdown {
+	animation: fadeDown 1000ms infinite;
+}
+
+
+// TODO: docs

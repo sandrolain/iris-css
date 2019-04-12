@@ -1,4 +1,4 @@
-@import url("./iris.css");
+@import url("./iris.min.css");
 
 :root {
 	--ird-bg-color: #F8F8F8;
@@ -11,7 +11,7 @@ body {
 }
 
 .ird-page {
-	margin: 1em auto;
+
 }
 	.ird-page__head {
 		text-align: center;
@@ -23,10 +23,6 @@ body {
 		color: #999999;
 	}
 
-.ird-category__path {
-	padding: 0.25em 0.5em;
-	background: var(--ird-bg-color);
-}
 
 
 .ird-comment {
@@ -40,6 +36,13 @@ body {
 .ird-example,
 .ird-code {
 	margin: 2em 0;
+}
+
+.ird-example__render::after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
 }
 
 

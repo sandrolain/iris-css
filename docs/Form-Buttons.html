@@ -2,236 +2,438 @@
 <html>
 	<head>
 		<title>Iris CSS Guide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
-		<div class="ird-page ir-w-80">
+		<div class="ird-page w-80 w-95@m w-100@s mh-auto">
 			<div class="ird-page__head">
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
-			<div class="ir-flex">
-				<div class="ir-mr-1"><div class="ird-page__menu ir-sticky-top ir-cnt-folio"><div class="ir-menu ir-menu--vertical ir-bg-transparent"><div class="ir-menu__item ">
-					<a href="Elements.html">Elements</a>
+			<div class="flex flex-col@s">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="menu-item ">
+					<a href="index.html">Iris CSS Guide</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Style-guide.html">Style guide</a>
 					
-				</div><div class="ir-menu__item ">
-					<a href="Typo.html">Typo</a>
+				</div><div class="menu-item ">
+					<a href="Typography.html">Typography</a>
+					<div class="menu"><div class="menu-item ">
+					<a href="Typography-Headings.html">Headings</a>
 					
-				</div><div class="ir-menu__item ">
-					Form
-					<div class="ir-menu"><div class="ir-menu__item ir-menu__item--open ">
+				</div><div class="menu-item ">
+					<a href="Typography-Textblocks.html">Textblocks</a>
+					
+				</div><div class="menu-item ">
+					<a href="Typography-Lists.html">Lists</a>
+					
+				</div><div class="menu-item ">
+					<a href="Typography-Format.html">Format</a>
+					
+				</div><div class="menu-item ">
+					<a href="Typography-Anchors.html">Anchors</a>
+					
+				</div></div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+					
+				</div><div class="menu-item ">
+					<a href="Form.html">Form</a>
+					<div class="menu"><div class="menu-item active ">
 					<a href="Form-Buttons.html">Buttons</a>
 					
-				</div></div>
-				</div><div class="ir-menu__item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="ir-menu"><div class="ir-menu__item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
 					
 				</div></div>
-				</div><div class="ir-menu__item ">
+				</div><div class="menu-item ">
+					<a href="Message.html">Message</a>
+					
+				</div><div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+					
+				</div><div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+					
+				</div><div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+					
+				</div><div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+					
+				</div><div class="menu-item ">
+					Cursor
+					
+				</div><div class="menu-item ">
+					Menu
+					
+				</div><div class="menu-item ">
+					Grid
+					
+				</div><div class="menu-item ">
 					Layout
-					<div class="ir-menu"><div class="ir-menu__item ">
+					<div class="menu"><div class="menu-item ">
 					<a href="Layout-Containers.html">Containers</a>
 					
 				</div></div>
-				</div><div class="ir-menu__item ">
-					Styles
-					<div class="ir-menu"><div class="ir-menu__item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div><div class="menu-item ">
+					Tooltip
 					
-				</div></div>
-				</div><div class="ir-menu__item ">
+				</div><div class="menu-item ">
+					Position
+					
+				</div><div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+					
+				</div><div class="menu-item ">
+					Display
+					
+				</div><div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+					
+				</div><div class="menu-item ">
 					Motion
-					<div class="ir-menu"><div class="ir-menu__item ">
+					<div class="menu"><div class="menu-item ">
 					<a href="Motion-Animations.html">Animations</a>
 					
 				</div></div>
-				</div></div></div></div>
-				<div class="ird-page__body ir-cnt-folio ir-flex__flexible"><div class="ird-category">
+				</div><div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+					
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+					<div class="menu"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+					
+				</div></div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+					
+				</div><div class="menu-item ">
+					Icons
+					
+				</div><div class="menu-item ">
+					Debug
+					
+				</div><div class="menu-item ">
+					Styles
+					<div class="menu"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+					
+				</div></div>
+				</div><div class="menu-item ">
+					<a href="Tables.html">Tables</a>
+					
+				</div>
+			</div></div></div>
+				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Buttons</h2>
-			<p class="ird-category__path">Path: <em>Form / Buttons</em></p>
+			<p class="ird-category__path crumbs">Path: <a href="Form.html" class="">Form</a> / <a href="Form-Buttons.html" class="active ">Buttons</a></p>
+			
 			<div class="ird-category__body"><div class="ird-text"><p>Button styles can be applied to any element.<br />
 Typically you'll want to use either a <code>&lt;button&gt;</code> or an <code>&lt;a&gt;</code> element.</p>
 </div></div>
 			<div class="ird-category__items"><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Button</h3>
+				<h3 class="ird-comment__title">Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-l6-5xY00NWm" id="tab-l6-5xY00NWm-render" checked />
+				<label class="panel-tab" for="tab-l6-5xY00NWm-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn">My Button</a></div></div>
+				<input type="radio" name="tab-l6-5xY00NWm" id="tab-l6-5xY00NWm-code" />
+				<label class="panel-tab" for="tab-l6-5xY00NWm-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-l6-5xY00NWm"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Thin Button</h3>
+				<h3 class="ird-comment__title">Thin Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--thin</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--thin&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--thin">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-thin</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-11NViyos7Qn" id="tab-11NViyos7Qn-render" checked />
+				<label class="panel-tab" for="tab-11NViyos7Qn-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-thin">My Button</a></div></div>
+				<input type="radio" name="tab-11NViyos7Qn" id="tab-11NViyos7Qn-code" />
+				<label class="panel-tab" for="tab-11NViyos7Qn-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-11NViyos7Qn"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-thin&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Big Button</h3>
+				<h3 class="ird-comment__title">Big Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--big</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--big&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--big">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-big</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-KOQcXSyXM9o" id="tab-KOQcXSyXM9o-render" checked />
+				<label class="panel-tab" for="tab-KOQcXSyXM9o-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-big">My Button</a></div></div>
+				<input type="radio" name="tab-KOQcXSyXM9o" id="tab-KOQcXSyXM9o-code" />
+				<label class="panel-tab" for="tab-KOQcXSyXM9o-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-KOQcXSyXM9o"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-big&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Wide Button</h3>
+				<h3 class="ird-comment__title">Wide Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--wide</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--wide&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--wide">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-wide</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-ocoiCsEzVPi" id="tab-ocoiCsEzVPi-render" checked />
+				<label class="panel-tab" for="tab-ocoiCsEzVPi-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-wide">My Button</a></div></div>
+				<input type="radio" name="tab-ocoiCsEzVPi" id="tab-ocoiCsEzVPi-code" />
+				<label class="panel-tab" for="tab-ocoiCsEzVPi-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ocoiCsEzVPi"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-wide&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Disabled Button</h3>
+				<h3 class="ird-comment__title">Disabled Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--disabled</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--disabled&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--disabled">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.disabled</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-ZnptXWrcFCG" id="tab-ZnptXWrcFCG-render" checked />
+				<label class="panel-tab" for="tab-ZnptXWrcFCG-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-disabled">My Button</a></div></div>
+				<input type="radio" name="tab-ZnptXWrcFCG" id="tab-ZnptXWrcFCG-code" />
+				<label class="panel-tab" for="tab-ZnptXWrcFCG-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ZnptXWrcFCG"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-disabled&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Accent Color Button</h3>
+				<h3 class="ird-comment__title">Accent Color Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-accent</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-accent&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-accent">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.accent</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-ewRkjgEsPdz" id="tab-ewRkjgEsPdz-render" checked />
+				<label class="panel-tab" for="tab-ewRkjgEsPdz-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn accent">My Button</a></div></div>
+				<input type="radio" name="tab-ewRkjgEsPdz" id="tab-ewRkjgEsPdz-code" />
+				<label class="panel-tab" for="tab-ewRkjgEsPdz-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ewRkjgEsPdz"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn accent&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Danger State Button</h3>
+				<h3 class="ird-comment__title">Critical State Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--error</code><br />
-<strong>selector</strong>: <code>.ir-btn.ir-btn--critical</code><br />
-<strong>selector</strong>: <code>.ir-btn.ir-btn--danger</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--danger&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--danger">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-critical</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-B_knHLBY5Fh" id="tab-B_knHLBY5Fh-render" checked />
+				<label class="panel-tab" for="tab-B_knHLBY5Fh-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-critical">My Button</a></div></div>
+				<input type="radio" name="tab-B_knHLBY5Fh" id="tab-B_knHLBY5Fh-code" />
+				<label class="panel-tab" for="tab-B_knHLBY5Fh-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-B_knHLBY5Fh"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-critical&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Warning State Button</h3>
+				<h3 class="ird-comment__title">Warning State Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--warning</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--warning&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--warning">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-warning</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-HkMGD1yvTjS" id="tab-HkMGD1yvTjS-render" checked />
+				<label class="panel-tab" for="tab-HkMGD1yvTjS-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-warning">My Button</a></div></div>
+				<input type="radio" name="tab-HkMGD1yvTjS" id="tab-HkMGD1yvTjS-code" />
+				<label class="panel-tab" for="tab-HkMGD1yvTjS-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-HkMGD1yvTjS"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Success State Button</h3>
+				<h3 class="ird-comment__title">Success State Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--success</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--success">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-success</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-nDlDQs58x54" id="tab-nDlDQs58x54-render" checked />
+				<label class="panel-tab" for="tab-nDlDQs58x54-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-success">My Button</a></div></div>
+				<input type="radio" name="tab-nDlDQs58x54" id="tab-nDlDQs58x54-code" />
+				<label class="panel-tab" for="tab-nDlDQs58x54-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-nDlDQs58x54"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Rounded Button</h3>
+				<h3 class="ird-comment__title">Rounded Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--rounded</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--rounded&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--rounded ir-accent&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--rounded ir-btn--danger&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--rounded ir-btn--warning&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--rounded ir-btn--success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--rounded">My Button</a>
-<a href="#" class="ir-btn ir-btn--rounded ir-accent">My Button</a>
-<a href="#" class="ir-btn ir-btn--rounded ir-btn--danger">My Button</a>
-<a href="#" class="ir-btn ir-btn--rounded ir-btn--warning">My Button</a>
-<a href="#" class="ir-btn ir-btn--rounded ir-btn--success">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-rounded</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-PV2hnJYKTeM" id="tab-PV2hnJYKTeM-render" checked />
+				<label class="panel-tab" for="tab-PV2hnJYKTeM-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-rounded">My Button</a>
+<a href="#" class="btn btn-rounded accent">My Button</a>
+<a href="#" class="btn btn-rounded btn-critical">My Button</a>
+<a href="#" class="btn btn-rounded btn-warning">My Button</a>
+<a href="#" class="btn btn-rounded btn-success">My Button</a></div></div>
+				<input type="radio" name="tab-PV2hnJYKTeM" id="tab-PV2hnJYKTeM-code" />
+				<label class="panel-tab" for="tab-PV2hnJYKTeM-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-PV2hnJYKTeM"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded accent&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded btn-critical&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded btn-warning&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-rounded btn-success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Outline Button</h3>
+				<h3 class="ird-comment__title">Outline Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--outline</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--outline&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--outline ir-accent&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--outline ir-btn--danger&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--outline ir-btn--warning&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--outline ir-btn--success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--outline">My Button</a>
-<a href="#" class="ir-btn ir-btn--outline ir-accent">My Button</a>
-<a href="#" class="ir-btn ir-btn--outline ir-btn--danger">My Button</a>
-<a href="#" class="ir-btn ir-btn--outline ir-btn--warning">My Button</a>
-<a href="#" class="ir-btn ir-btn--outline ir-btn--success">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-outline</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-2uW5t3XpW-w" id="tab-2uW5t3XpW-w-render" checked />
+				<label class="panel-tab" for="tab-2uW5t3XpW-w-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-outline">My Button</a>
+<a href="#" class="btn btn-outline accent">My Button</a>
+<a href="#" class="btn btn-outline btn-critical">My Button</a>
+<a href="#" class="btn btn-outline btn-warning">My Button</a>
+<a href="#" class="btn btn-outline btn-success">My Button</a></div></div>
+				<input type="radio" name="tab-2uW5t3XpW-w" id="tab-2uW5t3XpW-w-code" />
+				<label class="panel-tab" for="tab-2uW5t3XpW-w-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-2uW5t3XpW-w"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-outline&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-outline accent&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-outline btn-critical&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-outline btn-warning&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-outline btn-success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Discrete Button</h3>
+				<h3 class="ird-comment__title">Discrete Button
+</h3>
 			</div>
 			
-			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.ir-btn.ir-btn--discrete</code></p>
-</div><div class="ird-example">
-				<h5 class="ird-example__title">Example Code</h5>
-				<div class="ird-example__code"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--discrete&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--discrete ir-accent&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--discrete ir-btn--danger&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--discrete ir-btn--warning&quot;&gt;My Button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;ir-btn ir-btn--discrete ir-btn--success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
-				<h5 class="ird-example__title">Example Render</h5>
-				<div class="ird-example__render ir-cnt-border ir-bg-chess"><a href="#" class="ir-btn ir-btn--discrete">My Button</a>
-<a href="#" class="ir-btn ir-btn--discrete ir-accent">My Button</a>
-<a href="#" class="ir-btn ir-btn--discrete ir-btn--danger">My Button</a>
-<a href="#" class="ir-btn ir-btn--discrete ir-btn--warning">My Button</a>
-<a href="#" class="ir-btn ir-btn--discrete ir-btn--success">My Button</a></div>
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn.btn-discrete</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-0PfkrHDTe1Q" id="tab-0PfkrHDTe1Q-render" checked />
+				<label class="panel-tab" for="tab-0PfkrHDTe1Q-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn btn-discrete">My Button</a>
+<a href="#" class="btn btn-discrete accent">My Button</a>
+<a href="#" class="btn btn-discrete btn-critical">My Button</a>
+<a href="#" class="btn btn-discrete btn-warning">My Button</a>
+<a href="#" class="btn btn-discrete btn-success">My Button</a></div></div>
+				<input type="radio" name="tab-0PfkrHDTe1Q" id="tab-0PfkrHDTe1Q-code" />
+				<label class="panel-tab" for="tab-0PfkrHDTe1Q-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-0PfkrHDTe1Q"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete accent&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete btn-critical&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete btn-warning&quot;&gt;My Button&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete btn-success&quot;&gt;My Button&lt;/a&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Buttons Group
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn-group</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-3vHdWt34drj" id="tab-3vHdWt34drj-render" checked />
+				<label class="panel-tab" for="tab-3vHdWt34drj-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="btn-group">
+	<a href="#" class="btn">My Button</a>
+	<a href="#" class="btn accent">My Button</a>
+	<a href="#" class="btn btn-critical">My Button</a>
+	<a href="#" class="btn btn-warning">My Button</a>
+	<a href="#" class="btn btn-success">My Button</a>
+</div>
+<br/>
+<div class="btn-group">
+	<a href="#" class="btn btn-outline">My Button</a>
+	<a href="#" class="btn btn-outline accent">My Button</a>
+	<a href="#" class="btn btn-outline btn-critical">My Button</a>
+	<a href="#" class="btn btn-outline btn-warning">My Button</a>
+	<a href="#" class="btn btn-outline btn-success">My Button</a>
+</div>
+<br/>
+<div class="btn-group">
+	<a href="#" class="btn btn-discrete">My Button</a>
+	<a href="#" class="btn btn-discrete accent">My Button</a>
+	<a href="#" class="btn btn-discrete btn-critical">My Button</a>
+	<a href="#" class="btn btn-discrete btn-warning">My Button</a>
+	<a href="#" class="btn btn-discrete btn-success">My Button</a>
+</div></div></div>
+				<input type="radio" name="tab-3vHdWt34drj" id="tab-3vHdWt34drj-code" />
+				<label class="panel-tab" for="tab-3vHdWt34drj-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-3vHdWt34drj"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;btn-group&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn accent&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-critical&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;My Button&lt;/a&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-outline&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-outline accent&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-outline btn-critical&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-outline btn-warning&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-outline btn-success&quot;&gt;My Button&lt;/a&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete accent&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete btn-critical&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete btn-warning&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-discrete btn-success&quot;&gt;My Button&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Buttons Group Vertical
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.btn-group.vertical</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-4e-dSKZR3Uj" id="tab-4e-dSKZR3Uj-render" checked />
+				<label class="panel-tab" for="tab-4e-dSKZR3Uj-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="btn-group vertical">
+	<a href="#" class="btn">My Button</a>
+	<a href="#" class="btn accent">My Button</a>
+	<a href="#" class="btn btn-critical">My Button</a>
+	<a href="#" class="btn btn-warning">My Button</a>
+	<a href="#" class="btn btn-success">My Button</a>
+</div></div></div>
+				<input type="radio" name="tab-4e-dSKZR3Uj" id="tab-4e-dSKZR3Uj-code" />
+				<label class="panel-tab" for="tab-4e-dSKZR3Uj-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-4e-dSKZR3Uj"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;btn-group vertical&quot;&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn accent&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-critical&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot;&gt;My Button&lt;/a&gt;
+	&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;My Button&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
 			</div></div>
 		</div></div>
 		</div></div>
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.1.0<br/>
+			Generated with Iris Docs v 0.2.0<br/>
 			Styled with Iris CSS<br/>
 			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
 		</p>

@@ -1,0 +1,43 @@
+// TODO: docs
+
+.grid {
+	display: grid;
+	grid-gap: 0;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+@for $i from 1 through 3 {
+	.grid-gap-#{$i} {
+		grid-gap: $i * 1em
+	}
+}
+
+@for $i from 2 through 6 {
+	.grid-span-#{$i} {
+		grid-row-end: span $i;
+	}
+}
+
+@for $i from 1 through 12 {
+	.grid-#{$i} {
+		grid-column-end: span $i;
+	}
+}
+
+@media only screen and (max-width: 639px) {
+
+	.grid-1,
+	.grid-2,
+	.grid-3,
+	.grid-4,
+	.grid-5,
+	.grid-6,
+	.grid-7,
+	.grid-8,
+	.grid-9,
+	.grid-10,
+	.grid-11,
+	.grid-12 {
+		grid-column-end: span 12;
+	}
+}

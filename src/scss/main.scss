@@ -5,55 +5,349 @@
 
 --*/
 
+/*--
+
+@type:		category
+@category:	Style guide
+@title:		Style guide
+@sequence:	1
+
+### Style modifiers
+
+`.inverse`
+`.accent`
+`.nostyle`
+`.nohover`
+`.vertical`
+`.rounded`
+`.wide`
+`.left`
+`.center`
+`.right`
+
+### Status modifiers
+
+`.active`
+`.visible`
+`.hidden`
+
+### Importance modifiers
+
+`.info`
+`.success`
+`.warning`
+`.danger`
+
+
+--*/
+
+
+/*--
+
+@type:		category
+@title:		Debug
+@category:	Debug
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Icons
+@category:	Icons
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Animations
+@category:	Animations
+@icon:		<i class="fas fa-spinner"></i>
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Loaders
+@category:	Animations / Loaders
+@icon:		<i class="fas fa-spinner"></i>
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Animations
+@category:	Motion / Animations
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Display
+@category:	Display
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Position
+@category:	Position
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Layout
+@category:	Layout
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Typography
+@category:	Typography
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Cursor
+@category:	Cursor
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Headings
+@category:	Typography / Headings
+@sequence:	1
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Textblocks
+@category:	Typography / Textblocks
+@sequence:	2
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Lists
+@category:	Typography / Lists
+@sequence:	3
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Format
+@category:	Typography / Format
+@sequence:	4
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Anchors
+@category:	Typography / Anchors
+@sequence:	6
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Images
+@category:	Images
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Tables
+@category:	Tables
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Form
+@category:	Form
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Buttons
+@category:	Form / Buttons
+
+Button styles can be applied to any element.
+Typically you'll want to use either a `<button>` or an `<a>` element.
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Message
+@category:	Message
+
+--*/
+
+
+/*--
+
+@type:		category
+@title:		Colors
+@category:	Colors
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Tags
+@category:	Tags
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Aspect
+@category:	Aspect
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Bars
+@category:	Bars
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Menu
+@category:	Menu
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Menu
+@category:	Menu
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Grid
+@category:	Grid
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Tooltip
+@category:	Tooltip
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Progress
+@category:	Progress
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Pagination
+@category:	Pagination
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Breadcrumbs
+@category:	Breadcrumbs
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Panel
+@category:	Panel
+
+--*/
+
+
 @import "./themes/light.scss";
 
-@import "./styles/01.reset.scss";
-@import "./styles/02.debug.scss";
-@import "./styles/03.thirdy.scss";
-@import "./styles/04.animations.scss";
-@import "./styles/05.display.scss";
-@import "./styles/06.position.scss";
-@import "./styles/07.layout.scss";
-@import "./styles/08.background.scss";
-@import "./styles/09.typo.scss";
-@import "./styles/10.cursor.scss";
+@import "./comp/00.lib.scss";
+
+@import "./comp/01.reset.scss";
+@import "./comp/02.debug.scss";
+@import "./comp/03.icons.scss";
+@import "./comp/04.animations.scss";
+@import "./comp/05.display.scss";
+@import "./comp/06.position.scss";
+@import "./comp/07.layout.scss";
+@import "./comp/09.typo.scss";
+@import "./comp/10.cursor.scss";
 
 
+@import "./comp/12.headings.scss";
+@import "./comp/13.textblocks.scss";
+@import "./comp/14.lists.scss";
+@import "./comp/15.textformat.scss";
+@import "./comp/16.anchors.scss";
+@import "./comp/17.images.scss";
+@import "./comp/18.tables.scss";
 
-@import "./atoms/00.01.document.scss";
-@import "./atoms/00.02.headings.scss";
-@import "./atoms/00.03.textblocks.scss";
-@import "./atoms/00.04.lists.scss";
-@import "./atoms/00.05.textformat.scss";
-@import "./atoms/00.06.anchors.scss";
-@import "./atoms/00.07.images.scss";
-@import "./atoms/00.08.tables.scss";
+@import "./comp/19.form.scss";
+@import "./comp/20.button.scss";
 
-@import "./atoms/01.01.form.scss";
-@import "./atoms/01.02.button.scss";
-@import "./atoms/01.03.fieldset.scss";
-@import "./atoms/01.04.legend.scss";
-@import "./atoms/01.05.inputs.scss";
-@import "./atoms/01.06.textarea.scss";
-@import "./atoms/01.07.select.scss";
-@import "./atoms/01.08.range.scss";
-@import "./atoms/01.09.checkbox.scss";
-
-@import "./atoms/02.01.lists.scss";
-@import "./atoms/02.02.message.scss";
-@import "./atoms/02.03.statuses.scss";
-@import "./atoms/02.04.tags.scss";
-@import "./atoms/02.05.aspect.scss";
-@import "./atoms/02.06.bars.scss";
-@import "./atoms/02.07.menus.scss";
-@import "./atoms/02.08.cols.scss";
-@import "./atoms/02.09.grids.scss";
-@import "./atoms/02.10.tooltips.scss";
-@import "./atoms/02.11.progress.scss";
-@import "./atoms/02.12.pagination.scss";
-@import "./atoms/02.13.breadcrumb.scss";
-@import "./atoms/02.14.panels.scss";
-@import "./atoms/02.15.avatar.scss";
-@import "./atoms/02.16.loaders.scss";
-@import "./atoms/02.17.containers.scss";
-@import "./atoms/02.18.backgrounds.scss";
+@import "./comp/21.message.scss";
+@import "./comp/22.colors.scss";
+@import "./comp/23.tags.scss";
+@import "./comp/24.aspect.scss";
+@import "./comp/25.bars.scss";
+@import "./comp/26.menus.scss";
+@import "./comp/28.grids.scss";
+@import "./comp/29.tooltips.scss";
+@import "./comp/30.progress.scss";
+@import "./comp/31.pagination.scss";
+@import "./comp/32.breadcrumb.scss";
+@import "./comp/33.panels.scss";
+@import "./comp/35.loaders.scss";
+@import "./comp/36.containers.scss";
+@import "./comp/37.backgrounds.scss";

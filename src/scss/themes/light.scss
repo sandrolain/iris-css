@@ -3,11 +3,13 @@
 :root {
 
 	$primary-color: #11589F;
+	--ir-primary-color-ll: #{lighten($primary-color, 20%)};
 	--ir-primary-color-l: #{lighten($primary-color, 10%)};
 	--ir-primary-color-m: #{$primary-color};
 	--ir-primary-color-d: #{darken($primary-color, 10%)};
+	--ir-primary-color-dd: #{darken($primary-color, 20%)};
 
-	$accent-color: #9f1134;
+	$accent-color: rgb(241, 193, 205);
 	--ir-accent-color-l: #{lighten($accent-color, 20%)};
 	--ir-accent-color-m: #{lighten($accent-color, 10%)};
 	--ir-accent-color-d: #{$accent-color};
@@ -24,11 +26,13 @@
 	--ir-base-font-size: 14px;
 
 	--ir-bg-color: #FFFFFF;
+	--ir-bg-color-0: fade(#FFFFFF, 0%);
 	--ir-fg-color: #000000;
-	--ir-secondary-fg-color: var(--ir-gray-color-m);
-	--ir-dark-bg-color: var(--ir-gray-color-dd);
-	--ir-dark-fg-color: #FFFFFF;
+	--ir-fg-color-0: fade(#000000, 0%);
 
+	--ir-secondary-color-l: var(--ir-gray-color-m);
+	--ir-secondary-color-m: var(--ir-gray-color-d);
+	--ir-secondary-color-d: var(--ir-gray-color-dd);
 
 	--ir-border-color: var(--ir-gray-color-l);
 	--ir-border-radius: 0.15em;
@@ -36,7 +40,7 @@
 	--ir-action-color: var(--ir-primary-color-m);
 	--ir-action-active-color: var(--ir-primary-color-l);
 	--ir-action-light-color: var(--ir-primary-color-ll);
-	--ir-action-fg-color: #FFFFFF;
+	--ir-action-fg-color: var(--ir-bg-color);
 
 	--ir-hili-bg-color-1: #F9F192;
 	--ir-hili-bg-color-2: #F992F1;
@@ -46,21 +50,21 @@
 	--ir-code-bg-color: var(--ir-gray-color-lll);
 	--ir-code-lang-color: var(--ir-gray-color-l);
 	--ir-code-font-family: 'Roboto Mono', monospace;
-	--ir-code-font-size: 14px;
+	--ir-code-font-size: 1em;
 
 	--ir-heading-color: var(--ir-primary-color-d);
-	--ir-heading-accent-color: var(--ir-accent-color-d);
 
-	--ir-blockquote-border-color: #F0F0F0;
+	--ir-blockquote-border-color: var(--ir-gray-color-lll);
 
-	--ir-table-head-color: #DDDDDD;
-	--ir-table-border-color: #F0F0F0;
-	--ir-table-striped-color: #F8F8F8;
+	--ir-table-bg-color: var(--ir-bg-color);
+	--ir-table-head-color: var(--ir-gray-color-l);
+	--ir-table-border-color: var(--ir-gray-color-ll);
+	--ir-table-striped-color: var(--ir-gray-color-lll);
 
-	$message-color: #999999;
-	--ir-message-color-l: #{lighten($message-color, 35%)};
-	--ir-message-color-m: #{darken($message-color, 15%)};
-	--ir-message-color-d: #{darken($message-color, 25%)};
+	$msg-color: #999999;
+	--ir-msg-color-l: #{lighten($msg-color, 35%)};
+	--ir-msg-color-m: #{darken($msg-color, 15%)};
+	--ir-msg-color-d: #{darken($msg-color, 25%)};
 
 	$success-color: #339900;
 	--ir-success-color-l: #{lighten($success-color, 60%)};
@@ -77,26 +81,26 @@
 	--ir-warning-color-m: #{darken($warning-color, 10%)};
 	--ir-warning-color-d: #{darken($warning-color, 15%)};
 
-	$danger-color: #FF3300;
-	--ir-danger-color-l: #{lighten($danger-color, 45%)};
-	--ir-danger-color-m: #{darken($danger-color, 10%)};
-	--ir-danger-color-d: #{darken($danger-color, 15%)};
+	$critical-color: #FF3300;
+	--ir-critical-color-l: #{lighten($critical-color, 45%)};
+	--ir-critical-color-m: #{darken($critical-color, 10%)};
+	--ir-critical-color-d: #{darken($critical-color, 15%)};
 
-	--ir-red-color-l: #{lighten(#ED5565, 30%)};
-	--ir-red-color-m: #{darken(#ED5565, 20%)};
-	--ir-re-color-d: #{darken(#ED5565, 30%)};
+	--ir-red-color-l: #{lighten(#FF3333, 30%)};
+	--ir-red-color-m: #{darken(#FF3333, 20%)};
+	--ir-re-color-d: #{darken(#FF3333, 30%)};
 
-	--ir-orange-color-l: #{lighten(#FC6551, 30%)};
-	--ir-orange-color-m: #{darken(#FC6551, 20%)};
-	--ir-orange-color-d: #{darken(#FC6551, 30%)};
+	--ir-orange-color-l: #{lighten(#FF9933, 30%)};
+	--ir-orange-color-m: #{darken(#FF9933, 20%)};
+	--ir-orange-color-d: #{darken(#FF9933, 30%)};
 
-	--ir-yellow-color-l: #{lighten(#F6A742, 30%)};
-	--ir-yellow-color-m: #{darken(#F6A742, 20%)};
-	--ir-yellow-color-d: #{darken(#F6A742, 30%)};
+	--ir-yellow-color-l: #{lighten(#FFCC33, 30%)};
+	--ir-yellow-color-m: #{darken(#FFCC33, 20%)};
+	--ir-yellow-color-d: #{darken(#FFCC33, 30%)};
 
-	--ir-green-color-l: #{lighten(#A0D468, 30%)};
-	--ir-green-color-m: #{darken(#A0D468, 20%)};
-	--ir-green-color-d: #{darken(#A0D468, 30%)};
+	--ir-green-color-l: #{lighten(#66CC33, 30%)};
+	--ir-green-color-m: #{darken(#66CC33, 20%)};
+	--ir-green-color-d: #{darken(#66CC33, 30%)};
 
 	--ir-teal-color-l: #{lighten(#48CFAD, 30%)};
 	--ir-teal-color-m: #{darken(#48CFAD, 20%)};
@@ -132,23 +136,23 @@
 
 	$tag-color: #556677;
 	--ir-tag-bg-color: #{darken($tag-color, 10%)};
-	--ir-tag-fg-color: #FFFFFF;
+	--ir-tag-fg-color: var(--ir-bg-color);
 	--ir-tag-active-bg-color: #{lighten($tag-color, 10%)};
-	--ir-tag-active-fg-color: #FFFFFF;
+	--ir-tag-active-fg-color: var(--ir-bg-color);
 
 	--ir-light-border-color: var(--ir-gray-color-ll);
 	--ir-input-border-color: var(--ir-gray-color-l);
-	--ir-input-bg-color-0: rgba(255, 255, 255, 0);
-	--ir-input-bg-color: #FFFFFF;
-	--ir-input-fg-color: #000000;
+	--ir-input-bg-color-0: var(--ir-bg-color-0);
+	--ir-input-bg-color: var(--ir-bg-color);
+	--ir-input-fg-color: var(--ir-fg-color);
 	--ir-label-bg-color: var(--ir-gray-color-lll);
 	--ir-label-fg-color: var(--ir-gray-color-dd);
 	--ir-placeholder-color: var(--ir-gray-color-m);
 
-	--ir-bar-bg-color: #F0F0F0;
+	--ir-bar-bg-color: var(--ir-gray-color-lll);
 	--ir-bar-fg-color: var(--ir-gray-color-dd);
-	--ir-bar-hover-bg-color: #FFFFFF;
-	--ir-bar-hover-fg-color: #000000;
+	--ir-bar-hover-bg-color: var(--ir-bg-color);
+	--ir-bar-hover-fg-color: var(--ir-fg-color);
 
 	--ir-shadow-color: rgba(0, 0, 0, 0.3);
 	--ir-shadow-1: 0 0.1em 0.2em var(--ir-shadow-color);
@@ -160,14 +164,15 @@
 	--ir-frame-color: var(--ir-gray-color-l);
 
 	--ir-tooltip-bg-color: var(--ir-gray-color-dd);
-	--ir-tooltip-fg-color: #FFFFFF;
+	--ir-tooltip-fg-color: var(--ir-bg-color);
 
 	--ir-progress-bg-color: var(--ir-gray-color-ll);
 
 	--ir-pagination-border-color: var(--ir-gray-color-ll);
 
-	--ir-panel-border-color: var(--ir-gray-color-l);
-	--ir-panel-header-color: var(--ir-gray-color-ll);
+	--ir-panel-border-color: var(--ir-gray-color-ll);
+	--ir-panel-body-color: var(--ir-bg-color);
+	--ir-panel-header-color: var(--ir-gray-color-lll);
 
 	--ir-folio-bg-color: var(--ir-bg-color);
 	--ir-folio-fg-color: var(--ir-fg-color);
@@ -181,12 +186,84 @@
 	--ir-chess-size: 10px;
 }
 
-// INVERSE
-:root {
-	--ir-heading-inverse-color: var(--ir-primary-color-l);
-	--ir-heading-inverse-accent-color: var(--ir-accent-color-l);
+// ACCENT
+.accent {
 
-	--ir-table-inverse-head-color: #333333;
-	--ir-table-inverse-border-color: #222222;
-	--ir-table-inverse-striped-color: #111111;
+	--ir-action-color: var(--ir-accent-color-m);
+	--ir-action-active-color: var(--ir-accent-color-l);
+	--ir-action-light-color: var(--ir-accent-color-ll);
+
+	--ir-heading-color: var(--ir-accent-color-d);
+}
+
+// INVERSE
+@mixin inverse-colors {
+	--ir-gray-color-ddd: #F8F8F8;
+	--ir-gray-color-dd: #EEEEEE;
+	--ir-gray-color-d: #CCCCCC;
+	--ir-gray-color-m: #999999;
+	--ir-gray-color-l: #666666;
+	--ir-gray-color-ll: #333333;
+	--ir-gray-color-lll: #181818;
+
+	--ir-bg-color: #222222;
+	--ir-bg-color-0: rgba(0, 0, 0, 0);
+	--ir-fg-color: #FFFFFF;
+	--ir-fg-color-0: rgba(255, 255, 255, 0);
+
+	--ir-secondary-color-l: var(--ir-gray-color-l);
+	--ir-secondary-color-m: var(--ir-gray-color-m);
+	--ir-secondary-color-d: var(--ir-gray-color-d);
+
+	--ir-border-color: var(--ir-gray-color-l);
+
+	--ir-action-color: var(--ir-primary-color-m);
+	--ir-action-active-color: var(--ir-primary-color-l);
+	--ir-action-light-color: var(--ir-primary-color-ll);
+	--ir-action-fg-color: var(--ir-fg-color);
+
+	--ir-heading-color: var(--ir-primary-color-d);
+	--ir-heading-accent-color: var(--ir-accent-color-d);
+
+	--ir-blockquote-border-color: var(--ir-gray-color-lll);
+
+	--ir-table-bg-color: var(--ir-bg-color);
+	--ir-table-head-color: var(--ir-gray-color-l);
+	--ir-table-border-color: var(--ir-gray-color-ll);
+	--ir-table-striped-color: var(--ir-gray-color-lll);
+
+	--ir-bar-bg-color: var(--ir-gray-color-lll);
+	--ir-bar-fg-color: var(--ir-gray-color-dd);
+	--ir-bar-hover-bg-color: var(--ir-bg-color);
+	--ir-bar-hover-fg-color: var(--ir-fg-color);
+
+	--ir-frame-color: var(--ir-gray-color-l);
+
+	--ir-tooltip-bg-color: var(--ir-gray-color-dd);
+	--ir-tooltip-fg-color: var(--ir-bg-color);
+
+	--ir-progress-bg-color: var(--ir-gray-color-ll);
+
+	--ir-pagination-border-color: var(--ir-gray-color-ll);
+
+	--ir-panel-border-color: var(--ir-gray-color-ll);
+	--ir-panel-body-color: var(--ir-bg-color);
+	--ir-panel-header-color: var(--ir-gray-color-lll);
+
+	--ir-folio-bg-color: var(--ir-bg-color);
+	--ir-folio-fg-color: var(--ir-fg-color);
+
+	--ir-cnt-bg-color: var(--ir-bg-color);
+	--ir-cnt-fg-color: var(--ir-fg-color);
+	--ir-cnt-border-color: var(--ir-border-color);
+}
+
+.inverse {
+	@include inverse-colors();
+}
+
+@media (prefers-color-scheme: dark) {
+	.enable-dark-scheme {
+		@include inverse-colors();
+	}
 }

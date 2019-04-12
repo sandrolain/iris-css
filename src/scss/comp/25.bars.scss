@@ -1,0 +1,44 @@
+/*--
+
+@title: Bar
+@category:	Bars
+
+**selector**: `.bar`
+**selector**: `.bar-spacer`
+
+```example:html
+<div class="bar cnt-shadow-1">
+	<div class="pl-1">Left Zone</div>
+	<div class="bar-spacer"></div>
+	<div><h2>Main Zone</h2></div>
+	<div class="bar-spacer"></div>
+	<div class="pr-1"><button>Action</button></div>
+</div>
+```
+
+--*/
+
+
+.bar {
+	height: 3em;
+	line-height: 3em;
+	background-color: var(--ir-bar-bg-color);
+	color: var(--ir-bar-fg-color);
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+
+	h1, h2 {
+		margin: 0;
+		font-size: 2em;
+		line-height: inherit;
+	}
+
+	& > * {
+		flex: 0 1 auto;
+	}
+
+	& > .bar-spacer {
+		flex: 1 1 auto;
+	}
+}

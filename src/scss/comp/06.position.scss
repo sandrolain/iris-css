@@ -1,0 +1,37 @@
+// TODO: docs
+
+
+// Relative positioning
+.rel {
+	position: relative;
+}
+
+// Absolute positioning
+.abs {
+	position: absolute;
+}
+
+// Sticky positioning
+.sticky {
+	position: sticky;
+}
+.sticky-top {
+	position: sticky;
+	top: 0;
+}
+.sticky-bottom {
+	position: sticky;
+	bottom: 0;
+}
+
+// Fixed positioning
+.fix {
+	position: fixed;
+}
+
+// Z-Index
+@for $i from 0 through 20 {
+	.z-#{$i * 10} {
+		z-index: 10 * $i;
+	}
+}

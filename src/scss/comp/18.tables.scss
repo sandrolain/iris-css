@@ -1,0 +1,303 @@
+/*--
+
+@title:		Table
+@category:	Tables
+
+**selector**: `table`
+**selector**: `tr`
+**selector**: `th`
+**selector**: `td`
+
+```example:html
+<table>
+	<thead>
+		<tr>
+			<th>Col 1</th>
+			<th>Col 2</th>
+			<th>Col 3</th>
+			<th>Col 4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+--*/
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1em;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: auto;
+	background-color: var(--ir-table-bg-color);
+	color: var(--ir-fg-color);
+
+
+
+/*--
+
+@title:		Table Striped
+@category:	Tables
+
+**selector**: `.table-striped`
+
+```example:html
+<table class="table-striped">
+	<thead>
+		<tr>
+			<th>Col 1</th>
+			<th>Col 2</th>
+			<th>Col 3</th>
+			<th>Col 4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+--*/
+
+	&.table-striped {
+		tbody {
+			tr:nth-of-type(even) {
+				th, td {
+					background-color: var(--ir-table-striped-color);
+				}
+			}
+		}
+	}
+
+
+
+/*--
+
+@title:		Table cells vertical border
+@category:	Tables
+
+**selector**: `.table-border`
+
+```example:html
+<table class="table-border">
+	<thead>
+		<tr>
+			<th>Col 1</th>
+			<th>Col 2</th>
+			<th>Col 3</th>
+			<th>Col 4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+--*/
+
+	&.table-border {
+		th, td {
+			border-right-width: 0.1em;
+
+			&:last-child {
+				border-right-width: 0;
+			}
+		}
+	}
+
+
+/*--
+
+@title:		Compact table
+@category:	Tables
+
+**selector**: `.table-small`
+
+```example:html
+<table class="table-small">
+	<thead>
+		<tr>
+			<th>Col 1</th>
+			<th>Col 2</th>
+			<th>Col 3</th>
+			<th>Col 4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+--*/
+
+	&.table-small {
+		th, td {
+			padding: 0.25em 0.5em;
+		}
+	}
+
+	caption {
+		text-align: left;
+		caption-side: bottom;
+	}
+
+	td, th {
+		padding: 0.5em 1em;
+		border-style: solid;
+		border-color: var(--ir-table-border-color);
+		border-bottom-width: 0.1em;
+		vertical-align: middle;
+		text-align: inherit;
+
+		&:only-child {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	th {
+		vertical-align: bottom;
+	}
+
+
+	thead {
+		th {
+			border-bottom-width: 0.2em;
+			background-color: var(--ir-table-head-color);
+		}
+	}
+
+	tbody {
+		th {
+			background-color: var(--ir-table-border-color) !important;
+		}
+		tr:hover {
+			td, th {
+				border-bottom-color: var(--ir-table-head-color) !important;
+			}
+			td {
+				background-color: var(--ir-table-border-color) !important;
+			}
+			th {
+				background-color: var(--ir-table-head-color) !important;
+			}
+		}
+	}
+}
+
+
+
+/*--
+
+@title:		Inverse table
+@category:	Tables
+
+**selector**: `.inverse`
+
+```example:html
+<table class="inverse">
+	<thead>
+		<tr>
+			<th>Col 1</th>
+			<th>Col 2</th>
+			<th>Col 3</th>
+			<th>Col 4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+		<tr>
+			<th>Vulputate</th>
+			<td>Magna</td>
+			<td>Euismod</td>
+			<td>Vehicula</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+--*/

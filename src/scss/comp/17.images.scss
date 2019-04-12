@@ -1,0 +1,195 @@
+/*--
+
+@title:		Image
+@category:	Images
+
+**selector**: `img`
+
+```example:html
+<img src="https://lorempixel.com/480/320/nature" alt="Image alt" />
+```
+--*/
+
+
+img {
+	vertical-align: top;
+	border-style: none;
+
+/*--
+
+@title:		Limit image to content width
+@category:	Images
+
+**selector**: `.img-max`
+
+```example:html
+<img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-max" />
+```
+--*/
+
+	&.img-max {
+		max-width: 100%;
+		height: auto;
+	}
+
+/*--
+
+@title:		Fit image to content width
+@category:	Images
+
+**selector**: `.img-fit`
+
+```example:html
+<img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-fit" />
+```
+--*/
+
+	&.img-fit {
+		width: 100%;
+		height: auto;
+	}
+
+/*--
+
+@title:		Align image to left
+@category:	Images
+
+**selector**: `.img-left`
+
+```example:html
+<img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-left" />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.
+```
+--*/
+
+	&.img-left {
+		float: left;
+		margin: 0 1em 1em 0;
+	}
+
+/*--
+
+@title:		Align image to right
+@category:	Images
+
+**selector**: `.img-right`
+
+```example:html
+<img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-right" />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.
+```
+--*/
+
+	&.img-right {
+		float: right;
+		margin: 0 0 1em 1em;
+	}
+
+/*--
+
+@title:		Apply frame to image
+@category:	Images
+
+**selector**: `.img-frame`
+
+```example:html
+<img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-frame" />
+```
+--*/
+
+	&.img-frame {
+		border: 1px solid var(--ir-frame-color);
+		padding: 0.25em;
+		background: #000000;
+		background-clip: content-box;;
+
+		&:hover {
+			border-color: var(--ir-action-active-color);
+		}
+	}
+}
+
+
+
+
+
+/*--
+
+@title:		<figure>
+@category:	Images
+
+**selector**: `figure`
+**selector**: `figcaption`
+
+```example:html
+<figure>
+	<img src="https://lorempixel.com/480/320/nature" alt="Image alt" />
+	<figcaption>Image caption</figcaption>
+</figure>
+```
+--*/
+
+figure {
+	margin: 0 0 1rem;
+}
+
+figcaption {
+	display: block;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	color: var(--ir-secondary-color-m);
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+/*--
+
+@title:		Avatar
+@category:	Images
+
+**selector**: `.avatar`
+
+```example:html
+<span class="avatar">
+	<img src="https://lorempixel.com/200/200/people" alt="Image alt" />
+</span>
+```
+--*/
+
+
+/*--
+
+@title:		Rounded Avatar
+@category:	Images
+
+**selector**: `.avatar.rounded`
+
+```example:html
+<span class="avatar rounded">
+	<img src="https://lorempixel.com/300/200/people" alt="Image alt" />
+</span>
+```
+--*/
+
+.avatar {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 4em;
+	height: 4em;
+
+	img {
+		max-height: 100%;
+	}
+
+	&.rounded {
+		border-radius: 50%;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+}

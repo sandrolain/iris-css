@@ -1,0 +1,108 @@
+/*--
+
+@type:		category
+@title:		Containers
+@category:	Layout / Containers
+
+--*/
+
+
+/*--
+
+@title:		Folio Container
+@category:	Layout / Containers
+
+**selector**: `.cnt-folio`
+
+```example:html
+<div class="cnt-folio">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+
+.cnt-folio {
+	padding: var(--ir-cnt-padding);
+	background: var(--ir-folio-bg-color);
+	color: var(--ir-folio-fg-color);
+	box-shadow: var(--ir-shadow-1);
+}
+
+
+/*--
+
+@title:		Border Container
+@category:	Layout / Containers
+
+**selector**: `.cnt-border`
+
+```example:html
+<div class="cnt-border">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+
+.cnt-border {
+	padding: var(--ir-cnt-padding);
+	background: var(--ir-cnt-bg-color);
+	color: var(--ir-cnt-fg-color);
+	border: 1px solid var(--ir-cnt-border-color);
+}
+
+/*--
+
+@title:		Rounded Container Modifier
+@category:	Layout / Containers
+
+**selector**: `.cnt-rounded`
+
+```example:html
+<div class="cnt-folio cnt-rounded">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+```example:html
+<div class="cnt-border cnt-rounded">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+.cnt-rounded {
+	border-radius: var(--ir-cnt-border-radius);
+}
+
+
+/*--
+
+@title:		Shadows Modifier
+@category:	Layout / Containers
+
+**selector**: `.cnt-shadow-1`
+**selector**: `.cnt-shadow-2`
+**selector**: `.cnt-shadow-3`
+**selector**: `.cnt-shadow-4`
+
+```example:html
+<div class="cnt-folio cnt-shadow-1 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+<div class="cnt-folio cnt-shadow-2 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+<div class="cnt-folio cnt-shadow-3 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+<div class="cnt-folio cnt-shadow-4 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+.cnt-shadow-1 {
+	box-shadow: var(--ir-shadow-1);
+}
+
+.cnt-shadow-2 {
+	box-shadow: var(--ir-shadow-2);
+}
+
+.cnt-shadow-3 {
+	box-shadow: var(--ir-shadow-3);
+}
+
+.cnt-shadow-4 {
+	box-shadow: var(--ir-shadow-4);
+}

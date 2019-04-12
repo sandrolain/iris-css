@@ -1,0 +1,524 @@
+/*--
+
+@title:		Button
+@category:	Form / Buttons
+
+**selector**: `.btn`
+
+```example:html
+<a href="#" class="btn">My Button</a>
+```
+
+--*/
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+a.btn:not(.nostyle) {
+	width: auto;
+	overflow: visible;
+	display: inline-flex;
+	padding: 0em 0.6em;
+	line-height: 2em;
+	height: 2em;
+	background-color: var(--ir-action-color);
+	color: var(--ir-action-fg-color);
+	border-radius: var(--ir-border-radius);
+	font-weight: bold;
+	box-shadow: 0 0.1em 0.2em var(--ir-shadow-color);
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	transition: box-shadow 160ms ease,
+		background-color 160ms ease,
+		color 160ms ease,
+		border-color 160ms ease;
+
+
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+		outline: 0;
+	}
+
+	&:focus,
+	&:active,
+	&::-moz-focus-inner {
+		outline: none;
+	}
+
+	&:hover {
+		background-color: var(--ir-action-active-color) !important;
+		text-decoration: none;
+		box-shadow: 0 0.2em 0.4em var(--ir-shadow-color);
+		z-index: 10;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: 0 0.1em 0.2em var(--ir-shadow-color);
+	}
+
+/*--
+
+@title:		Thin Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-thin`
+
+```example:html
+<a href="#" class="btn btn-thin">My Button</a>
+```
+
+--*/
+
+	&.btn-thin {
+		font-size: 0.85em;
+	}
+
+/*--
+
+@title:		Big Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-big`
+
+```example:html
+<a href="#" class="btn btn-big">My Button</a>
+```
+
+--*/
+
+	&.btn-big {
+		font-size: 1.2em;
+	}
+
+/*--
+
+@title:		Wide Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-wide`
+
+```example:html
+<a href="#" class="btn btn-wide">My Button</a>
+```
+
+--*/
+
+	&.btn-wide {
+		width: 100%;
+		display: block;
+	}
+
+/*--
+
+@title:		Disabled Button
+@category:	Form / Buttons
+
+**selector**: `.btn.disabled`
+
+```example:html
+<a href="#" class="btn btn-disabled">My Button</a>
+```
+
+--*/
+
+	&.disabled,
+	&:disabled,
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: 0.7;
+		pointer-events: none;
+	}
+
+
+	// Preset for Font-Awesome and Material-Icons
+	.fa,
+	.fas,
+	.far,
+	.fal,
+	.fab,
+	.mi {
+		width: 1.25em;
+		margin-right: 0.5em;
+	}
+
+	/*--
+
+@title:		Accent Color Button
+@category:	Form / Buttons
+
+**selector**: `.btn.accent`
+
+```example:html
+<a href="#" class="btn accent">My Button</a>
+```
+
+--*/
+
+&.accent {
+	background-color: var(--ir-accent-color-d);
+
+	&:hover {
+		background-color: var(--ir-accent-color-m) !important;
+	}
+}
+
+/*--
+
+@title:		Critical State Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-critical`
+
+```example:html
+<a href="#" class="btn btn-critical">My Button</a>
+```
+
+--*/
+
+	&.btn-critical {
+		background-color: var(--ir-critical-color-d);
+
+		&:hover {
+			background-color: var(--ir-critical-color-m) !important;
+		}
+	}
+
+/*--
+
+@title:		Warning State Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-warning`
+
+```example:html
+<a href="#" class="btn btn-warning">My Button</a>
+```
+
+--*/
+
+	&.btn-warning {
+		background-color: var(--ir-warning-color-d);
+
+		&:hover {
+			background-color: var(--ir-warning-color-m) !important;
+		}
+	}
+
+/*--
+
+@title:		Success State Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-success`
+
+```example:html
+<a href="#" class="btn btn-success">My Button</a>
+```
+
+--*/
+
+	&.btn-success {
+		background-color: var(--ir-success-color-d);
+
+		&:hover {
+			background-color: var(--ir-success-color-m) !important;
+		}
+	}
+
+/*--
+
+@title:		Rounded Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-rounded`
+
+```example:html
+<a href="#" class="btn btn-rounded">My Button</a>
+<a href="#" class="btn btn-rounded accent">My Button</a>
+<a href="#" class="btn btn-rounded btn-critical">My Button</a>
+<a href="#" class="btn btn-rounded btn-warning">My Button</a>
+<a href="#" class="btn btn-rounded btn-success">My Button</a>
+```
+
+--*/
+
+	&.btn-rounded {
+		border-radius: 1em;
+	}
+
+/*--
+
+@title:		Outline Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-outline`
+
+```example:html
+<a href="#" class="btn btn-outline">My Button</a>
+<a href="#" class="btn btn-outline accent">My Button</a>
+<a href="#" class="btn btn-outline btn-critical">My Button</a>
+<a href="#" class="btn btn-outline btn-warning">My Button</a>
+<a href="#" class="btn btn-outline btn-success">My Button</a>
+```
+
+--*/
+
+	&.btn-outline {
+		background: var(--ir-bg-color) !important;
+		border-width: 1px;
+		border-style: solid;
+		color: var(--ir-action-color);
+		line-height: 1.9em;
+
+		&:hover {
+			background-color: var(--ir-bg-color) !important;
+			color: var(--ir-action-active-color);
+			border-color: var(--ir-action-active-color) !important;
+		}
+
+		&.accent {
+			border-color: var(--ir-accent-color-d);
+			color: var(--ir-accent-color-d);;
+
+			&:hover {
+				color: var(--ir-accent-color-m);
+				border-color: var(--ir-accent-color-m) !important;
+			}
+		}
+
+		&.btn-critical {
+			border-color: var(--ir-critical-color-d);
+			color: var(--ir-critical-color-d);;
+
+			&:hover {
+				color: var(--ir-critical-color-m);
+				border-color: var(--ir-critical-color-m) !important;
+			}
+		}
+
+		&.btn-warning {
+			border-color: var(--ir-warning-color-d);
+			color: var(--ir-warning-color-d);;
+
+			&:hover {
+				color: var(--ir-warning-color-m);
+				border-color: var(--ir-warning-color-m) !important;
+			}
+		}
+
+		&.btn-success {
+			border-color: var(--ir-success-color-d);
+			color: var(--ir-success-color-d);;
+
+			&:hover {
+				color: var(--ir-success-color-m);
+				border-color: var(--ir-success-color-m) !important;
+			}
+		}
+	}
+
+/*--
+
+@title:		Discrete Button
+@category:	Form / Buttons
+
+**selector**: `.btn.btn-discrete`
+
+```example:html
+<a href="#" class="btn btn-discrete">My Button</a>
+<a href="#" class="btn btn-discrete accent">My Button</a>
+<a href="#" class="btn btn-discrete btn-critical">My Button</a>
+<a href="#" class="btn btn-discrete btn-warning">My Button</a>
+<a href="#" class="btn btn-discrete btn-success">My Button</a>
+```
+
+--*/
+
+	&.btn-discrete {
+		background: var(--ir-bg-color) !important;
+		color: var(--ir-action-color);
+		box-shadow: 0 0 0 currentColor inset;
+		border: 1px solid var(--ir-bg-color);
+
+		&:hover {
+			background-color: var(--ir-bg-color) !important;
+			color: var(--ir-action-active-color);
+			box-shadow: 0 0 0.2em currentColor inset;
+			border-color: currentColor;
+		}
+
+		&.accent {
+			color: var(--ir-accent-color-d);
+
+			&:hover {
+				color: var(--ir-accent-color-m);
+			}
+		}
+
+		&.btn-critical {
+			color: var(--ir-critical-color-d);
+
+			&:hover {
+				color: var(--ir-critical-color-m);
+			}
+		}
+		&.btn-warning {
+			color: var(--ir-warning-color-d);
+
+			&:hover {
+				color: var(--ir-warning-color-m);
+			}
+		}
+		&.btn-success {
+			color: var(--ir-success-color-d);;
+
+			&:hover {
+				color: var(--ir-success-color-m);
+			}
+		}
+	}
+}
+
+
+/*--
+
+@title:		Buttons Group
+@category:	Form / Buttons
+
+**selector**: `.btn-group`
+
+```example:html
+<div class="btn-group">
+	<a href="#" class="btn">My Button</a>
+	<a href="#" class="btn accent">My Button</a>
+	<a href="#" class="btn btn-critical">My Button</a>
+	<a href="#" class="btn btn-warning">My Button</a>
+	<a href="#" class="btn btn-success">My Button</a>
+</div>
+<br/>
+<div class="btn-group">
+	<a href="#" class="btn btn-outline">My Button</a>
+	<a href="#" class="btn btn-outline accent">My Button</a>
+	<a href="#" class="btn btn-outline btn-critical">My Button</a>
+	<a href="#" class="btn btn-outline btn-warning">My Button</a>
+	<a href="#" class="btn btn-outline btn-success">My Button</a>
+</div>
+<br/>
+<div class="btn-group">
+	<a href="#" class="btn btn-discrete">My Button</a>
+	<a href="#" class="btn btn-discrete accent">My Button</a>
+	<a href="#" class="btn btn-discrete btn-critical">My Button</a>
+	<a href="#" class="btn btn-discrete btn-warning">My Button</a>
+	<a href="#" class="btn btn-discrete btn-success">My Button</a>
+</div>
+```
+
+--*/
+
+
+/*--
+
+@title:		Buttons Group Vertical
+@category:	Form / Buttons
+
+**selector**: `.btn-group.vertical`
+
+```example:html
+<div class="btn-group vertical">
+	<a href="#" class="btn">My Button</a>
+	<a href="#" class="btn accent">My Button</a>
+	<a href="#" class="btn btn-critical">My Button</a>
+	<a href="#" class="btn btn-warning">My Button</a>
+	<a href="#" class="btn btn-success">My Button</a>
+</div>
+```
+
+--*/
+
+
+.btn-group {
+	display: inline-flex;
+	vertical-align: middle;
+
+	& + .btn-group {
+		margin-left: 0.5em;
+	}
+
+	&:not(.vertical)
+	{
+		button,
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.btn {
+			display: inline-flex;
+			flex: 1 1 auto;
+
+			&:not(:last-child) {
+				border-right: none;
+			}
+
+			&:not(:first-child) {
+				border-left: none;
+			}
+
+			&:first-child {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			&:not(:first-child):not(:last-child) {
+				border-radius: 0;
+			}
+
+			&:last-child {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+	}
+
+	&.vertical {
+		flex-direction: column;
+
+		button,
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.btn {
+			display: inline-flex;
+			flex: 1;
+
+			&:not(:last-child) {
+				border-bottom: none;
+			}
+
+			&:not(:first-child) {
+				border-top: none;
+			}
+
+			&:first-child {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			&:not(:first-child):not(:last-child) {
+				border-radius: 0;
+			}
+
+			&:last-child {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+		}
+	}
+}

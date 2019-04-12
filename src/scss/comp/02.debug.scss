@@ -1,0 +1,16 @@
+// TODO: docs
+
+.debug {
+	// Debug rules
+	ol > :not(li),
+	ul > :not(li),
+	a[href="TODO"],
+	a[href=""],
+	form:not([action]) {
+		outline: 1px dashed red;
+	}
+}
+
+.dbg {
+	outline: 1px dotted #FF00FF;
+}

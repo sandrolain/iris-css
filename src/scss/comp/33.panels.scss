@@ -1,0 +1,178 @@
+/*--
+
+@title:		Panel
+@category:	Panel
+
+**selector**: `.panel`
+
+```example:html
+<div class="panel">
+	<div class="panel-head"><h4>Panel Title</h4></div>
+	<div class="panel-body">
+		<p>Panel body</p>
+	</div>
+	<div class="panel-body">
+		<p>Multiple Panel body</p>
+	</div>
+	<div class="panel-foot t-right"><em>Panel Foot</em></div>
+</div>
+```
+
+```example:html
+<div class="panel" style="width: 15em">
+	<div class="panel-head"><h4>Panel Title</h4></div>
+	<div class="panel-body">
+		<p>Panel body</p>
+	</div>
+	<div class="panel-body">
+		<p>Multiple Panel body</p>
+	</div>
+	<div class="panel-foot t-right"><em>Panel Foot</em></div>
+</div>
+```
+
+--*/
+
+
+/*--
+
+@title:		Panel with Tabs
+@category:	Panel
+
+**selector**: `.panel`
+
+```example:html
+<div class="panel">
+	<div class="panel-head"><h4>Panel Title</h4></div>
+	<div class="panel-body">
+		<p>Panel body</p>
+	</div>
+	<div class="panel-body">
+		<p>Multiple Panel body</p>
+	</div>
+	<div class="panel-foot t-right"><em>Panel Foot</em></div>
+</div>
+```
+
+```example:html
+<div class="panel panel-tabs">
+
+	<input type="radio" name="tabs" id="panel-1" checked />
+	<label class="panel-tab" for="panel-1">Panel 1</label>
+	<div class="panel-cnt">
+		<p>Panel 1 body</p>
+	</div>
+
+	<input type="radio" name="tabs" id="panel-2" />
+	<label class="panel-tab" for="panel-2">Panel 2</label>
+	<div class="panel-cnt">
+		<p>Panel 2 body</p>
+	</div>
+
+	<input type="radio" name="tabs" id="panel-3" />
+	<label class="panel-tab" for="panel-3">Panel 3</label>
+	<div class="panel-cnt">
+		<p>Panel 3 body</p>
+	</div>
+
+</div>
+```
+
+--*/
+
+.panel,
+.panel-tabs {
+	margin-top: 1em;
+}
+	.panel-head,
+	.panel-foot,
+	.panel-body,
+	.panel-tabs {
+		padding: 1em 1.5em;
+		border: 1px solid var(--ir-panel-border-color);
+		background-color: var(--ir-panel-body-color);
+		border-bottom: 0;
+
+		&:first-child {
+			border-top-left-radius: var(--ir-border-radius);
+			border-top-right-radius: var(--ir-border-radius);
+		}
+
+		&:last-child {
+			border-bottom-left-radius: var(--ir-border-radius);
+			border-bottom-right-radius: var(--ir-border-radius);
+			border-bottom: 1px solid var(--ir-panel-border-color);
+		}
+	}
+
+	.panel-tabs {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0;
+		background-color: var(--ir-panel-header-color);
+		border-radius: var(--ir-border-radius);
+
+		.panel-tab {
+			display: block;
+			padding: 1em 1.5em;
+			border-right: 1px solid var(--ir-panel-border-color);
+			color: var(--ir-action-color);
+			font-size: 1.2em;
+		}
+
+		.panel-cnt {
+			padding: 1em 1.5em;
+			display: none;
+			order: 99;
+			width: 100%;
+			border-top: 1px solid var(--ir-panel-border-color);
+			background-color: var(--ir-panel-body-color);
+		}
+
+		& > input {
+			display: none !important;
+		}
+
+		input:checked + .panel-tab,
+		.panel-tab:hover,
+		.panel-tab:active {
+			background-color: var(--ir-panel-body-color) !important;
+			text-decoration: none !important;
+			color: var(--ir-action-active-color);
+		}
+		input:checked + .panel-tab {
+			position: relative;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -1px;
+				height: 1px;
+				background-color: var(--ir-panel-body-color);
+			}
+		}
+
+		input:checked + .panel-tab + .panel-cnt {
+			display: block;
+		}
+	}
+
+
+
+	.panel-head,
+	.panel-foot {
+		background-color: var(--ir-panel-header-color);
+
+		& > * {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}

@@ -1,0 +1,37 @@
+
+
+// TODO: docs
+
+
+
+.pointer {
+	cursor: pointer;
+}
+
+.grab {
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+
+	&:active {
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: grabbing;
+	}
+}
+
+// selection
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.selectable {
+	-webkit-touch-callout: default;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}

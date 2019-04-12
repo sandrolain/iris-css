@@ -1,0 +1,187 @@
+/*--
+
+@title: Pagination
+@category:	Pagination
+
+**selector**: `.pagin`
+
+<style type="text/css">
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+</style>
+
+```example:html
+<div class="pagin">
+	<a href="#"><i class="fas fa-arrow-left"></i></a>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#"><i class="fas fa-arrow-right"></i></a>
+</div>
+```
+
+--*/
+
+/*--
+
+@title: Pagination Centered
+@category:	Pagination
+
+**selector**: `.pagin.center`
+
+```example:html
+<div class="pagin center">
+	<a href="#"><i class="fas fa-arrow-left"></i></a>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#"><i class="fas fa-arrow-right"></i></a>
+</div>
+```
+
+--*/
+
+
+/*--
+
+@title: Pagination Right
+@category:	Pagination
+
+**selector**: `.pagin.right`
+
+```example:html
+<div class="pagin right">
+	<a href="#"><i class="fas fa-arrow-left"></i></a>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#"><i class="fas fa-arrow-right"></i></a>
+</div>
+```
+
+--*/
+
+
+/*--
+
+@title: Pagination Wide
+@category:	Pagination
+
+**selector**: `.pagin.wide`
+
+```example:html
+<div class="pagin wide">
+	<a href="#"><i class="fas fa-arrow-left"></i></a>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#"><i class="fas fa-arrow-right"></i></a>
+</div>
+```
+
+--*/
+
+/*--
+
+@title: Pagination Rounded
+@category:	Pagination
+
+**selector**: `.pagin.rounded`
+
+```example:html
+<div class="pagin rounded">
+	<a href="#"><i class="fas fa-arrow-left"></i></a>
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#"><i class="fas fa-arrow-right"></i></a>
+</div>
+```
+
+--*/
+
+.pagin {
+	list-style: none;
+	padding: 0;
+	display: flex;
+
+	&.center {
+		justify-content: center;
+	}
+	&.right {
+		justify-content: flex-end;
+	}
+
+	& > *,
+	& > a {
+		line-height: 2em;
+		flex: 0 1 auto;
+		min-width: 3em;
+		padding: 0 0.5em;
+		display: inline-block;
+		border: 1px solid var(--ir-pagination-border-color);
+		background: var(--ir-bg-color);
+		text-align: center;
+		text-decoration: none;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--ir-action-active-color);
+			color: var(--ir-action-fg-color);
+			border-color: var(--ir-action-color);
+			z-index: 2;
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			background-color: var(--ir-action-color);
+			color: var(--ir-action-fg-color);
+			border-color: var(--ir-action-active-color);
+			z-index: 2;
+		}
+	}
+
+	&.wide > * {
+		flex: 1;
+	}
+
+	& > *:not(:last-child) {
+		//border-right-width: 0;
+		margin-right: -1px;
+	}
+
+	& > *:first-child {
+		border-radius: var(--ir-border-radius) 0 0 var(--ir-border-radius);
+	}
+
+	& > *:last-child {
+		border-radius: 0 var(--ir-border-radius) var(--ir-border-radius) 0;
+	}
+
+	& > *:first-child:last-child {
+		border-radius: var(--ir-border-radius);
+	}
+
+	&.rounded  {
+		& > *:first-child {
+			border-radius: 1em 0 0 1em;
+		}
+		& > *:last-child {
+			border-radius: 0 1em 1em 0;
+		}
+		& > *:first-child:last-child {
+			border-radius: 1em;
+		}
+	}
+}

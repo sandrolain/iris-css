@@ -1,0 +1,194 @@
+
+/*--
+
+@title:		Unordered List
+@category:	Typography / Lists
+@sequence:	3.2
+
+**selector**: `ul`
+**selector**: `ul li`
+
+```example:html
+<ul>
+	<li>One</li>
+	<li>Two</li>
+	<li>Three
+		<ul>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+			<li>Four</li>
+			<li>Five</li>
+		</ul>
+	</li>
+	<li>Four</li>
+	<li>Five</li>
+</ul>
+```
+
+--*/
+
+/*--
+
+@title:		Orderd List
+@category:	Typography / Lists
+@sequence:	3.2
+
+**selector**: `ol`
+**selector**: `ol li`
+
+```example:html
+<ol>
+	<li>One</li>
+	<li>Two</li>
+	<li>Three
+		<ol>
+			<li>One</li>
+			<li>Two</li>
+			<li>Three</li>
+			<li>Four</li>
+			<li>Five</li>
+		</ol>
+	</li>
+	<li>Four</li>
+	<li>Five</li>
+</ol>
+```
+
+--*/
+
+
+/*--
+
+@title:		Definition List
+@category:	Typography / Lists
+@sequence:	3.2
+
+**selector**: `dl`
+**selector**: `dl dt`
+**selector**: `dl dd`
+
+```example:html
+<dl>
+	<dt>Fusce Amet</dt>
+	<dd>Aenean lacinia bibendum nulla sed consectetur.</dd>
+	<dt>Cursus Venenatis</dt>
+	<dd>Nulla vitae elit libero, a pharetra augue.</dd>
+	<dt class="accent">Justo Fringilla</dt>
+	<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+</dl>
+```
+
+--*/
+
+
+ol,
+ul,
+dl {
+	margin-top: 1em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+ol,
+ul,
+dd {
+	padding-left: 1.5em;
+}
+
+ol {
+	ol {
+		list-style: lower-alpha;
+
+		ol {
+			list-style: decimal;
+
+			ol {
+				list-style: lower-alpha;
+			}
+		}
+	}
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: 700;
+	color: var(--ir-action-color-d);
+
+	dd + & {
+		margin-top: 0.5em;
+	}
+}
+
+
+/*--
+
+@title:		Inline List
+@category:	Typography / Lists
+@sequence:	3.2
+
+**selector**: `.list-inline`
+
+```example:html
+<ul class="list-inline">
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+	<li>Four</li>
+	<li>Five</li>
+</ul>
+```
+
+--*/
+
+
+/*--
+
+@title:		Unstyled List
+@category:	Typography / Lists
+@sequence:	3.2
+
+**selector**: `.list-nostyle`
+
+```example:html
+<ul class="list-nostyle">
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+	<li>Four</li>
+	<li>Five</li>
+</ul>
+```
+
+--*/
+
+ul, ol {
+
+	&.list-inline {
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		flex-direction: row;
+
+		& > * {
+			margin-right: 0.5em;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.list-nostyle {
+		padding-left: 0;
+		list-style: none;
+	}
+}

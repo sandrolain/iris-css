@@ -1,0 +1,242 @@
+
+/*--
+
+@title:		Message
+@category:	Message
+
+**selector**: `.msg`
+**selector**: `.msg-cnt`
+
+```example:html
+<div class="msg">
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+```
+
+--*/
+
+/*--
+
+@title:		Info Message
+@category:	Message
+
+**selector**: `.msg.info`
+
+```example:html
+<div class="msg info">
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+```
+
+--*/
+
+/*--
+
+@title:		Success Message
+@category:	Message
+
+**selector**: `.msg.success`
+
+```example:html
+<div class="msg success">
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+```
+
+--*/
+
+/*--
+
+@title:		Warning Message
+@category:	Message
+
+**selector**: `.msg.warning`
+
+```example:html
+<div class="msg warning">
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+```
+
+--*/
+
+/*--
+
+@title:		Critical Message
+@category:	Message
+
+**selector**: `.msg.critical`
+
+```example:html
+<div class="msg critical">
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+```
+
+--*/
+
+/*--
+
+@title:		Message with Icon
+@category:	Message
+
+**selector**: `.msg.info`
+
+<style type="text/css">
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+</style>
+
+```example:html
+<div class="msg info">
+	<div class="msg-icon"><i class="fas fa-info"></i></div>
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+<div class="msg success">
+	<div class="msg-icon"><i class="fas fa-check"></i></div>
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+<div class="msg warning">
+	<div class="msg-icon"><i class="fas fa-exclamation"></i></div>
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+<div class="msg critical">
+	<div class="msg-icon"><i class="fas fa-times"></i></div>
+	<div class="msg-cnt">
+		<h4>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</h4>
+		<p>Nulla vitae elit libero, <b>a pharetra augue</b>. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
+	</div>
+</div>
+```
+
+
+--*/
+
+.msg {
+	display: flex;
+	flex-direction: row;
+	padding: 1.5em;
+	margin-bottom: 1.5em;
+	background-color: var(--ir-msg-color-l);
+	color: var(--ir-msg-color-m);
+	border-bottom: 0.15em solid currentColor;
+
+	b,
+	strong,
+	a,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--ir-msg-color-d);
+		font-weight: 600;
+	}
+
+	&.info {
+		background-color: var(--ir-info-color-l);
+		color: var(--ir-info-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-info-color-d);
+		}
+	}
+
+	&.success {
+		background-color: var(--ir-success-color-l);
+		color: var(--ir-success-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-success-color-d);
+		}
+	}
+
+	&.warning {
+		background-color: var(--ir-warning-color-l);
+		color: var(--ir-warning-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-warning-color-d);
+		}
+	}
+
+	&.critical {
+		background-color: var(--ir-critical-color-l);
+		color: var(--ir-critical-color-m);
+
+		b,
+		strong,
+		a,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--ir-critical-color-d);
+		}
+	}
+
+	.msg-icon {
+		width: 3em;
+		height: 3em;
+		margin-right: 1.5em;
+		text-align: center;
+
+		& > * {
+			font-size: 3em;
+		}
+	}
+
+	.msg-cnt {
+		flex: 1;
+	}
+}

@@ -1,0 +1,51 @@
+// TODO: docs
+
+
+// Relative positioning
+@include responsive("rel") {
+	position: relative !important;
+}
+
+// Absolute positioning
+@include responsive("abs") {
+	position: absolute !important;
+}
+
+// Sticky positioning
+@include responsive("sticky") {
+	position: sticky !important;
+}
+@include responsive("sticky-top") {
+	position: sticky !important;
+	top: 0;
+}
+@include responsive("sticky-bottom") {
+	position: sticky !important;
+	bottom: 0;
+}
+
+// Fixed positioning
+@include responsive("fix") {
+	position: fixed !important;
+}
+
+// Z-Index
+@for $i from 0 through 20 {
+
+	$z: $i * 10;
+	$cls: z-#{$z};
+
+	@include responsive($cls) {
+		z-index: $z;
+	}
+}
+
+@for $i from 1 through 16 {
+
+	$z: 200 + ($i * 50);
+	$cls: z-#{$z};
+
+	@include responsive($cls) {
+		z-index: $z;
+	}
+}

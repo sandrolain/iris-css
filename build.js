@@ -31,7 +31,7 @@ const examplesCssPath	= path.join(examplesDirPath, "iris.css");
 
 const themesDirPath		= path.join(__dirname, "src", "scss", "themes");
 
-const thirdyDirPath		= path.join(__dirname, "src", "thirdy");
+// const thirdyDirPath		= path.join(__dirname, "src", "thirdy");
 
 const buildExpanded = () =>
 {
@@ -69,7 +69,12 @@ const buildMinified = (opts, cb) =>
 	// fs.writeFileSync(opts.mapDestPath, result.map);
 
 	const cleaner = new CleanCSS({
-		level: 2,
+		level: {
+			2: {
+				mergeSemantically: true,
+				restructureRules: true
+			}
+		},
 		sourceMap: true
 	});
 
@@ -121,19 +126,19 @@ const buildThemes = () =>
 		});
 	}
 
-	copyThirdyDirectory();
+	// copyThirdyDirectory();
 };
 
-const copyThirdyDirectory = () =>
-{
-	ncp(thirdyDirPath, thirdyDestPath, function (err)
-	{
-		if (err)
-		{
-			return console.error(err);
-		}
-	});
-};
+// const copyThirdyDirectory = () =>
+// {
+// 	ncp(thirdyDirPath, thirdyDestPath, function (err)
+// 	{
+// 		if (err)
+// 		{
+// 			return console.error(err);
+// 		}
+// 	});
+// };
 
 buildExpanded();
 

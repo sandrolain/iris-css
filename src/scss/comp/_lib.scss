@@ -1,0 +1,53 @@
+$media-s-width: 640px;
+
+@mixin responsive($sel)
+{
+	@media screen and (min-width: 0px)
+	{
+		.#{$sel} {
+			@content;
+		}
+	}
+
+	@media screen and (max-width: $media-s-width)
+	{
+		.#{$sel}\@s {
+			@content;
+		}
+	}
+
+	@media screen and (min-width: 641px) and (max-width: 1023px)
+	{
+		.#{$sel}\@m {
+			@content;
+		}
+	}
+
+	@media screen and (min-width: 1024px)
+	{
+		.#{$sel}\@l {
+			@content;
+		}
+	}
+
+	@media screen and (min-width: 1280px)
+	{
+		.#{$sel}\@xl {
+			@content;
+		}
+	}
+}
+
+@mixin media-s()
+{
+	@media screen and (max-width: $media-s-width)
+	{
+		@content;
+	}
+}
+
+
+:root {
+	--ir-golden-ratio: 1.61803;
+	--ir-pi: 3.14159;
+}

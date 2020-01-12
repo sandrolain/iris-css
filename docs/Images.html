@@ -3,9 +3,12 @@
 	<head>
 		<title>Iris CSS Guide</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
@@ -14,123 +17,139 @@
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
 			<div class="flex flex-col@s">
-				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
 				<div class="menu-item ">
 					<a href="index.html">Iris CSS Guide</a>
 				</div>
 				<div class="menu-item ">
 					<a href="Style-guide.html">Style guide</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography.html">Typography</a>
-					<div class="menu"><div class="menu-item ">
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
 					<a href="Typography-Headings.html">Headings</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Textblocks.html">Textblocks</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Lists.html">Lists</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Format.html">Format</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Anchors.html">Anchors</a>
-					
-				</div></div>
-				</div><div class="menu-item active ">
-					<a href="Images.html">Images</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form.html">Form</a>
-					<div class="menu"><div class="menu-item ">
-					<a href="Form-Buttons.html">Buttons</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form-Inputs.html">Inputs</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Message.html">Message</a>
-					
-				</div><div class="menu-item ">
-					<a href="Colors.html">Colors</a>
-					
-				</div><div class="menu-item ">
-					<a href="Tags.html">Tags</a>
-					
-				</div><div class="menu-item ">
-					<a href="Aspect.html">Aspect</a>
-					
-				</div><div class="menu-item ">
-					<a href="Bars.html">Bars</a>
-					
-				</div><div class="menu-item ">
-					Cursor
-					
-				</div><div class="menu-item ">
-					Menu
-					
-				</div><div class="menu-item ">
-					Grid
-					
-				</div><div class="menu-item ">
-					Layout
-					<div class="menu"><div class="menu-item ">
-					<a href="Layout-Containers.html">Containers</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					Tooltip
-					
-				</div><div class="menu-item ">
-					Position
-					
-				</div><div class="menu-item ">
-					<a href="Progress.html">Progress</a>
-					
-				</div><div class="menu-item ">
-					Display
-					
-				</div><div class="menu-item ">
-					<a href="Pagination.html">Pagination</a>
-					
-				</div><div class="menu-item ">
-					Motion
-					<div class="menu"><div class="menu-item ">
-					<a href="Motion-Animations.html">Animations</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Breadcrumbs.html">Breadcrumbs</a>
-					
-				</div><div class="menu-item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="menu"><div class="menu-item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Panel.html">Panel</a>
-					
-				</div><div class="menu-item ">
-					Icons
-					
-				</div><div class="menu-item ">
-					Debug
-					
-				</div><div class="menu-item ">
-					Styles
-					<div class="menu"><div class="menu-item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
-					
-				</div></div>
+				</div>
 				</div><div class="menu-item ">
 					<a href="Tables.html">Tables</a>
-					
 				</div>
-			</div></div></div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item active ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Images</h2>
 			
@@ -144,12 +163,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>img</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-fEObVw4CzCn" id="tab-fEObVw4CzCn-render" checked />
-				<label class="panel-tab" for="tab-fEObVw4CzCn-render">Example Render</label>
+				<input type="radio" name="tab-KlkWfUDCoH1" id="tab-KlkWfUDCoH1-render" checked />
+				<label class="panel-tab" for="tab-KlkWfUDCoH1-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><img src="https://lorempixel.com/480/320/nature" alt="Image alt" /></div></div>
-				<input type="radio" name="tab-fEObVw4CzCn" id="tab-fEObVw4CzCn-code" />
-				<label class="panel-tab" for="tab-fEObVw4CzCn-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-fEObVw4CzCn"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; /&gt;</code></pre></div>
+				<input type="radio" name="tab-KlkWfUDCoH1" id="tab-KlkWfUDCoH1-code" />
+				<label class="panel-tab" for="tab-KlkWfUDCoH1-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-KlkWfUDCoH1"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; /&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -159,12 +178,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.img-max</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab--2KoFQUytET" id="tab--2KoFQUytET-render" checked />
-				<label class="panel-tab" for="tab--2KoFQUytET-render">Example Render</label>
+				<input type="radio" name="tab-O2cdakZziZm" id="tab-O2cdakZziZm-render" checked />
+				<label class="panel-tab" for="tab-O2cdakZziZm-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-max" /></div></div>
-				<input type="radio" name="tab--2KoFQUytET" id="tab--2KoFQUytET-code" />
-				<label class="panel-tab" for="tab--2KoFQUytET-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode--2KoFQUytET"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-max&quot; /&gt;</code></pre></div>
+				<input type="radio" name="tab-O2cdakZziZm" id="tab-O2cdakZziZm-code" />
+				<label class="panel-tab" for="tab-O2cdakZziZm-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-O2cdakZziZm"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-max&quot; /&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -174,12 +193,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.img-fit</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-lfNPPuXI-Z5" id="tab-lfNPPuXI-Z5-render" checked />
-				<label class="panel-tab" for="tab-lfNPPuXI-Z5-render">Example Render</label>
+				<input type="radio" name="tab-QLLfWlALqrU" id="tab-QLLfWlALqrU-render" checked />
+				<label class="panel-tab" for="tab-QLLfWlALqrU-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-fit" /></div></div>
-				<input type="radio" name="tab-lfNPPuXI-Z5" id="tab-lfNPPuXI-Z5-code" />
-				<label class="panel-tab" for="tab-lfNPPuXI-Z5-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-lfNPPuXI-Z5"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-fit&quot; /&gt;</code></pre></div>
+				<input type="radio" name="tab-QLLfWlALqrU" id="tab-QLLfWlALqrU-code" />
+				<label class="panel-tab" for="tab-QLLfWlALqrU-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-QLLfWlALqrU"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-fit&quot; /&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -189,13 +208,13 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.img-left</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-ykLkxa544zr" id="tab-ykLkxa544zr-render" checked />
-				<label class="panel-tab" for="tab-ykLkxa544zr-render">Example Render</label>
+				<input type="radio" name="tab-ctNahCZcAlR" id="tab-ctNahCZcAlR-render" checked />
+				<label class="panel-tab" for="tab-ctNahCZcAlR-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-left" />
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</div></div>
-				<input type="radio" name="tab-ykLkxa544zr" id="tab-ykLkxa544zr-code" />
-				<label class="panel-tab" for="tab-ykLkxa544zr-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-ykLkxa544zr"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-left&quot; /&gt;
+				<input type="radio" name="tab-ctNahCZcAlR" id="tab-ctNahCZcAlR-code" />
+				<label class="panel-tab" for="tab-ctNahCZcAlR-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ctNahCZcAlR"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-left&quot; /&gt;
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
@@ -206,13 +225,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi po
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.img-right</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-LRbZxIu2EC6" id="tab-LRbZxIu2EC6-render" checked />
-				<label class="panel-tab" for="tab-LRbZxIu2EC6-render">Example Render</label>
+				<input type="radio" name="tab-UHVnmIiuRk0" id="tab-UHVnmIiuRk0-render" checked />
+				<label class="panel-tab" for="tab-UHVnmIiuRk0-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-right" />
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</div></div>
-				<input type="radio" name="tab-LRbZxIu2EC6" id="tab-LRbZxIu2EC6-code" />
-				<label class="panel-tab" for="tab-LRbZxIu2EC6-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-LRbZxIu2EC6"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-right&quot; /&gt;
+				<input type="radio" name="tab-UHVnmIiuRk0" id="tab-UHVnmIiuRk0-code" />
+				<label class="panel-tab" for="tab-UHVnmIiuRk0-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-UHVnmIiuRk0"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-right&quot; /&gt;
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum.</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
@@ -223,12 +242,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi po
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.img-frame</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-cFKXhJ2fSqB" id="tab-cFKXhJ2fSqB-render" checked />
-				<label class="panel-tab" for="tab-cFKXhJ2fSqB-render">Example Render</label>
+				<input type="radio" name="tab-xSm4LgS6S9V" id="tab-xSm4LgS6S9V-render" checked />
+				<label class="panel-tab" for="tab-xSm4LgS6S9V-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><img src="https://lorempixel.com/480/320/nature" alt="Image alt" class="img-frame" /></div></div>
-				<input type="radio" name="tab-cFKXhJ2fSqB" id="tab-cFKXhJ2fSqB-code" />
-				<label class="panel-tab" for="tab-cFKXhJ2fSqB-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-cFKXhJ2fSqB"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-frame&quot; /&gt;</code></pre></div>
+				<input type="radio" name="tab-xSm4LgS6S9V" id="tab-xSm4LgS6S9V-code" />
+				<label class="panel-tab" for="tab-xSm4LgS6S9V-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-xSm4LgS6S9V"><pre><code data-lang="html" class="language-html">&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; class=&quot;img-frame&quot; /&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -238,15 +257,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi po
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>figure</code><br />
 <strong>selector</strong>: <code>figcaption</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-SrqUm5Kh54F" id="tab-SrqUm5Kh54F-render" checked />
-				<label class="panel-tab" for="tab-SrqUm5Kh54F-render">Example Render</label>
+				<input type="radio" name="tab-L3He7vBFXUc" id="tab-L3He7vBFXUc-render" checked />
+				<label class="panel-tab" for="tab-L3He7vBFXUc-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><figure>
 	<img src="https://lorempixel.com/480/320/nature" alt="Image alt" />
 	<figcaption>Image caption</figcaption>
 </figure></div></div>
-				<input type="radio" name="tab-SrqUm5Kh54F" id="tab-SrqUm5Kh54F-code" />
-				<label class="panel-tab" for="tab-SrqUm5Kh54F-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-SrqUm5Kh54F"><pre><code data-lang="html" class="language-html">&lt;figure&gt;
+				<input type="radio" name="tab-L3He7vBFXUc" id="tab-L3He7vBFXUc-code" />
+				<label class="panel-tab" for="tab-L3He7vBFXUc-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-L3He7vBFXUc"><pre><code data-lang="html" class="language-html">&lt;figure&gt;
 	&lt;img src=&quot;https://lorempixel.com/480/320/nature&quot; alt=&quot;Image alt&quot; /&gt;
 	&lt;figcaption&gt;Image caption&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre></div>
@@ -259,14 +278,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi po
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.avatar</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-8crdCxHeh5A" id="tab-8crdCxHeh5A-render" checked />
-				<label class="panel-tab" for="tab-8crdCxHeh5A-render">Example Render</label>
+				<input type="radio" name="tab-jpU4_nb7_GI" id="tab-jpU4_nb7_GI-render" checked />
+				<label class="panel-tab" for="tab-jpU4_nb7_GI-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><span class="avatar">
 	<img src="https://lorempixel.com/200/200/people" alt="Image alt" />
 </span></div></div>
-				<input type="radio" name="tab-8crdCxHeh5A" id="tab-8crdCxHeh5A-code" />
-				<label class="panel-tab" for="tab-8crdCxHeh5A-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-8crdCxHeh5A"><pre><code data-lang="html" class="language-html">&lt;span class=&quot;avatar&quot;&gt;
+				<input type="radio" name="tab-jpU4_nb7_GI" id="tab-jpU4_nb7_GI-code" />
+				<label class="panel-tab" for="tab-jpU4_nb7_GI-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-jpU4_nb7_GI"><pre><code data-lang="html" class="language-html">&lt;span class=&quot;avatar&quot;&gt;
 	&lt;img src=&quot;https://lorempixel.com/200/200/people&quot; alt=&quot;Image alt&quot; /&gt;
 &lt;/span&gt;</code></pre></div>
 			</div></div>
@@ -278,14 +297,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi po
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.avatar.rounded</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-NPnAdY6f12j" id="tab-NPnAdY6f12j-render" checked />
-				<label class="panel-tab" for="tab-NPnAdY6f12j-render">Example Render</label>
+				<input type="radio" name="tab-TXNCUwBvBvd" id="tab-TXNCUwBvBvd-render" checked />
+				<label class="panel-tab" for="tab-TXNCUwBvBvd-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><span class="avatar rounded">
 	<img src="https://lorempixel.com/300/200/people" alt="Image alt" />
 </span></div></div>
-				<input type="radio" name="tab-NPnAdY6f12j" id="tab-NPnAdY6f12j-code" />
-				<label class="panel-tab" for="tab-NPnAdY6f12j-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-NPnAdY6f12j"><pre><code data-lang="html" class="language-html">&lt;span class=&quot;avatar rounded&quot;&gt;
+				<input type="radio" name="tab-TXNCUwBvBvd" id="tab-TXNCUwBvBvd-code" />
+				<label class="panel-tab" for="tab-TXNCUwBvBvd-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-TXNCUwBvBvd"><pre><code data-lang="html" class="language-html">&lt;span class=&quot;avatar rounded&quot;&gt;
 	&lt;img src=&quot;https://lorempixel.com/300/200/people&quot; alt=&quot;Image alt&quot; /&gt;
 &lt;/span&gt;</code></pre></div>
 			</div></div>
@@ -294,9 +313,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi po
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.2.0<br/>
+			Generated with Iris Docs v 0.3.0<br/>
 			Styled with Iris CSS<br/>
-			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
 		</p>
 			</div>
 		</div>

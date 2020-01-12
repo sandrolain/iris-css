@@ -3,9 +3,12 @@
 	<head>
 		<title>Iris CSS Guide</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
@@ -14,123 +17,139 @@
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
 			<div class="flex flex-col@s">
-				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
 				<div class="menu-item ">
 					<a href="index.html">Iris CSS Guide</a>
 				</div>
 				<div class="menu-item ">
 					<a href="Style-guide.html">Style guide</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography.html">Typography</a>
-					<div class="menu"><div class="menu-item ">
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
 					<a href="Typography-Headings.html">Headings</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Textblocks.html">Textblocks</a>
-					
-				</div><div class="menu-item active ">
+				</div>
+				<div class="menu-item active ">
 					<a href="Typography-Lists.html">Lists</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Format.html">Format</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Anchors.html">Anchors</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Images.html">Images</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form.html">Form</a>
-					<div class="menu"><div class="menu-item ">
-					<a href="Form-Buttons.html">Buttons</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form-Inputs.html">Inputs</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Message.html">Message</a>
-					
-				</div><div class="menu-item ">
-					<a href="Colors.html">Colors</a>
-					
-				</div><div class="menu-item ">
-					<a href="Tags.html">Tags</a>
-					
-				</div><div class="menu-item ">
-					<a href="Aspect.html">Aspect</a>
-					
-				</div><div class="menu-item ">
-					<a href="Bars.html">Bars</a>
-					
-				</div><div class="menu-item ">
-					Cursor
-					
-				</div><div class="menu-item ">
-					Menu
-					
-				</div><div class="menu-item ">
-					Grid
-					
-				</div><div class="menu-item ">
-					Layout
-					<div class="menu"><div class="menu-item ">
-					<a href="Layout-Containers.html">Containers</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					Tooltip
-					
-				</div><div class="menu-item ">
-					Position
-					
-				</div><div class="menu-item ">
-					<a href="Progress.html">Progress</a>
-					
-				</div><div class="menu-item ">
-					Display
-					
-				</div><div class="menu-item ">
-					<a href="Pagination.html">Pagination</a>
-					
-				</div><div class="menu-item ">
-					Motion
-					<div class="menu"><div class="menu-item ">
-					<a href="Motion-Animations.html">Animations</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Breadcrumbs.html">Breadcrumbs</a>
-					
-				</div><div class="menu-item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="menu"><div class="menu-item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Panel.html">Panel</a>
-					
-				</div><div class="menu-item ">
-					Icons
-					
-				</div><div class="menu-item ">
-					Debug
-					
-				</div><div class="menu-item ">
-					Styles
-					<div class="menu"><div class="menu-item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
-					
-				</div></div>
+				</div>
 				</div><div class="menu-item ">
 					<a href="Tables.html">Tables</a>
-					
 				</div>
-			</div></div></div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Lists</h2>
 			<p class="ird-category__path crumbs">Path: <a href="Typography.html" class="">Typography</a> / <a href="Typography-Lists.html" class="active ">Lists</a></p>
@@ -145,8 +164,8 @@
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>ul</code><br />
 <strong>selector</strong>: <code>ul li</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-twHDqRTKGP" id="tab-twHDqRTKGP-render" checked />
-				<label class="panel-tab" for="tab-twHDqRTKGP-render">Example Render</label>
+				<input type="radio" name="tab-miDAZvDNpV" id="tab-miDAZvDNpV-render" checked />
+				<label class="panel-tab" for="tab-miDAZvDNpV-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><ul>
 	<li>One</li>
 	<li>Two</li>
@@ -162,9 +181,9 @@
 	<li>Four</li>
 	<li>Five</li>
 </ul></div></div>
-				<input type="radio" name="tab-twHDqRTKGP" id="tab-twHDqRTKGP-code" />
-				<label class="panel-tab" for="tab-twHDqRTKGP-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-twHDqRTKGP"><pre><code data-lang="html" class="language-html">&lt;ul&gt;
+				<input type="radio" name="tab-miDAZvDNpV" id="tab-miDAZvDNpV-code" />
+				<label class="panel-tab" for="tab-miDAZvDNpV-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-miDAZvDNpV"><pre><code data-lang="html" class="language-html">&lt;ul&gt;
 	&lt;li&gt;One&lt;/li&gt;
 	&lt;li&gt;Two&lt;/li&gt;
 	&lt;li&gt;Three
@@ -189,8 +208,8 @@
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>ol</code><br />
 <strong>selector</strong>: <code>ol li</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-f8FI_Ka_UQ" id="tab-f8FI_Ka_UQ-render" checked />
-				<label class="panel-tab" for="tab-f8FI_Ka_UQ-render">Example Render</label>
+				<input type="radio" name="tab-XxvjEPNKtf" id="tab-XxvjEPNKtf-render" checked />
+				<label class="panel-tab" for="tab-XxvjEPNKtf-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><ol>
 	<li>One</li>
 	<li>Two</li>
@@ -206,9 +225,9 @@
 	<li>Four</li>
 	<li>Five</li>
 </ol></div></div>
-				<input type="radio" name="tab-f8FI_Ka_UQ" id="tab-f8FI_Ka_UQ-code" />
-				<label class="panel-tab" for="tab-f8FI_Ka_UQ-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-f8FI_Ka_UQ"><pre><code data-lang="html" class="language-html">&lt;ol&gt;
+				<input type="radio" name="tab-XxvjEPNKtf" id="tab-XxvjEPNKtf-code" />
+				<label class="panel-tab" for="tab-XxvjEPNKtf-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-XxvjEPNKtf"><pre><code data-lang="html" class="language-html">&lt;ol&gt;
 	&lt;li&gt;One&lt;/li&gt;
 	&lt;li&gt;Two&lt;/li&gt;
 	&lt;li&gt;Three
@@ -234,8 +253,8 @@
 <strong>selector</strong>: <code>dl dt</code><br />
 <strong>selector</strong>: <code>dl dd</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-loAtlAjuIz" id="tab-loAtlAjuIz-render" checked />
-				<label class="panel-tab" for="tab-loAtlAjuIz-render">Example Render</label>
+				<input type="radio" name="tab-pwHQ_6ieVD" id="tab-pwHQ_6ieVD-render" checked />
+				<label class="panel-tab" for="tab-pwHQ_6ieVD-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><dl>
 	<dt>Fusce Amet</dt>
 	<dd>Aenean lacinia bibendum nulla sed consectetur.</dd>
@@ -244,9 +263,9 @@
 	<dt class="accent">Justo Fringilla</dt>
 	<dd>Donec id elit non mi porta gravida at eget metus.</dd>
 </dl></div></div>
-				<input type="radio" name="tab-loAtlAjuIz" id="tab-loAtlAjuIz-code" />
-				<label class="panel-tab" for="tab-loAtlAjuIz-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-loAtlAjuIz"><pre><code data-lang="html" class="language-html">&lt;dl&gt;
+				<input type="radio" name="tab-pwHQ_6ieVD" id="tab-pwHQ_6ieVD-code" />
+				<label class="panel-tab" for="tab-pwHQ_6ieVD-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-pwHQ_6ieVD"><pre><code data-lang="html" class="language-html">&lt;dl&gt;
 	&lt;dt&gt;Fusce Amet&lt;/dt&gt;
 	&lt;dd&gt;Aenean lacinia bibendum nulla sed consectetur.&lt;/dd&gt;
 	&lt;dt&gt;Cursus Venenatis&lt;/dt&gt;
@@ -263,8 +282,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.list-inline</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-P5uc9oN9J7" id="tab-P5uc9oN9J7-render" checked />
-				<label class="panel-tab" for="tab-P5uc9oN9J7-render">Example Render</label>
+				<input type="radio" name="tab-6t-SADdWOP" id="tab-6t-SADdWOP-render" checked />
+				<label class="panel-tab" for="tab-6t-SADdWOP-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><ul class="list-inline">
 	<li>One</li>
 	<li>Two</li>
@@ -272,9 +291,9 @@
 	<li>Four</li>
 	<li>Five</li>
 </ul></div></div>
-				<input type="radio" name="tab-P5uc9oN9J7" id="tab-P5uc9oN9J7-code" />
-				<label class="panel-tab" for="tab-P5uc9oN9J7-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-P5uc9oN9J7"><pre><code data-lang="html" class="language-html">&lt;ul class=&quot;list-inline&quot;&gt;
+				<input type="radio" name="tab-6t-SADdWOP" id="tab-6t-SADdWOP-code" />
+				<label class="panel-tab" for="tab-6t-SADdWOP-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-6t-SADdWOP"><pre><code data-lang="html" class="language-html">&lt;ul class=&quot;list-inline&quot;&gt;
 	&lt;li&gt;One&lt;/li&gt;
 	&lt;li&gt;Two&lt;/li&gt;
 	&lt;li&gt;Three&lt;/li&gt;
@@ -290,8 +309,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.list-nostyle</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-LQl5Shtj44" id="tab-LQl5Shtj44-render" checked />
-				<label class="panel-tab" for="tab-LQl5Shtj44-render">Example Render</label>
+				<input type="radio" name="tab-n9a8pmM9zR" id="tab-n9a8pmM9zR-render" checked />
+				<label class="panel-tab" for="tab-n9a8pmM9zR-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><ul class="list-nostyle">
 	<li>One</li>
 	<li>Two</li>
@@ -299,9 +318,9 @@
 	<li>Four</li>
 	<li>Five</li>
 </ul></div></div>
-				<input type="radio" name="tab-LQl5Shtj44" id="tab-LQl5Shtj44-code" />
-				<label class="panel-tab" for="tab-LQl5Shtj44-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-LQl5Shtj44"><pre><code data-lang="html" class="language-html">&lt;ul class=&quot;list-nostyle&quot;&gt;
+				<input type="radio" name="tab-n9a8pmM9zR" id="tab-n9a8pmM9zR-code" />
+				<label class="panel-tab" for="tab-n9a8pmM9zR-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-n9a8pmM9zR"><pre><code data-lang="html" class="language-html">&lt;ul class=&quot;list-nostyle&quot;&gt;
 	&lt;li&gt;One&lt;/li&gt;
 	&lt;li&gt;Two&lt;/li&gt;
 	&lt;li&gt;Three&lt;/li&gt;
@@ -314,9 +333,10 @@
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.2.0<br/>
+			Generated with Iris Docs v 0.3.0<br/>
 			Styled with Iris CSS<br/>
-			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
 		</p>
 			</div>
 		</div>

@@ -1,0 +1,59 @@
+
+/*--
+
+@title:		Debug Mode
+@category:	Debug
+
+**selector**: `.debug`
+
+```example:html
+<div class="debug">
+	<ul>
+		<p>invalid tag inside &lt;ul&gt; or &lt;ol&gt; tag</p>
+	</ul>
+	<br/>
+	<a href="">&lt;a&gt; tag with empty href attribute</a><br/><br/>
+	<a href="TODO">&lt;a&gt; tag with "TODO" href attribute</a>
+	<br/>
+	<form>
+		&lt;form&gt; tag without action attribute
+	</form>
+
+</div>
+```
+
+--*/
+
+/*--
+
+@title:		Outline Debug Class
+@category:	Debug
+
+**selector**: `.debug .\?`
+
+```example:html
+<div class="debug">
+	<div class="?">Block Elements with special "?" class</div>
+	<br/>
+	<span class="?">Inline Elements with special "?" class</span>
+</div>
+```
+
+--*/
+
+.debug {
+	// Debug rules
+	ol > :not(li),
+	ul > :not(li),
+	a[href="TODO"],
+	a[href=""],
+	form:not([action]) {
+		outline: 1px dashed red;
+	}
+
+	.\? {
+		outline: 1px dotted #FF00FF;
+	}
+}
+
+

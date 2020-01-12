@@ -1,0 +1,241 @@
+[
+  {
+    "title": "Iris CSS Guide",
+    "text": "",
+    "url": "index.html"
+  },
+  {
+    "title": "Style guide",
+    "category": "Style guide",
+    "text": "Style modifiers .inverse .accent .nostyle .nohover .vertical .rounded .wide .left .center .right .scroll .noscroll Status modifiers .active .visible .hidden Importance modifiers .info .success .warning .danger",
+    "url": "Style-guide.html"
+  },
+  {
+    "title": "Headings",
+    "category": "Typography / Headings",
+    "text": "selector: h1, .h1 selector: h2, .h2 selector: h3, .h3 selector: h4, .h4 selector: h5, .h5 selector: h6, .h6 selector: h1 small selector: h2 small selector: h3 small selector: h4 small selector: h5 small selector: h6 small",
+    "url": "Typography-Headings.html"
+  },
+  {
+    "title": "Textblocks",
+    "category": "Typography / Textblocks",
+    "text": "selector: p, .p selector: blockquote selector: blockquote p selector: blockquote cite selector: blockquote.blockquote-right selector: blockquote.blockquote-right p selector: blockquote.blockquote-right cite selector: blockquote.blockquote-center selector: blockquote.blockquote-center p selector: blockquote.blockquote-center cite selector: pre, .pre selector: pre code, .pre .code",
+    "url": "Typography-Textblocks.html"
+  },
+  {
+    "title": "Lists",
+    "category": "Typography / Lists",
+    "text": "selector: ul selector: ul li selector: ol selector: ol li selector: dl selector: dl dt selector: dl dd selector: .list-inline selector: .list-nostyle",
+    "url": "Typography-Lists.html"
+  },
+  {
+    "title": "Format",
+    "category": "Typography / Format",
+    "text": "selector: strong, b, .b selector: en, i, .i selector: u, .u selector: s, .s selector: abbr, .abbr selector: dfn, .dfn selector: cite, .cite selector: del, .del selector: code, .code",
+    "url": "Typography-Format.html"
+  },
+  {
+    "title": "Anchors",
+    "category": "Typography / Anchors",
+    "text": "selector: a",
+    "url": "Typography-Anchors.html"
+  },
+  {
+    "title": "Tables",
+    "category": "Tables",
+    "text": "selector: table selector: tr selector: th selector: td selector: .table-striped selector: .table-border selector: .table-small selector: .inverse",
+    "url": "Tables.html"
+  },
+  {
+    "title": "Form",
+    "category": "Form",
+    "text": "selector: form",
+    "url": "Form.html"
+  },
+  {
+    "title": "Images",
+    "category": "Images",
+    "text": "selector: img selector: .img-max selector: .img-fit selector: .img-left selector: .img-right selector: .img-frame selector: figure selector: figcaption selector: .avatar selector: .avatar.rounded",
+    "url": "Images.html"
+  },
+  {
+    "title": "Colors",
+    "category": "Colors",
+    "text": "selector: .fg-default selector: .fg-primary selector: .fg-secondary selector: .fg-accent selector: .fg-action selector: .fg-action-active selector: .fg-info selector: .fg-success selector: .fg-warning selector: .fg-critical selector: .fg-red selector: .fg-orange selector: .fg-yellow selector: .fg-green selector: .fg-teal selector: .fg-sky selector: .fg-blue selector: .fg-purple selector: .fg-pink selector: .fg-lgray selector: .fg-mgray selector: .fg-dgray selector: .bg-default selector: .bg-info selector: .bg-success selector: .bg-warning selector: .bg-critical selector: .bg-red selector: .bg-orange selector: .bg-yellow selector: .bg-green selector: .bg-teal selector: .bg-sky selector: .bg-blue selector: .bg-purple selector: .bg-pink selector: .bg-lgray selector: .bg-mgray selector: .bg-dgray selector: .rd-default selector: .rd-info selector: .rd-success selector: .rd-warning selector: .rd-critical selector: .rd-red selector: .rd-orange selector: .rd-yellow selector: .rd-green selector: .rd-teal selector: .rd-sky selector: .rd-blue selector: .rd-purple selector: .rd-pink selector: .rd-lgray selector: .rd-mgray selector: .rd-dgray",
+    "url": "Colors.html"
+  },
+  {
+    "title": "Tags",
+    "category": "Tags",
+    "text": "selector: .tag selector: .tag.rounded selector: .tag.outline selector: .tag.info selector: .tag.success selector: .tag.warning selector: .tag.critical selector: .tag.rounded",
+    "url": "Tags.html"
+  },
+  {
+    "title": "Aspect",
+    "category": "Aspect",
+    "text": "selector: .aspect-21x9 selector: .aspect-16x9 selector: .aspect-4x3 selector: .aspect-1x1",
+    "url": "Aspect.html"
+  },
+  {
+    "title": "Bars",
+    "category": "Bars",
+    "text": "selector: .bar selector: .bar-spacer",
+    "url": "Bars.html"
+  },
+  {
+    "title": "Menu",
+    "category": "Menu",
+    "text": "selector: .menu selector: .menu-item selector: .menu.vertical selector: .menu.inverse selector: .menu-item.active selector: .menu-sep selector: .menu-ham",
+    "url": "Menu.html"
+  },
+  {
+    "title": "Grid",
+    "category": "Grid",
+    "text": "",
+    "url": "Grid.html"
+  },
+  {
+    "title": "Tooltip",
+    "category": "Tooltip",
+    "text": "",
+    "url": "Tooltip.html"
+  },
+  {
+    "title": "Message",
+    "category": "Message",
+    "text": "selector: .msg selector: .msg-cnt selector: .msg.info selector: .msg.success selector: .msg.warning selector: .msg.critical selector: .msg.info ",
+    "url": "Message.html"
+  },
+  {
+    "title": "Progress",
+    "category": "Progress",
+    "text": "selector: .progress selector: .progress-bar selector: .progress.active",
+    "url": "Progress.html"
+  },
+  {
+    "title": "Cursor",
+    "category": "Cursor",
+    "text": "",
+    "url": "Cursor.html"
+  },
+  {
+    "title": "Pagination",
+    "category": "Pagination",
+    "text": "selector: .pagin selector: .pagin.center selector: .pagin.right selector: .pagin.wide selector: .pagin.rounded",
+    "url": "Pagination.html"
+  },
+  {
+    "title": "Typography",
+    "category": "Typography",
+    "text": "selector: .txt-press selector: .txt-backpress selector: .txt-glass",
+    "url": "Typography.html"
+  },
+  {
+    "title": "Breadcrumbs",
+    "category": "Breadcrumbs",
+    "text": "selector: .crumbs selector: .crumbs.center selector: .crumbs.right selector: .active",
+    "url": "Breadcrumbs.html"
+  },
+  {
+    "title": "Layout",
+    "category": "Layout",
+    "text": "",
+    "url": "Layout.html"
+  },
+  {
+    "title": "Panel",
+    "category": "Panel",
+    "text": "selector: .panel selector: .panel",
+    "url": "Panel.html"
+  },
+  {
+    "title": "Position",
+    "category": "Position",
+    "text": "",
+    "url": "Position.html"
+  },
+  {
+    "title": "Masonry",
+    "category": "Masonry",
+    "text": "selector: .masonry",
+    "url": "Masonry.html"
+  },
+  {
+    "title": "Display",
+    "category": "Display",
+    "text": "",
+    "url": "Display.html"
+  },
+  {
+    "title": "Opacity",
+    "category": "Opacity",
+    "text": "",
+    "url": "Opacity.html"
+  },
+  {
+    "title": "Animations",
+    "category": "Motion / Animations",
+    "text": "selector: .ir-ani-blink selector: .ir-ani-blinkdown",
+    "url": "Motion-Animations.html"
+  },
+  {
+    "title": "",
+    "category": "",
+    "text": "selector: .op-0 selector: .op-0-1 selector: .op-0-2 selector: .op-0-3 selector: .op-0-4 selector: .op-0-5 selector: .op-0-6 selector: .op-0-7 selector: .op-0-8 selector: .op-0-9 selector: .op-1",
+    "url": "Base-Display.html"
+  },
+  {
+    "title": "Loaders",
+    "category": "Animations / Loaders",
+    "text": "selector: .loader-1 selector: .loader-2 selector: .loader-3 selector: .loader-4 selector: .loader-5",
+    "url": "Animations-Loaders.html"
+  },
+  {
+    "title": "Inputs",
+    "category": "Form / Inputs",
+    "text": "selector: form selector: form selector: form",
+    "url": "Form-Inputs.html"
+  },
+  {
+    "title": "Animations",
+    "category": "Animations",
+    "text": "",
+    "url": "Animations.html"
+  },
+  {
+    "title": "Backgrounds",
+    "category": "Styles / Backgrounds",
+    "text": "selector: .bg-chess selector: .bg-noise selector: .bg-transparent",
+    "url": "Styles-Backgrounds.html"
+  },
+  {
+    "title": "Icons",
+    "category": "Icons",
+    "text": "selector: .material-icons Material Icons Documentation: Official guide Icons Index",
+    "url": "Icons.html"
+  },
+  {
+    "title": "Containers",
+    "category": "Layout / Containers",
+    "text": "selector: .cnt-folio selector: .cnt-border selector: .cnt-rounded selector: .cnt-shadow-1 selector: .cnt-shadow-2 selector: .cnt-shadow-3 selector: .cnt-shadow-4 selector: .cnt-shadow-5 selector: .cnt-shadow-inset-1 selector: .cnt-shadow-inset-2 selector: .cnt-shadow-inset-3 selector: .cnt-shadow-inset-4 selector: .cnt-shadow-inset-5 selector: .cnt-shadow-outline-1 selector: .cnt-shadow-outline-2 selector: .cnt-shadow-outline-3 selector: .cnt-shadow-outline-4 selector: .cnt-shadow-outline-5",
+    "url": "Layout-Containers.html"
+  },
+  {
+    "title": "Debug",
+    "category": "Debug",
+    "text": "selector: .debug selector: .debug .\\?",
+    "url": "Debug.html"
+  },
+  {
+    "title": "Modal",
+    "category": "Modal",
+    "text": "selector: .modal selector: .modal.scroll",
+    "url": "Modal.html"
+  },
+  {
+    "title": "Buttons",
+    "category": "Form / Buttons",
+    "text": "Button styles can be applied to any element. Typically you'll want to use either a ` or an element. selector: .btn selector: .btn.thin selector: .btn.big selector: .btn.wide selector: .btn.disabled selector: .btn.accent selector: .btn.success selector: .btn.warning selector: .btn.critical selector: .btn.rounded selector: .btn.outline selector: .btn.discrete selector: .btn-group selector: .btn-group.vertical selector: .btn-set`",
+    "url": "Form-Buttons.html"
+  }
+]

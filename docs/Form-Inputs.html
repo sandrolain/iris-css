@@ -3,9 +3,12 @@
 	<head>
 		<title>Iris CSS Guide</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
@@ -14,123 +17,139 @@
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
 			<div class="flex flex-col@s">
-				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
 				<div class="menu-item ">
 					<a href="index.html">Iris CSS Guide</a>
 				</div>
 				<div class="menu-item ">
 					<a href="Style-guide.html">Style guide</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography.html">Typography</a>
-					<div class="menu"><div class="menu-item ">
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
 					<a href="Typography-Headings.html">Headings</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Textblocks.html">Textblocks</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Lists.html">Lists</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Format.html">Format</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Anchors.html">Anchors</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Images.html">Images</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form.html">Form</a>
-					<div class="menu"><div class="menu-item ">
-					<a href="Form-Buttons.html">Buttons</a>
-					
-				</div><div class="menu-item active ">
-					<a href="Form-Inputs.html">Inputs</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Message.html">Message</a>
-					
-				</div><div class="menu-item ">
-					<a href="Colors.html">Colors</a>
-					
-				</div><div class="menu-item ">
-					<a href="Tags.html">Tags</a>
-					
-				</div><div class="menu-item ">
-					<a href="Aspect.html">Aspect</a>
-					
-				</div><div class="menu-item ">
-					<a href="Bars.html">Bars</a>
-					
-				</div><div class="menu-item ">
-					Cursor
-					
-				</div><div class="menu-item ">
-					Menu
-					
-				</div><div class="menu-item ">
-					Grid
-					
-				</div><div class="menu-item ">
-					Layout
-					<div class="menu"><div class="menu-item ">
-					<a href="Layout-Containers.html">Containers</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					Tooltip
-					
-				</div><div class="menu-item ">
-					Position
-					
-				</div><div class="menu-item ">
-					<a href="Progress.html">Progress</a>
-					
-				</div><div class="menu-item ">
-					Display
-					
-				</div><div class="menu-item ">
-					<a href="Pagination.html">Pagination</a>
-					
-				</div><div class="menu-item ">
-					Motion
-					<div class="menu"><div class="menu-item ">
-					<a href="Motion-Animations.html">Animations</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Breadcrumbs.html">Breadcrumbs</a>
-					
-				</div><div class="menu-item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="menu"><div class="menu-item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Panel.html">Panel</a>
-					
-				</div><div class="menu-item ">
-					Icons
-					
-				</div><div class="menu-item ">
-					Debug
-					
-				</div><div class="menu-item ">
-					Styles
-					<div class="menu"><div class="menu-item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
-					
-				</div></div>
+				</div>
 				</div><div class="menu-item ">
 					<a href="Tables.html">Tables</a>
-					
 				</div>
-			</div></div></div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item active ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Inputs</h2>
 			<p class="ird-category__path crumbs">Path: <a href="Form.html" class="">Form</a> / <a href="Form-Inputs.html" class="active ">Inputs</a></p>
@@ -144,8 +163,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>form</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-dlJQW7njhi9" id="tab-dlJQW7njhi9-render" checked />
-				<label class="panel-tab" for="tab-dlJQW7njhi9-render">Example Render</label>
+				<input type="radio" name="tab-PQcWVDR8TP7" id="tab-PQcWVDR8TP7-render" checked />
+				<label class="panel-tab" for="tab-PQcWVDR8TP7-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><form action="#">
 	<fieldset>
 		<legend>Fieldset Legend</legend>
@@ -183,17 +202,21 @@
 				<label for="fld07">Field Label</label>
 				<label><input id="fld07" type="checkbox" /> Checkbox Label</label>
 			</div>
-			<div class="field w-66">
+			<div class="field w-33">
 				<label for="fld08">Field Label</label>
 				<label><input name="fld08"  type="radio" /> Radio Label</label>
 				<label><input name="fld08" type="radio" /> Radio Label</label>
 			</div>
+			<div class="field w-33">
+				<label for="fld09">Field Label</label>
+				<textarea id="fld09" rows="3" placeholder="Textarea"></textarea>
+			</div>
 		</div>
 	</fieldset>
 </form></div></div>
-				<input type="radio" name="tab-dlJQW7njhi9" id="tab-dlJQW7njhi9-code" />
-				<label class="panel-tab" for="tab-dlJQW7njhi9-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-dlJQW7njhi9"><pre><code data-lang="html" class="language-html">&lt;form action=&quot;#&quot;&gt;
+				<input type="radio" name="tab-PQcWVDR8TP7" id="tab-PQcWVDR8TP7-code" />
+				<label class="panel-tab" for="tab-PQcWVDR8TP7-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-PQcWVDR8TP7"><pre><code data-lang="html" class="language-html">&lt;form action=&quot;#&quot;&gt;
 	&lt;fieldset&gt;
 		&lt;legend&gt;Fieldset Legend&lt;/legend&gt;
 		&lt;div class=&quot;fields&quot;&gt;
@@ -230,10 +253,220 @@
 				&lt;label for=&quot;fld07&quot;&gt;Field Label&lt;/label&gt;
 				&lt;label&gt;&lt;input id=&quot;fld07&quot; type=&quot;checkbox&quot; /&gt; Checkbox Label&lt;/label&gt;
 			&lt;/div&gt;
-			&lt;div class=&quot;field w-66&quot;&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
 				&lt;label for=&quot;fld08&quot;&gt;Field Label&lt;/label&gt;
 				&lt;label&gt;&lt;input name=&quot;fld08&quot;  type=&quot;radio&quot; /&gt; Radio Label&lt;/label&gt;
 				&lt;label&gt;&lt;input name=&quot;fld08&quot; type=&quot;radio&quot; /&gt; Radio Label&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld09&quot;&gt;Field Label&lt;/label&gt;
+				&lt;textarea id=&quot;fld09&quot; rows=&quot;3&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Disabled Inputs
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>form</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-bt_NVdBNCHA" id="tab-bt_NVdBNCHA-render" checked />
+				<label class="panel-tab" for="tab-bt_NVdBNCHA-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><form action="#">
+	<fieldset>
+		<legend>Fieldset Legend</legend>
+		<div class="fields">
+			<div class="field w-33">
+				<label for="fld01">Field Label</label>
+				<input id="fld01" type="text" size="100" placeholder="Text Input" disabled />
+			</div>
+			<div class="field w-33">
+				<label for="fld02">Field Label</label>
+				<input id="fld02" type="email" size="100" placeholder="Email Input" disabled />
+			</div>
+			<div class="field w-33">
+				<label for="fld03">Field Label</label>
+				<input id="fld03" type="url" size="100" placeholder="Url Input" disabled />
+			</div>
+			<div class="field w-33">
+				<label for="fld04">Field Label</label>
+				<input id="fld04" type="number" size="100" placeholder="Number Input" disabled />
+			</div>
+			<div class="field w-33">
+				<label for="fld05">Field Label</label>
+				<input id="fld05" type="datetime-local" size="100" placeholder="Datetime Input" disabled />
+			</div>
+			<div class="field w-33">
+				<label for="fld06">Field Label</label>
+				<select id="fld06" disabled>
+					<option value="0">Zero</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+			<div class="field w-33">
+				<label for="fld07">Field Label</label>
+				<label><input id="fld07" type="checkbox" disabled /> Checkbox Label</label>
+			</div>
+			<div class="field w-66">
+				<label for="fld08">Field Label</label>
+				<label><input name="fld08"  type="radio" disabled /> Radio Label</label>
+				<label><input name="fld08" type="radio" disabled /> Radio Label</label>
+			</div>
+		</div>
+	</fieldset>
+</form></div></div>
+				<input type="radio" name="tab-bt_NVdBNCHA" id="tab-bt_NVdBNCHA-code" />
+				<label class="panel-tab" for="tab-bt_NVdBNCHA-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-bt_NVdBNCHA"><pre><code data-lang="html" class="language-html">&lt;form action=&quot;#&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Fieldset Legend&lt;/legend&gt;
+		&lt;div class=&quot;fields&quot;&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld01&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld01&quot; type=&quot;text&quot; size=&quot;100&quot; placeholder=&quot;Text Input&quot; disabled /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld02&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld02&quot; type=&quot;email&quot; size=&quot;100&quot; placeholder=&quot;Email Input&quot; disabled /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld03&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld03&quot; type=&quot;url&quot; size=&quot;100&quot; placeholder=&quot;Url Input&quot; disabled /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld04&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld04&quot; type=&quot;number&quot; size=&quot;100&quot; placeholder=&quot;Number Input&quot; disabled /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld05&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld05&quot; type=&quot;datetime-local&quot; size=&quot;100&quot; placeholder=&quot;Datetime Input&quot; disabled /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld06&quot;&gt;Field Label&lt;/label&gt;
+				&lt;select id=&quot;fld06&quot; disabled&gt;
+					&lt;option value=&quot;0&quot;&gt;Zero&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+					&lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld07&quot;&gt;Field Label&lt;/label&gt;
+				&lt;label&gt;&lt;input id=&quot;fld07&quot; type=&quot;checkbox&quot; disabled /&gt; Checkbox Label&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-66&quot;&gt;
+				&lt;label for=&quot;fld08&quot;&gt;Field Label&lt;/label&gt;
+				&lt;label&gt;&lt;input name=&quot;fld08&quot;  type=&quot;radio&quot; disabled /&gt; Radio Label&lt;/label&gt;
+				&lt;label&gt;&lt;input name=&quot;fld08&quot; type=&quot;radio&quot; disabled /&gt; Radio Label&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Invalid Inputs
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>form</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-NL1cFO7ddsk" id="tab-NL1cFO7ddsk-render" checked />
+				<label class="panel-tab" for="tab-NL1cFO7ddsk-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><form action="#">
+	<fieldset>
+		<legend>Fieldset Legend</legend>
+		<div class="fields">
+			<div class="field w-33">
+				<label for="fld01">Field Label</label>
+				<input id="fld01" type="text" size="100" placeholder="Text Input"  />
+			</div>
+			<div class="field w-33">
+				<label for="fld02">Field Label</label>
+				<input id="fld02" type="email" size="100" placeholder="Email Input" value="Bad Email Address" />
+			</div>
+			<div class="field w-33">
+				<label for="fld03">Field Label</label>
+				<input id="fld03" type="url" size="100" placeholder="Url Input" />
+			</div>
+			<div class="field w-33">
+				<label for="fld04">Field Label</label>
+				<input id="fld04" type="number" size="100" placeholder="Number Input" max="100" value="999" />
+			</div>
+			<div class="field w-33">
+				<label for="fld05">Field Label</label>
+				<input id="fld05" type="datetime-local" size="100" placeholder="Datetime Input" />
+			</div>
+			<div class="field w-33">
+				<label for="fld06">Field Label</label>
+				<select id="fld06">
+					<option value="0">Zero</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+			<div class="field w-33">
+				<label for="fld07">Field Label (max 100)</label>
+				<label><input id="fld07" type="checkbox" required /> Checkbox Label</label>
+			</div>
+			<div class="field w-66">
+				<label for="fld08">Field Label</label>
+				<label><input name="fld08"  type="radio" required /> Radio Label</label>
+				<label><input name="fld08" type="radio" required /> Radio Label</label>
+			</div>
+		</div>
+	</fieldset>
+</form></div></div>
+				<input type="radio" name="tab-NL1cFO7ddsk" id="tab-NL1cFO7ddsk-code" />
+				<label class="panel-tab" for="tab-NL1cFO7ddsk-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-NL1cFO7ddsk"><pre><code data-lang="html" class="language-html">&lt;form action=&quot;#&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Fieldset Legend&lt;/legend&gt;
+		&lt;div class=&quot;fields&quot;&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld01&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld01&quot; type=&quot;text&quot; size=&quot;100&quot; placeholder=&quot;Text Input&quot;  /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld02&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld02&quot; type=&quot;email&quot; size=&quot;100&quot; placeholder=&quot;Email Input&quot; value=&quot;Bad Email Address&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld03&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld03&quot; type=&quot;url&quot; size=&quot;100&quot; placeholder=&quot;Url Input&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld04&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld04&quot; type=&quot;number&quot; size=&quot;100&quot; placeholder=&quot;Number Input&quot; max=&quot;100&quot; value=&quot;999&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld05&quot;&gt;Field Label&lt;/label&gt;
+				&lt;input id=&quot;fld05&quot; type=&quot;datetime-local&quot; size=&quot;100&quot; placeholder=&quot;Datetime Input&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld06&quot;&gt;Field Label&lt;/label&gt;
+				&lt;select id=&quot;fld06&quot;&gt;
+					&lt;option value=&quot;0&quot;&gt;Zero&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+					&lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-33&quot;&gt;
+				&lt;label for=&quot;fld07&quot;&gt;Field Label (max 100)&lt;/label&gt;
+				&lt;label&gt;&lt;input id=&quot;fld07&quot; type=&quot;checkbox&quot; required /&gt; Checkbox Label&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;field w-66&quot;&gt;
+				&lt;label for=&quot;fld08&quot;&gt;Field Label&lt;/label&gt;
+				&lt;label&gt;&lt;input name=&quot;fld08&quot;  type=&quot;radio&quot; required /&gt; Radio Label&lt;/label&gt;
+				&lt;label&gt;&lt;input name=&quot;fld08&quot; type=&quot;radio&quot; required /&gt; Radio Label&lt;/label&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
@@ -244,9 +477,10 @@
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.2.0<br/>
+			Generated with Iris Docs v 0.3.0<br/>
 			Styled with Iris CSS<br/>
-			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
 		</p>
 			</div>
 		</div>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Iris CSS Guide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
+		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
+		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+	</head>
+	<body>
+		<div class="ird-page w-80 w-95@m w-100@s mh-auto">
+			<div class="ird-page__head">
+				<h1 class="ird-page__title">Iris CSS Guide</h1>
+			</div>
+			<div class="flex flex-col@s">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
+				<div class="menu-item ">
+					<a href="index.html">Iris CSS Guide</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Style-guide.html">Style guide</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography.html">Typography</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Typography-Headings.html">Headings</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Textblocks.html">Textblocks</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Lists.html">Lists</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Format.html">Format</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Anchors.html">Anchors</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Tables.html">Tables</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item active ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
+			<h2>Modal</h2>
+			
+			
+			
+			<div class="ird-category__items"><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Modal
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.modal</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-Yavi86P3bRE" id="tab-Yavi86P3bRE-render" checked />
+				<label class="panel-tab" for="tab-Yavi86P3bRE-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn" id="modal1-open">Open Modal</a>
+<div class="modal" id="modal1">
+	<div class="modal-cnt">
+		<div class="panel w-max-50">
+			<div class="panel-head">
+				<h3>Modal Window title</h3>
+			</div>
+			<div class="panel-body">
+				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.</p>
+				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.</p>
+			</div>
+			<div class="panel-foot txt-right">
+				<div class="btn-set">
+					<a href="#" class="btn discrete" id="modal1-close">Dismiss</a>
+					<a href="#" class="btn critical">Destroy</a>
+					<a href="#" class="btn success">Confirm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	document.getElementById("modal1-open").addEventListener("click", function(event)
+	{
+		event.preventDefault();
+
+		document.getElementById("modal1").classList.add("visible");
+	});
+
+	document.getElementById("modal1-close").addEventListener("click", function(e)
+	{
+		event.preventDefault();
+
+		document.getElementById("modal1").classList.remove("visible");
+	});
+
+</script></div></div>
+				<input type="radio" name="tab-Yavi86P3bRE" id="tab-Yavi86P3bRE-code" />
+				<label class="panel-tab" for="tab-Yavi86P3bRE-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-Yavi86P3bRE"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn&quot; id=&quot;modal1-open&quot;&gt;Open Modal&lt;/a&gt;
+&lt;div class=&quot;modal&quot; id=&quot;modal1&quot;&gt;
+	&lt;div class=&quot;modal-cnt&quot;&gt;
+		&lt;div class=&quot;panel w-max-50&quot;&gt;
+			&lt;div class=&quot;panel-head&quot;&gt;
+				&lt;h3&gt;Modal Window title&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;panel-body&quot;&gt;
+				&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.&lt;/p&gt;
+				&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;panel-foot txt-right&quot;&gt;
+				&lt;div class=&quot;btn-set&quot;&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn discrete&quot; id=&quot;modal1-close&quot;&gt;Dismiss&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn critical&quot;&gt;Destroy&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn success&quot;&gt;Confirm&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+	document.getElementById(&quot;modal1-open&quot;).addEventListener(&quot;click&quot;, function(event)
+	{
+		event.preventDefault();
+
+		document.getElementById(&quot;modal1&quot;).classList.add(&quot;visible&quot;);
+	});
+
+	document.getElementById(&quot;modal1-close&quot;).addEventListener(&quot;click&quot;, function(e)
+	{
+		event.preventDefault();
+
+		document.getElementById(&quot;modal1&quot;).classList.remove(&quot;visible&quot;);
+	});
+
+&lt;/script&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Modal
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.modal.scroll</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-xLAD9ytf9El" id="tab-xLAD9ytf9El-render" checked />
+				<label class="panel-tab" for="tab-xLAD9ytf9El-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><a href="#" class="btn" id="modal2-open">Open Modal</a>
+<div class="modal scroll" id="modal2">
+	<div class="modal-cnt">
+		<div class="panel w-max-50">
+			<div class="panel-head">
+				<h3>Modal Window title</h3>
+			</div>
+			<div class="panel-body">
+				<img src="https://lorempixel.com/1024/768/nature" alt="Image alt" />
+				<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+				<p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+				<p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+				<p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			</div>
+			<div class="panel-foot txt-right">
+				<div class="btn-set">
+					<a href="#" class="btn discrete" id="modal2-close">Dismiss</a>
+					<a href="#" class="btn critical">Destroy</a>
+					<a href="#" class="btn success">Confirm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	document.getElementById("modal2-open").addEventListener("click", function(event)
+	{
+		event.preventDefault();
+
+		document.body.classList.add("noscroll");
+		document.getElementById("modal2").classList.add("visible");
+	});
+
+	document.getElementById("modal2-close").addEventListener("click", function(e)
+	{
+		event.preventDefault();
+
+		document.body.classList.remove("noscroll");
+		document.getElementById("modal2").classList.remove("visible");
+	});
+
+</script></div></div>
+				<input type="radio" name="tab-xLAD9ytf9El" id="tab-xLAD9ytf9El-code" />
+				<label class="panel-tab" for="tab-xLAD9ytf9El-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-xLAD9ytf9El"><pre><code data-lang="html" class="language-html">&lt;a href=&quot;#&quot; class=&quot;btn&quot; id=&quot;modal2-open&quot;&gt;Open Modal&lt;/a&gt;
+&lt;div class=&quot;modal scroll&quot; id=&quot;modal2&quot;&gt;
+	&lt;div class=&quot;modal-cnt&quot;&gt;
+		&lt;div class=&quot;panel w-max-50&quot;&gt;
+			&lt;div class=&quot;panel-head&quot;&gt;
+				&lt;h3&gt;Modal Window title&lt;/h3&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;panel-body&quot;&gt;
+				&lt;img src=&quot;https://lorempixel.com/1024/768/nature&quot; alt=&quot;Image alt&quot; /&gt;
+				&lt;p&gt;Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.&lt;/p&gt;
+				&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;
+				&lt;p&gt;Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+				&lt;p&gt;Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.&lt;/p&gt;
+				&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;
+				&lt;p&gt;Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+				&lt;p&gt;Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.&lt;/p&gt;
+				&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;
+				&lt;p&gt;Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;
+				&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;panel-foot txt-right&quot;&gt;
+				&lt;div class=&quot;btn-set&quot;&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn discrete&quot; id=&quot;modal2-close&quot;&gt;Dismiss&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn critical&quot;&gt;Destroy&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;btn success&quot;&gt;Confirm&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+	document.getElementById(&quot;modal2-open&quot;).addEventListener(&quot;click&quot;, function(event)
+	{
+		event.preventDefault();
+
+		document.body.classList.add(&quot;noscroll&quot;);
+		document.getElementById(&quot;modal2&quot;).classList.add(&quot;visible&quot;);
+	});
+
+	document.getElementById(&quot;modal2-close&quot;).addEventListener(&quot;click&quot;, function(e)
+	{
+		event.preventDefault();
+
+		document.body.classList.remove(&quot;noscroll&quot;);
+		document.getElementById(&quot;modal2&quot;).classList.remove(&quot;visible&quot;);
+	});
+
+&lt;/script&gt;</code></pre></div>
+			</div></div>
+		</div></div>
+		</div></div>
+			</div>
+			<div class="ird-page__foot">
+				<p class="ird-page__disclaimer">
+			Generated with Iris Docs v 0.3.0<br/>
+			Styled with Iris CSS<br/>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
+		</p>
+			</div>
+		</div>
+	</body>
+</html>
+		

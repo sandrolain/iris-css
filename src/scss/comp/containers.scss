@@ -1,0 +1,190 @@
+/*--
+
+@type:		category
+@title:		Containers
+@category:	Layout / Containers
+
+--*/
+
+
+/*--
+
+@title:		Folio Container
+@category:	Layout / Containers
+
+**selector**: `.cnt-folio`
+
+```example:html
+<div class="cnt-folio">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+
+@include responsive("cnt-folio") {
+	padding: var(--ir-cnt-padding);
+	background: var(--ir-folio-bg-color);
+	color: var(--ir-folio-fg-color);
+	box-shadow: var(--ir-shadow-1);
+}
+
+
+/*--
+
+@title:		Border Container
+@category:	Layout / Containers
+
+**selector**: `.cnt-border`
+
+```example:html
+<div class="cnt-border">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+
+@include responsive("cnt-border") {
+	padding: var(--ir-cnt-padding);
+	background: var(--ir-cnt-bg-color);
+	color: var(--ir-cnt-fg-color);
+	border: 1px solid var(--ir-cnt-border-color);
+}
+
+/*--
+
+@title:		Rounded Container Modifier
+@category:	Layout / Containers
+
+**selector**: `.cnt-rounded`
+
+```example:html
+<div class="cnt-folio cnt-rounded">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+```example:html
+<div class="cnt-border cnt-rounded">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+```
+
+--*/
+
+@include responsive("cnt-rounded") {
+	border-radius: var(--ir-cnt-border-radius);
+}
+
+
+/*--
+
+@title:		Container Shadow
+@category:	Layout / Containers
+
+**selector**: `.cnt-shadow-1`
+**selector**: `.cnt-shadow-2`
+**selector**: `.cnt-shadow-3`
+**selector**: `.cnt-shadow-4`
+**selector**: `.cnt-shadow-5`
+
+```example:html
+<div class="cnt-folio cnt-shadow-1 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-2 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-3 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-4 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-5 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+```
+
+--*/
+
+
+/*--
+
+@title:		Container Inset Shadow
+@category:	Layout / Containers
+
+**selector**: `.cnt-shadow-inset-1`
+**selector**: `.cnt-shadow-inset-2`
+**selector**: `.cnt-shadow-inset-3`
+**selector**: `.cnt-shadow-inset-4`
+**selector**: `.cnt-shadow-inset-5`
+
+```example:html
+<div class="cnt-folio cnt-shadow-inset-1 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-2 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-3 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-4 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-5 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+```
+
+--*/
+
+
+/*--
+
+@title:		Container Outline Shadow
+@category:	Layout / Containers
+
+**selector**: `.cnt-shadow-outline-1`
+**selector**: `.cnt-shadow-outline-2`
+**selector**: `.cnt-shadow-outline-3`
+**selector**: `.cnt-shadow-outline-4`
+**selector**: `.cnt-shadow-outline-5`
+
+```example:html
+<div class="cnt-folio cnt-shadow-outline-1 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-2 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-3 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-4 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-5 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+```
+
+--*/
+
+
+@include responsive("cnt-shadow-0") {
+	box-shadow: none !important;
+}
+
+@for $i from 1 through 10
+{
+	$offset: #{0.1em * $i};
+
+	:root {
+		--ir-shadow-#{$i}: 0 #{$offset} calc(#{$offset} * var(--ir-shadow-blur)) var(--ir-shadow-color);
+		--ir-shadow-inset-#{$i}: 0 #{$offset} calc(#{$offset} * var(--ir-shadow-blur)) var(--ir-shadow-color) inset;
+		--ir-shadow-outline-#{$i}: 0 0 calc(#{$offset} * var(--ir-shadow-blur) / 2) var(--ir-shadow-color);
+	}
+
+	@include responsive(cnt-shadow-#{$i})
+	{
+		box-shadow: var(--ir-shadow-#{$i});
+	}
+
+	@include responsive(cnt-shadow-inset-#{$i})
+	{
+		box-shadow: var(--ir-shadow-inset-#{$i});
+	}
+
+	@include responsive(cnt-shadow-outline-#{$i})
+	{
+		box-shadow: var(--ir-shadow-outline-#{$i});
+	}
+
+	@include responsive(txt-shadow-#{$i})
+	{
+		text-shadow: var(--ir-shadow-#{$i});
+	}
+}
+
+
+
+
+
+// @include responsive("cnt-shadow-2") {
+// 	box-shadow: var(--ir-shadow-2);
+// }
+
+// @include responsive("cnt-shadow-3") {
+// 	box-shadow: var(--ir-shadow-3);
+// }
+
+// @include responsive("cnt-shadow-4") {
+// 	box-shadow: var(--ir-shadow-4);
+// }

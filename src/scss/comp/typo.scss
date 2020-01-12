@@ -1,0 +1,102 @@
+
+
+
+/*--
+
+@title:		Press Text
+@category:	Typography
+
+**selector**: `.txt-press`
+
+```example:html
+<div class="cnt-folio bg-noise">
+<h3 class="txt-press">Consectetur Ipsum Mollis Venenatis Purus</h3>
+</div>
+```
+
+--*/
+
+.txt-press {
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 1), 0px -1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/*--
+
+@title:		Backpress Text
+@category:	Typography
+
+**selector**: `.txt-backpress`
+
+```example:html
+<div class="cnt-folio bg-noise">
+<h3 class="txt-backpress">Consectetur Ipsum Mollis Venenatis Purus</h3>
+</div>
+```
+
+--*/
+
+.txt-backpress {
+	text-shadow: 0px -1px 0px rgba(255, 255, 255, 1), 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/*--
+
+@title:		Glass Text
+@category:	Typography
+
+**selector**: `.txt-glass`
+
+```example:html
+<h3 class="txt-glass">Consectetur Ipsum Mollis Venenatis Purus</h3>
+```
+
+--*/
+
+.txt-glass {
+	opacity: 0.75;
+	text-shadow: 0px 0.1em 0.1em currentColor;
+}
+
+
+.txt-article {
+
+	p, ul, ol, iframe, blockquote, pre
+	{
+		margin: 1em 0em !important;
+
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	*[style] {
+		/*color: inherit @i;*/
+		font-size: inherit !important;
+		font-family: inherit !important;
+	}
+
+	iframe,
+	img {
+		max-width: 100%;
+		max-width: 100%;
+	}
+
+	img[align="left"],
+	img[style*="float:left"],
+	img[style*="float: left"] {
+		max-width: 50%;
+		margin: 0.618em 1.618em 0.618em 0 !important;
+	}
+
+	img[align="right"],
+	img[style*="float:right"],
+	img[style*="float: right"] {
+		max-width: 50%;
+		margin: 0.618em 0 0.618em 1.618em !important;
+	}
+}
+
+

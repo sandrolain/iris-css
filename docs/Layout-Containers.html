@@ -3,9 +3,12 @@
 	<head>
 		<title>Iris CSS Guide</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
@@ -14,123 +17,139 @@
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
 			<div class="flex flex-col@s">
-				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
 				<div class="menu-item ">
 					<a href="index.html">Iris CSS Guide</a>
 				</div>
 				<div class="menu-item ">
 					<a href="Style-guide.html">Style guide</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography.html">Typography</a>
-					<div class="menu"><div class="menu-item ">
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
 					<a href="Typography-Headings.html">Headings</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Textblocks.html">Textblocks</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Lists.html">Lists</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Format.html">Format</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Anchors.html">Anchors</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Images.html">Images</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form.html">Form</a>
-					<div class="menu"><div class="menu-item ">
-					<a href="Form-Buttons.html">Buttons</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form-Inputs.html">Inputs</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Message.html">Message</a>
-					
-				</div><div class="menu-item ">
-					<a href="Colors.html">Colors</a>
-					
-				</div><div class="menu-item ">
-					<a href="Tags.html">Tags</a>
-					
-				</div><div class="menu-item ">
-					<a href="Aspect.html">Aspect</a>
-					
-				</div><div class="menu-item ">
-					<a href="Bars.html">Bars</a>
-					
-				</div><div class="menu-item ">
-					Cursor
-					
-				</div><div class="menu-item ">
-					Menu
-					
-				</div><div class="menu-item ">
-					Grid
-					
-				</div><div class="menu-item ">
-					Layout
-					<div class="menu"><div class="menu-item active ">
-					<a href="Layout-Containers.html">Containers</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					Tooltip
-					
-				</div><div class="menu-item ">
-					Position
-					
-				</div><div class="menu-item ">
-					<a href="Progress.html">Progress</a>
-					
-				</div><div class="menu-item ">
-					Display
-					
-				</div><div class="menu-item ">
-					<a href="Pagination.html">Pagination</a>
-					
-				</div><div class="menu-item ">
-					Motion
-					<div class="menu"><div class="menu-item ">
-					<a href="Motion-Animations.html">Animations</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Breadcrumbs.html">Breadcrumbs</a>
-					
-				</div><div class="menu-item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="menu"><div class="menu-item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Panel.html">Panel</a>
-					
-				</div><div class="menu-item ">
-					Icons
-					
-				</div><div class="menu-item ">
-					Debug
-					
-				</div><div class="menu-item ">
-					Styles
-					<div class="menu"><div class="menu-item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
-					
-				</div></div>
+				</div>
 				</div><div class="menu-item ">
 					<a href="Tables.html">Tables</a>
-					
 				</div>
-			</div></div></div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item active ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Containers</h2>
 			<p class="ird-category__path crumbs">Path: <a href="Layout.html" class="">Layout</a> / <a href="Layout-Containers.html" class="active ">Containers</a></p>
@@ -144,12 +163,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.cnt-folio</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-F_8o74n5R7I" id="tab-F_8o74n5R7I-render" checked />
-				<label class="panel-tab" for="tab-F_8o74n5R7I-render">Example Render</label>
+				<input type="radio" name="tab-4YkC3e-Fgtn" id="tab-4YkC3e-Fgtn-render" checked />
+				<label class="panel-tab" for="tab-4YkC3e-Fgtn-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-folio">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div></div></div>
-				<input type="radio" name="tab-F_8o74n5R7I" id="tab-F_8o74n5R7I-code" />
-				<label class="panel-tab" for="tab-F_8o74n5R7I-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-F_8o74n5R7I"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
+				<input type="radio" name="tab-4YkC3e-Fgtn" id="tab-4YkC3e-Fgtn-code" />
+				<label class="panel-tab" for="tab-4YkC3e-Fgtn-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-4YkC3e-Fgtn"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -159,12 +178,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.cnt-border</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-o4Ab6-Wn5FZ" id="tab-o4Ab6-Wn5FZ-render" checked />
-				<label class="panel-tab" for="tab-o4Ab6-Wn5FZ-render">Example Render</label>
+				<input type="radio" name="tab-98xmwrTlZ1W" id="tab-98xmwrTlZ1W-render" checked />
+				<label class="panel-tab" for="tab-98xmwrTlZ1W-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-border">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div></div></div>
-				<input type="radio" name="tab-o4Ab6-Wn5FZ" id="tab-o4Ab6-Wn5FZ-code" />
-				<label class="panel-tab" for="tab-o4Ab6-Wn5FZ-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-o4Ab6-Wn5FZ"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-border&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
+				<input type="radio" name="tab-98xmwrTlZ1W" id="tab-98xmwrTlZ1W-code" />
+				<label class="panel-tab" for="tab-98xmwrTlZ1W-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-98xmwrTlZ1W"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-border&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -174,52 +193,110 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.cnt-rounded</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-ysn5LJUlkzr" id="tab-ysn5LJUlkzr-render" checked />
-				<label class="panel-tab" for="tab-ysn5LJUlkzr-render">Example Render</label>
+				<input type="radio" name="tab-nHaahFLbcy9" id="tab-nHaahFLbcy9-render" checked />
+				<label class="panel-tab" for="tab-nHaahFLbcy9-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-folio cnt-rounded">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div></div></div>
-				<input type="radio" name="tab-ysn5LJUlkzr" id="tab-ysn5LJUlkzr-code" />
-				<label class="panel-tab" for="tab-ysn5LJUlkzr-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-ysn5LJUlkzr"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio cnt-rounded&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
+				<input type="radio" name="tab-nHaahFLbcy9" id="tab-nHaahFLbcy9-code" />
+				<label class="panel-tab" for="tab-nHaahFLbcy9-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-nHaahFLbcy9"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio cnt-rounded&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
 			</div><div class="panel panel-tabs">
-				<input type="radio" name="tab-ILAntYs2g3L" id="tab-ILAntYs2g3L-render" checked />
-				<label class="panel-tab" for="tab-ILAntYs2g3L-render">Example Render</label>
+				<input type="radio" name="tab-b612xuT-wru" id="tab-b612xuT-wru-render" checked />
+				<label class="panel-tab" for="tab-b612xuT-wru-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-border cnt-rounded">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div></div></div>
-				<input type="radio" name="tab-ILAntYs2g3L" id="tab-ILAntYs2g3L-code" />
-				<label class="panel-tab" for="tab-ILAntYs2g3L-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-ILAntYs2g3L"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-border cnt-rounded&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
+				<input type="radio" name="tab-b612xuT-wru" id="tab-b612xuT-wru-code" />
+				<label class="panel-tab" for="tab-b612xuT-wru-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-b612xuT-wru"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-border cnt-rounded&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
-				<h3 class="ird-comment__title">Shadows Modifier
+				<h3 class="ird-comment__title">Container Shadow
 </h3>
 			</div>
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.cnt-shadow-1</code><br />
 <strong>selector</strong>: <code>.cnt-shadow-2</code><br />
 <strong>selector</strong>: <code>.cnt-shadow-3</code><br />
-<strong>selector</strong>: <code>.cnt-shadow-4</code></p>
+<strong>selector</strong>: <code>.cnt-shadow-4</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-5</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-prqd8GsKEhW" id="tab-prqd8GsKEhW-render" checked />
-				<label class="panel-tab" for="tab-prqd8GsKEhW-render">Example Render</label>
-				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-folio cnt-shadow-1 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
-<div class="cnt-folio cnt-shadow-2 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
-<div class="cnt-folio cnt-shadow-3 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
-<div class="cnt-folio cnt-shadow-4 mv-1">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div></div></div>
-				<input type="radio" name="tab-prqd8GsKEhW" id="tab-prqd8GsKEhW-code" />
-				<label class="panel-tab" for="tab-prqd8GsKEhW-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-prqd8GsKEhW"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio cnt-shadow-1 mv-1&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;
-&lt;div class=&quot;cnt-folio cnt-shadow-2 mv-1&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;
-&lt;div class=&quot;cnt-folio cnt-shadow-3 mv-1&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;
-&lt;div class=&quot;cnt-folio cnt-shadow-4 mv-1&quot;&gt;Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/div&gt;</code></pre></div>
+				<input type="radio" name="tab-y3xI8rT3wNI" id="tab-y3xI8rT3wNI-render" checked />
+				<label class="panel-tab" for="tab-y3xI8rT3wNI-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-folio cnt-shadow-1 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-2 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-3 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-4 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-5 mv-2">Etiam porta sem malesuada magna mollis euismod.</div></div></div>
+				<input type="radio" name="tab-y3xI8rT3wNI" id="tab-y3xI8rT3wNI-code" />
+				<label class="panel-tab" for="tab-y3xI8rT3wNI-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-y3xI8rT3wNI"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio cnt-shadow-1 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-2 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-3 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-4 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-5 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Container Inset Shadow
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.cnt-shadow-inset-1</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-inset-2</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-inset-3</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-inset-4</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-inset-5</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-5JTPeot1EKq" id="tab-5JTPeot1EKq-render" checked />
+				<label class="panel-tab" for="tab-5JTPeot1EKq-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-folio cnt-shadow-inset-1 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-2 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-3 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-4 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-inset-5 mv-2">Etiam porta sem malesuada magna mollis euismod.</div></div></div>
+				<input type="radio" name="tab-5JTPeot1EKq" id="tab-5JTPeot1EKq-code" />
+				<label class="panel-tab" for="tab-5JTPeot1EKq-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-5JTPeot1EKq"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio cnt-shadow-inset-1 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-inset-2 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-inset-3 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-inset-4 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-inset-5 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Container Outline Shadow
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.cnt-shadow-outline-1</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-outline-2</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-outline-3</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-outline-4</code><br />
+<strong>selector</strong>: <code>.cnt-shadow-outline-5</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-w4L04UULB5n" id="tab-w4L04UULB5n-render" checked />
+				<label class="panel-tab" for="tab-w4L04UULB5n-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="cnt-folio cnt-shadow-outline-1 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-2 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-3 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-4 mv-2">Etiam porta sem malesuada magna mollis euismod.</div>
+<div class="cnt-folio cnt-shadow-outline-5 mv-2">Etiam porta sem malesuada magna mollis euismod.</div></div></div>
+				<input type="radio" name="tab-w4L04UULB5n" id="tab-w4L04UULB5n-code" />
+				<label class="panel-tab" for="tab-w4L04UULB5n-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-w4L04UULB5n"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;cnt-folio cnt-shadow-outline-1 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-outline-2 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-outline-3 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-outline-4 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;
+&lt;div class=&quot;cnt-folio cnt-shadow-outline-5 mv-2&quot;&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/div&gt;</code></pre></div>
 			</div></div>
 		</div></div>
 		</div></div>
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.2.0<br/>
+			Generated with Iris Docs v 0.3.0<br/>
 			Styled with Iris CSS<br/>
-			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
 		</p>
 			</div>
 		</div>

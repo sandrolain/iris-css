@@ -1,0 +1,59 @@
+
+/*--
+
+@title:		Masonry
+@category:	Masonry
+
+**selector**: `.masonry`
+
+```example:html
+<div class="masonry" style="--height: 1000px">
+	<img src="https://lorempixel.com/200/200/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/100/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/300/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/250/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/300/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/100/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/200/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/250/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/200/nature" alt="Image alt" />
+	<img src="https://lorempixel.com/200/100/nature" alt="Image alt" />
+</div>
+```
+
+--*/
+
+
+// ref. https://tobiasahlin.com/blog/masonry-with-css/
+
+.masonry {
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+	height: var(--height);
+
+	& > * {
+		width: 32%;
+		margin-bottom: 2%;
+
+		&:nth-child(3n+1) {
+			order: 1;
+		}
+
+		&:nth-child(3n+2) {
+			order: 2;
+		}
+
+		&:nth-child(3n) {
+			order: 3;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		flex-basis: 100%;
+		width: 0;
+		order: 2;
+	}
+}

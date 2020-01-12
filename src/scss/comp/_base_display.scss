@@ -1,0 +1,139 @@
+// TODO: docs
+
+// displays
+@include responsive("block") {
+	display: block !important;
+}
+@include responsive("inline") {
+	display: inline !important;
+}
+@include responsive("hide") {
+	display: none !important;
+}
+@include responsive("inline-block") {
+	display: inline-block !important;
+}
+@include responsive("flex") {
+	display: flex !important;
+}
+@include responsive("flex-row") {
+	display: flex !important;
+	flex-direction: row;
+}
+@include responsive("flex-col") {
+	display: flex !important;
+	flex-direction: column;
+}
+@include responsive("flex-wrap") {
+	flex-wrap: wrap;
+}
+@include responsive("flex-flexible") {
+	width: auto;
+	flex: 1 1;
+}
+
+@include responsive("flex-start") {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+@include responsive("flex-center") {
+	justify-content: center;
+	align-items: center;
+}
+@include responsive("flex-end") {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+@for $i from 0 through 10 {
+
+	@include responsive(order-#{$i}) {
+		order: $i;
+	}
+}
+
+// Alignment
+@include responsive("va-top") {
+	vertical-align: top;
+}
+@include responsive("va-middle") {
+	vertical-align: middle;
+}
+@include responsive("va-bottom") {
+	vertical-align: bottom;
+}
+
+
+@include responsive("va-content-middle") {
+	display: flex !important;
+	align-items: center;
+}
+
+
+
+@include responsive("scroll") {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+@include responsive("noscroll") {
+	overflow: hidden;
+}
+
+
+
+
+/*--
+
+@title:		Opacity
+@category:	Base / Display
+@sequence:	2.1
+
+**selector**: `.op-0`
+**selector**: `.op-0-1`
+**selector**: `.op-0-2`
+**selector**: `.op-0-3`
+**selector**: `.op-0-4`
+**selector**: `.op-0-5`
+**selector**: `.op-0-6`
+**selector**: `.op-0-7`
+**selector**: `.op-0-8`
+**selector**: `.op-0-9`
+**selector**: `.op-1`
+
+```example:html
+<div class="op-0">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-1">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-2">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-3">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-4">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-5">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-6">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-7">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-8">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-0-9">Consectetur Ipsum Mollis Venenatis Purus</div>
+<div class="op-1">Consectetur Ipsum Mollis Venenatis Purus</div>
+
+```
+
+--*/
+
+$opacities: (
+	"0": 0,
+	"0-1": 0.1,
+	"0-2": 0.2,
+	"0-3": 0.3,
+	"0-4": 0.4,
+	"0-5": 0.5,
+	"0-6": 0.6,
+	"0-7": 0.7,
+	"0-8": 0.8,
+	"0-9": 0.9,
+	"1": 1,
+);
+
+// Font sizes
+@each $key, $i in $opacities {
+	.op-#{$key} {
+		opacity: $i;
+	}
+}

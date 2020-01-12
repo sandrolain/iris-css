@@ -1,0 +1,38 @@
+
+/*--
+
+@title:		Material Icons
+@category:	Icons
+
+**selector**: `.material-icons`
+
+Material Icons Documentation:
+- [Official guide](https://google.github.io/material-design-icons/#icon-font-for-the-web)
+- [Icons Index](https://material.io/tools/icons/?style=baseline)
+
+```example:html
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<i class="material-icons">face</i>
+<i class="material-icons fs-2">face</i>
+<i class="material-icons fs-3">face</i>
+<br/>
+<i class="material-icons">home</i>
+<i class="material-icons fs-2">home</i>
+<i class="material-icons fs-3">home</i>
+
+```
+
+--*/
+
+// Font-Awesome + Material Icons
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+.material-icons {
+	line-height: inherit;
+	width: 1em;
+	font-size: 1em;
+}

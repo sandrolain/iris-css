@@ -1,0 +1,292 @@
+/*--
+
+@title:		Loader 1
+@category:	Animations / Loaders
+
+**selector**: `.loader-1`
+
+```example:html
+<div class="loader-1"></div>
+<div class="loader-1 fg-primary fs-4"></div>
+```
+
+--*/
+
+
+.loader-1 {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-color: currentColor;
+	border-radius: 50%;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background-color: var(--ir-bg-color);
+	}
+
+	&::before {
+		width: 0.25em;
+		height: 0.25em;
+		border-radius: 50%;
+		margin: -0.125em 0 0 -0.125em;
+		animation: ir-loader-1-1 1000ms linear infinite;
+	}
+
+	&::after {
+		width: 0.5em;
+		height: 0.5em;
+		border-radius: 50%;
+		margin: -0.25em 0 0 -0.25em;
+		animation: ir-loader-1-2 1000ms linear infinite;
+	}
+}
+
+@keyframes ir-loader-1-1 {
+	0% {transform: rotate(0deg) translateY(-0.25em); opacity: 1; }
+	50% { opacity: 0; }
+	100% {transform: rotate(360deg) translateY(-0.25em); opacity: 1; }
+}
+@keyframes ir-loader-1-2 {
+	0% {transform: rotate(0deg) translateY(0.1875em); opacity: 0; }
+	50% { opacity: 1; }
+	100% {transform: rotate(360deg) translateY(0.1875em); opacity: 0; }
+}
+
+/*--
+
+@title:		Loader 2
+@category:	Animations / Loaders
+
+**selector**: `.loader-2`
+
+```example:html
+<div class="loader-2"></div>
+<div class="loader-2 fg-primary fs-4"></div>
+```
+
+--*/
+
+.loader-2 {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	position: relative;
+	perspective: 100px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: currentColor;
+		//border-radius: 50% 0 50% 0;
+		animation: ir-loader-2 2000ms linear infinite;
+	}
+}
+
+@keyframes ir-loader-2 {
+	0% {
+		transform: rotateY(0deg);
+	}
+	25% {
+		transform: rotateY(180deg);
+	}
+	50% {
+		transform: rotateY(180deg) rotateX(-180deg);
+	}
+	75% {
+		transform: rotateY(180deg) rotateX(-180deg) rotateY(-180deg);
+	}
+	100% {
+		transform: rotateY(180deg) rotateX(-180deg) rotateY(-180deg) rotateX(180deg);
+	}
+}
+
+/*--
+
+@title:		Loader 3
+@category:	Animations / Loaders
+
+**selector**: `.loader-3`
+
+```example:html
+<div class="loader-3"></div>
+<div class="loader-3 fg-primary fs-4"></div>
+```
+
+--*/
+
+.loader-3 {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0.5em;
+		height: 0.5em;
+		background-color: currentColor;
+	}
+	&::before {
+		animation: ir-loader-3-1 1000ms linear infinite;
+	}
+	&::after {
+		animation: ir-loader-3-2 1000ms linear infinite;
+	}
+}
+
+@keyframes ir-loader-3-1 {
+	0% {
+		transform: translate(0em, 0em);
+	}
+	25% {
+		transform: translate(0.5em, 0em);
+	}
+	50% {
+		transform: translate(0.5em, 0.5em);
+	}
+	75% {
+		transform: translate(0em, 0.5em);
+	}
+	100% {
+		transform: translate(0em, 0em);
+	}
+}
+
+@keyframes ir-loader-3-2 {
+	0% {
+		transform: translate(0.5em, 0.5em);
+	}
+	25% {
+		transform: translate(0em, 0.5em);
+	}
+	50% {
+		transform: translate(0em, 0em);
+	}
+	75% {
+		transform: translate(0.5em, 0em);
+	}
+	100% {
+		transform: translate(0.5em, 0.5em);
+	}
+}
+
+/*--
+
+@title:		Loader 4
+@category:	Animations / Loaders
+
+**selector**: `.loader-4`
+
+```example:html
+<div class="loader-4"></div>
+<div class="loader-4 fg-primary fs-4"></div>
+```
+
+--*/
+
+.loader-4 {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1em;
+		height: 1em;
+		opacity: 0.5;
+		border-radius: 0.5em;
+		background-color: currentColor;
+		animation: ir-loader-4 1000ms ease-in-out infinite alternate;
+	}
+	&::after {
+		animation-delay: -1000ms;
+	}
+}
+
+@keyframes ir-loader-4 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/*--
+
+@title:		Loader 5
+@category:	Animations / Loaders
+
+**selector**: `.loader-5`
+
+```example:html
+<div class="loader-5"></div>
+<div class="loader-5 fg-primary fs-4"></div>
+```
+
+--*/
+
+
+.loader-5 {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1em;
+		height: 1em;
+		border-width: 0.1em;
+		border-style: solid;
+		border-color: transparent;
+		border-radius: 50%;
+		animation: ir-loader-5 1000ms linear infinite;
+	}
+	&::before {
+		border-top-color: currentColor;
+	}
+	&::after {
+		width: 0.8em;
+		height: 0.8em;
+		left: 0.1em;
+		top: 0.1em;
+		border-bottom-color: currentColor;
+		animation: ir-loader-5 750ms linear infinite;
+		animation-delay: -250ms;
+		opacity: 0.5;
+	}
+}
+
+@keyframes ir-loader-5 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

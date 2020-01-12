@@ -2,17 +2,19 @@
 
 :root {
 
-	$primary-color: #11589F;
+	$primary-color: #14439F;
 	--ir-primary-color-ll: #{lighten($primary-color, 20%)};
 	--ir-primary-color-l: #{lighten($primary-color, 10%)};
 	--ir-primary-color-m: #{$primary-color};
 	--ir-primary-color-d: #{darken($primary-color, 10%)};
 	--ir-primary-color-dd: #{darken($primary-color, 20%)};
 
-	$accent-color: rgb(241, 193, 205);
+	$accent-color: #DB4E4B;
+	--ir-accent-color-ll: #{lighten($accent-color, 20%)};
 	--ir-accent-color-l: #{lighten($accent-color, 20%)};
-	--ir-accent-color-m: #{lighten($accent-color, 10%)};
-	--ir-accent-color-d: #{$accent-color};
+	--ir-accent-color-m: #{$accent-color};
+	--ir-accent-color-d: #{darken($accent-color, 10%)};
+	--ir-accent-color-dd: #{darken($accent-color, 20%)};
 
 	--ir-gray-color-lll: #F8F8F8;
 	--ir-gray-color-ll: #EEEEEE;
@@ -23,7 +25,10 @@
 	--ir-gray-color-ddd: #181818;
 
 	--ir-base-font-family: 'Roboto', sans-serif;
-	--ir-base-font-size: 14px;
+	// --ir-base-font-size: 14px;
+	// --ir-base-line-height: 1.4em;
+	--ir-base-font-size: calc(12px + 0.3vw);
+	--ir-base-line-height: calc(12px + 1vw);
 
 	--ir-bg-color: #FFFFFF;
 	--ir-bg-color-0: fade(#FFFFFF, 0%);
@@ -66,23 +71,23 @@
 	--ir-msg-color-m: #{darken($msg-color, 15%)};
 	--ir-msg-color-d: #{darken($msg-color, 25%)};
 
-	$success-color: #339900;
-	--ir-success-color-l: #{lighten($success-color, 60%)};
+	$success-color: #33AA33;
+	--ir-success-color-l: #{lighten($success-color, 51%)};
 	--ir-success-color-m: #{darken($success-color, 0%)};
 	--ir-success-color-d: #{darken($success-color, 5%)};
 
-	$info-color: #0033CC;
-	--ir-info-color-l: #{lighten($info-color, 55%)};
+	$info-color: #3366CC;
+	--ir-info-color-l: #{lighten($info-color, 45%)};
 	--ir-info-color-m: #{darken($info-color, 5%)};
 	--ir-info-color-d: #{darken($info-color, 10%)};
 
-	$warning-color: #FF9900;
-	--ir-warning-color-l: #{lighten($warning-color, 45%)};
+	$warning-color: #FFAA33;
+	--ir-warning-color-l: #{lighten($warning-color, 35%)};
 	--ir-warning-color-m: #{darken($warning-color, 10%)};
 	--ir-warning-color-d: #{darken($warning-color, 15%)};
 
-	$critical-color: #FF3300;
-	--ir-critical-color-l: #{lighten($critical-color, 45%)};
+	$critical-color: #FF5522;
+	--ir-critical-color-l: #{lighten($critical-color, 40%)};
 	--ir-critical-color-m: #{darken($critical-color, 10%)};
 	--ir-critical-color-d: #{darken($critical-color, 15%)};
 
@@ -141,12 +146,24 @@
 	--ir-tag-active-fg-color: var(--ir-bg-color);
 
 	--ir-light-border-color: var(--ir-gray-color-ll);
+
+	--ir-label-padding: 0.25em 0;
+	--ir-label-fg-color: var(--ir-gray-color-d);
+
+	--ir-input-padding: 0 1em;
+	--ir-input-textarea-padding: 0.6em 1em;
+	--ir-input-height: 2.4em;
 	--ir-input-border-color: var(--ir-gray-color-l);
 	--ir-input-bg-color-0: var(--ir-bg-color-0);
 	--ir-input-bg-color: var(--ir-bg-color);
 	--ir-input-fg-color: var(--ir-fg-color);
-	--ir-label-bg-color: var(--ir-gray-color-lll);
-	--ir-label-fg-color: var(--ir-gray-color-dd);
+	--ir-input-disabled-border-color: var(--ir-gray-color-l);
+	--ir-input-disabled-bg-color: var(--ir-gray-color-ll);
+	--ir-input-disabled-fg-color: var(--ir-gray-color-d);
+	--ir-input-invalid-border-color: var(--ir-critical-color-m);
+	--ir-input-invalid-bg-color: var(--ir-critical-color-l);
+	--ir-input-invalid-fg-color: var(--ir-critical-color-d);
+
 	--ir-placeholder-color: var(--ir-gray-color-m);
 
 	--ir-bar-bg-color: var(--ir-gray-color-lll);
@@ -155,10 +172,7 @@
 	--ir-bar-hover-fg-color: var(--ir-fg-color);
 
 	--ir-shadow-color: rgba(0, 0, 0, 0.3);
-	--ir-shadow-1: 0 0.1em 0.2em var(--ir-shadow-color);
-	--ir-shadow-2: 0 0.2em 0.6em var(--ir-shadow-color);
-	--ir-shadow-3: 0 0.4em 1.2em var(--ir-shadow-color);
-	--ir-shadow-4: 0 0.8em 2.4em var(--ir-shadow-color);
+	--ir-shadow-blur: 4;
 
 	// Image Frame
 	--ir-frame-color: var(--ir-gray-color-l);
@@ -184,6 +198,8 @@
 	--ir-cnt-border-radius: 0.5em;
 
 	--ir-chess-size: 10px;
+
+	--ir-modal-bg-color: rgba(0, 0, 0, 0.8);
 }
 
 // ACCENT

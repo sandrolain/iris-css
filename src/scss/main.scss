@@ -24,6 +24,8 @@
 `.left`
 `.center`
 `.right`
+`.scroll`
+`.noscroll`
 
 ### Status modifiers
 
@@ -309,45 +311,70 @@ Typically you'll want to use either a `<button>` or an `<a>` element.
 
 --*/
 
+/*--
+
+@type:		category
+@title:		Masonry
+@category:	Masonry
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Opacity
+@category:	Opacity
+
+--*/
+
+/*--
+
+@type:		category
+@title:		Debug
+@category:	Debug
+
+--*/
+
 
 @import "./themes/light.scss";
 
-@import "./comp/00.lib.scss";
+@import "./comp/_lib.scss";
+@import "./comp/_reset.scss";
 
-@import "./comp/01.reset.scss";
-@import "./comp/02.debug.scss";
-@import "./comp/03.icons.scss";
-@import "./comp/04.animations.scss";
-@import "./comp/05.display.scss";
-@import "./comp/06.position.scss";
-@import "./comp/07.layout.scss";
-@import "./comp/09.typo.scss";
-@import "./comp/10.cursor.scss";
+@import "./comp/_base_typo.scss";
+@import "./comp/_base_headings.scss";
+@import "./comp/_base_format.scss";
+@import "./comp/_base_anchors.scss";
+@import "./comp/_base_textblocks.scss";
+@import "./comp/_base_lists.scss";
+@import "./comp/_base_images.scss";
+@import "./comp/_base_tables.scss";
+@import "./comp/_base_layout.scss";
+@import "./comp/_base_display.scss";
+@import "./comp/_base_position.scss";
+@import "./comp/_base_form.scss";
+@import "./comp/_base_button.scss";
+@import "./comp/_base_cursor.scss";
+@import "./comp/_base_debug.scss";
 
+@import "./comp/aspect.scss";
+@import "./comp/colors.scss";
+@import "./comp/icons.scss";
+@import "./comp/backgrounds.scss";
+@import "./comp/animations.scss";
 
-@import "./comp/12.headings.scss";
-@import "./comp/13.textblocks.scss";
-@import "./comp/14.lists.scss";
-@import "./comp/15.textformat.scss";
-@import "./comp/16.anchors.scss";
-@import "./comp/17.images.scss";
-@import "./comp/18.tables.scss";
-
-@import "./comp/19.form.scss";
-@import "./comp/20.button.scss";
-
-@import "./comp/21.message.scss";
-@import "./comp/22.colors.scss";
-@import "./comp/23.tags.scss";
-@import "./comp/24.aspect.scss";
-@import "./comp/25.bars.scss";
-@import "./comp/26.menus.scss";
-@import "./comp/28.grids.scss";
-@import "./comp/29.tooltips.scss";
-@import "./comp/30.progress.scss";
-@import "./comp/31.pagination.scss";
-@import "./comp/32.breadcrumb.scss";
-@import "./comp/33.panels.scss";
-@import "./comp/35.loaders.scss";
-@import "./comp/36.containers.scss";
-@import "./comp/37.backgrounds.scss";
+@import "./comp/form-layout.scss";
+@import "./comp/message.scss";
+@import "./comp/tags.scss";
+@import "./comp/bars.scss";
+@import "./comp/menus.scss";
+@import "./comp/grids.scss";
+@import "./comp/tooltips.scss";
+@import "./comp/progress.scss";
+@import "./comp/pagination.scss";
+@import "./comp/breadcrumb.scss";
+@import "./comp/panels.scss";
+@import "./comp/loaders.scss";
+@import "./comp/masonry.scss";
+@import "./comp/containers.scss";
+@import "./comp/modal.scss";

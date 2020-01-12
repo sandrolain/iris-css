@@ -3,9 +3,12 @@
 	<head>
 		<title>Iris CSS Guide</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
@@ -14,123 +17,139 @@
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
 			<div class="flex flex-col@s">
-				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
 				<div class="menu-item ">
 					<a href="index.html">Iris CSS Guide</a>
 				</div>
 				<div class="menu-item ">
 					<a href="Style-guide.html">Style guide</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography.html">Typography</a>
-					<div class="menu"><div class="menu-item ">
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
 					<a href="Typography-Headings.html">Headings</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Textblocks.html">Textblocks</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Lists.html">Lists</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Format.html">Format</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Anchors.html">Anchors</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Images.html">Images</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form.html">Form</a>
-					<div class="menu"><div class="menu-item ">
-					<a href="Form-Buttons.html">Buttons</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form-Inputs.html">Inputs</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Message.html">Message</a>
-					
-				</div><div class="menu-item ">
-					<a href="Colors.html">Colors</a>
-					
-				</div><div class="menu-item ">
-					<a href="Tags.html">Tags</a>
-					
-				</div><div class="menu-item ">
-					<a href="Aspect.html">Aspect</a>
-					
-				</div><div class="menu-item ">
-					<a href="Bars.html">Bars</a>
-					
-				</div><div class="menu-item ">
-					Cursor
-					
-				</div><div class="menu-item ">
-					Menu
-					
-				</div><div class="menu-item ">
-					Grid
-					
-				</div><div class="menu-item ">
-					Layout
-					<div class="menu"><div class="menu-item ">
-					<a href="Layout-Containers.html">Containers</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					Tooltip
-					
-				</div><div class="menu-item ">
-					Position
-					
-				</div><div class="menu-item ">
-					<a href="Progress.html">Progress</a>
-					
-				</div><div class="menu-item ">
-					Display
-					
-				</div><div class="menu-item ">
-					<a href="Pagination.html">Pagination</a>
-					
-				</div><div class="menu-item ">
-					Motion
-					<div class="menu"><div class="menu-item ">
-					<a href="Motion-Animations.html">Animations</a>
-					
-				</div></div>
-				</div><div class="menu-item active ">
-					<a href="Breadcrumbs.html">Breadcrumbs</a>
-					
-				</div><div class="menu-item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="menu"><div class="menu-item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Panel.html">Panel</a>
-					
-				</div><div class="menu-item ">
-					Icons
-					
-				</div><div class="menu-item ">
-					Debug
-					
-				</div><div class="menu-item ">
-					Styles
-					<div class="menu"><div class="menu-item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
-					
-				</div></div>
+				</div>
 				</div><div class="menu-item ">
 					<a href="Tables.html">Tables</a>
-					
 				</div>
-			</div></div></div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item active ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Breadcrumbs</h2>
 			
@@ -144,8 +163,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.crumbs</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-YcpC04rGEAG" id="tab-YcpC04rGEAG-render" checked />
-				<label class="panel-tab" for="tab-YcpC04rGEAG-render">Example Render</label>
+				<input type="radio" name="tab-99CltWG1Jph" id="tab-99CltWG1Jph-render" checked />
+				<label class="panel-tab" for="tab-99CltWG1Jph-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="crumbs">
 	<a href="#">Main</a>
 	»
@@ -153,9 +172,9 @@
 	»
 	<a href="#">Sub Child</a>
 </div></div></div>
-				<input type="radio" name="tab-YcpC04rGEAG" id="tab-YcpC04rGEAG-code" />
-				<label class="panel-tab" for="tab-YcpC04rGEAG-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-YcpC04rGEAG"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs&quot;&gt;
+				<input type="radio" name="tab-99CltWG1Jph" id="tab-99CltWG1Jph-code" />
+				<label class="panel-tab" for="tab-99CltWG1Jph-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-99CltWG1Jph"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs&quot;&gt;
 	&lt;a href=&quot;#&quot;&gt;Main&lt;/a&gt;
 	»
 	&lt;span&gt;Child&lt;/span&gt;
@@ -171,8 +190,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.crumbs.center</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-SNn22Ywk6fs" id="tab-SNn22Ywk6fs-render" checked />
-				<label class="panel-tab" for="tab-SNn22Ywk6fs-render">Example Render</label>
+				<input type="radio" name="tab-BuCKqUQDagJ" id="tab-BuCKqUQDagJ-render" checked />
+				<label class="panel-tab" for="tab-BuCKqUQDagJ-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="crumbs center">
 	<a href="#">Main</a>
 	»
@@ -180,9 +199,9 @@
 	»
 	<a href="#">Sub Child</a>
 </div></div></div>
-				<input type="radio" name="tab-SNn22Ywk6fs" id="tab-SNn22Ywk6fs-code" />
-				<label class="panel-tab" for="tab-SNn22Ywk6fs-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-SNn22Ywk6fs"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs center&quot;&gt;
+				<input type="radio" name="tab-BuCKqUQDagJ" id="tab-BuCKqUQDagJ-code" />
+				<label class="panel-tab" for="tab-BuCKqUQDagJ-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-BuCKqUQDagJ"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs center&quot;&gt;
 	&lt;a href=&quot;#&quot;&gt;Main&lt;/a&gt;
 	»
 	&lt;span&gt;Child&lt;/span&gt;
@@ -198,8 +217,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.crumbs.right</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-1wkk4nZr2Bt" id="tab-1wkk4nZr2Bt-render" checked />
-				<label class="panel-tab" for="tab-1wkk4nZr2Bt-render">Example Render</label>
+				<input type="radio" name="tab-rL6YswSGrGZ" id="tab-rL6YswSGrGZ-render" checked />
+				<label class="panel-tab" for="tab-rL6YswSGrGZ-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="crumbs right">
 	<a href="#">Main</a>
 	»
@@ -207,9 +226,9 @@
 	»
 	<a href="#">Sub Child</a>
 </div></div></div>
-				<input type="radio" name="tab-1wkk4nZr2Bt" id="tab-1wkk4nZr2Bt-code" />
-				<label class="panel-tab" for="tab-1wkk4nZr2Bt-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-1wkk4nZr2Bt"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs right&quot;&gt;
+				<input type="radio" name="tab-rL6YswSGrGZ" id="tab-rL6YswSGrGZ-code" />
+				<label class="panel-tab" for="tab-rL6YswSGrGZ-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-rL6YswSGrGZ"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs right&quot;&gt;
 	&lt;a href=&quot;#&quot;&gt;Main&lt;/a&gt;
 	»
 	&lt;span&gt;Child&lt;/span&gt;
@@ -225,8 +244,8 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.active</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-2F00uXpeEuP" id="tab-2F00uXpeEuP-render" checked />
-				<label class="panel-tab" for="tab-2F00uXpeEuP-render">Example Render</label>
+				<input type="radio" name="tab-S195jBVxAWf" id="tab-S195jBVxAWf-render" checked />
+				<label class="panel-tab" for="tab-S195jBVxAWf-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><div class="crumbs">
 	<a href="#">Main</a>
 	»
@@ -234,9 +253,9 @@
 	»
 	<a href="#" class="active">Sub Child</a>
 </div></div></div>
-				<input type="radio" name="tab-2F00uXpeEuP" id="tab-2F00uXpeEuP-code" />
-				<label class="panel-tab" for="tab-2F00uXpeEuP-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-2F00uXpeEuP"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs&quot;&gt;
+				<input type="radio" name="tab-S195jBVxAWf" id="tab-S195jBVxAWf-code" />
+				<label class="panel-tab" for="tab-S195jBVxAWf-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-S195jBVxAWf"><pre><code data-lang="html" class="language-html">&lt;div class=&quot;crumbs&quot;&gt;
 	&lt;a href=&quot;#&quot;&gt;Main&lt;/a&gt;
 	»
 	&lt;span&gt;Child&lt;/span&gt;
@@ -249,9 +268,10 @@
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.2.0<br/>
+			Generated with Iris Docs v 0.3.0<br/>
 			Styled with Iris CSS<br/>
-			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
 		</p>
 			</div>
 		</div>

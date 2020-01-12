@@ -1,0 +1,94 @@
+// TODO: docs
+
+@for $i from 1 through 10 {
+	.fs-l-#{$i} {
+		font-size: 1em + (0.2 * $i) !important;
+	}
+	.fs-s-#{$i} {
+		font-size: 1em - (0.1 * $i) !important;
+	}
+}
+
+$sizes: (
+	"0": 0,
+	"0-25": 0.25,
+	"0-5": 0.5,
+	"0-75": 0.75,
+	"1": 1,
+	"1-25": 1.25,
+	"1-5": 1.5,
+	"1-75": 1.75,
+	"2": 2,
+	"2-5": 2.5,
+	"3": 3,
+	"3-5": 3.5,
+	"4": 4,
+	"4-5": 4.5,
+	"5": 5
+);
+
+// Font sizes
+@each $key, $i in $sizes {
+	.fs-#{$key} {
+		font-size: 1em * $i !important;
+	}
+	.lh-#{$key} {
+		line-height: 1em * $i !important;
+	}
+}
+
+.txt-reset {
+	font-family: inherit;
+	font-style: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	text-decoration: none;
+	border-style: none;
+	outline: none;
+}
+
+// Alignment
+.txt-left {
+	text-align: left;
+}
+.txt-center {
+	text-align: center;
+}
+.txt-right {
+	text-align: right;
+}
+.txt-justify {
+	text-align: justify;
+}
+.txt-upper {
+	text-transform: uppercase;
+}
+.txt-lower {
+	text-transform: lowercase;
+}
+.txt-cap {
+	text-transform: capitalize;
+}
+
+
+
+.txt-break {
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	word-wrap: break-word;      /* IE 5+ */
+}
+.txt-nowrap {
+	white-space: nowrap;
+}
+.txt-wrap {
+	white-space: normal;
+}
+.txt-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

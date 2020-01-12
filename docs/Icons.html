@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Iris CSS Guide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
+		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
+		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+	</head>
+	<body>
+		<div class="ird-page w-80 w-95@m w-100@s mh-auto">
+			<div class="ird-page__head">
+				<h1 class="ird-page__title">Iris CSS Guide</h1>
+			</div>
+			<div class="flex flex-col@s">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
+				<div class="menu-item ">
+					<a href="index.html">Iris CSS Guide</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Style-guide.html">Style guide</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography.html">Typography</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Typography-Headings.html">Headings</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Textblocks.html">Textblocks</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Lists.html">Lists</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Format.html">Format</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Typography-Anchors.html">Anchors</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Tables.html">Tables</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item active ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
+			<h2>Icons</h2>
+			
+			
+			
+			<div class="ird-category__items"><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Material Icons
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.material-icons</code></p>
+<p>Material Icons Documentation:</p>
+<ul>
+<li><a href="https://google.github.io/material-design-icons/#icon-font-for-the-web">Official guide</a></li>
+<li><a href="https://material.io/tools/icons/?style=baseline">Icons Index</a></li>
+</ul>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-2jeSmQNFKET" id="tab-2jeSmQNFKET-render" checked />
+				<label class="panel-tab" for="tab-2jeSmQNFKET-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<i class="material-icons">face</i>
+<i class="material-icons fs-2">face</i>
+<i class="material-icons fs-3">face</i>
+<br/>
+<i class="material-icons">home</i>
+<i class="material-icons fs-2">home</i>
+<i class="material-icons fs-3">home</i></div></div>
+				<input type="radio" name="tab-2jeSmQNFKET" id="tab-2jeSmQNFKET-code" />
+				<label class="panel-tab" for="tab-2jeSmQNFKET-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-2jeSmQNFKET"><pre><code data-lang="html" class="language-html">&lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;i class=&quot;material-icons&quot;&gt;face&lt;/i&gt;
+&lt;i class=&quot;material-icons fs-2&quot;&gt;face&lt;/i&gt;
+&lt;i class=&quot;material-icons fs-3&quot;&gt;face&lt;/i&gt;
+&lt;br/&gt;
+&lt;i class=&quot;material-icons&quot;&gt;home&lt;/i&gt;
+&lt;i class=&quot;material-icons fs-2&quot;&gt;home&lt;/i&gt;
+&lt;i class=&quot;material-icons fs-3&quot;&gt;home&lt;/i&gt;</code></pre></div>
+			</div></div>
+		</div></div>
+		</div></div>
+			</div>
+			<div class="ird-page__foot">
+				<p class="ird-page__disclaimer">
+			Generated with Iris Docs v 0.3.0<br/>
+			Styled with Iris CSS<br/>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
+		</p>
+			</div>
+		</div>
+	</body>
+</html>
+		

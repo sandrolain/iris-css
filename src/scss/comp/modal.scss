@@ -1,0 +1,145 @@
+/*--
+
+@type:		category
+@title:		Modal
+@category:	Modal
+
+--*/
+
+/*--
+
+@title:		Modal
+@category:	Modal
+
+**selector**: `.modal`
+
+```example:html
+<a href="#" class="btn" id="modal1-open">Open Modal</a>
+<div class="modal" id="modal1">
+	<div class="modal-cnt">
+		<div class="panel w-max-50">
+			<div class="panel-head">
+				<h3>Modal Window title</h3>
+			</div>
+			<div class="panel-body">
+				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.</p>
+				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.</p>
+			</div>
+			<div class="panel-foot txt-right">
+				<div class="btn-set">
+					<a href="#" class="btn discrete" id="modal1-close">Dismiss</a>
+					<a href="#" class="btn critical">Destroy</a>
+					<a href="#" class="btn success">Confirm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	document.getElementById("modal1-open").addEventListener("click", function(event)
+	{
+		event.preventDefault();
+
+		document.getElementById("modal1").classList.add("visible");
+	});
+
+	document.getElementById("modal1-close").addEventListener("click", function(e)
+	{
+		event.preventDefault();
+
+		document.getElementById("modal1").classList.remove("visible");
+	});
+
+</script>
+```
+
+--*/
+
+/*--
+
+@title:		Modal
+@category:	Modal
+
+**selector**: `.modal.scroll`
+
+```example:html
+<a href="#" class="btn" id="modal2-open">Open Modal</a>
+<div class="modal scroll" id="modal2">
+	<div class="modal-cnt">
+		<div class="panel w-max-50">
+			<div class="panel-head">
+				<h3>Modal Window title</h3>
+			</div>
+			<div class="panel-body">
+				<img src="https://lorempixel.com/1024/768/nature" alt="Image alt" />
+				<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+				<p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+				<p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				<p>Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+				<p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			</div>
+			<div class="panel-foot txt-right">
+				<div class="btn-set">
+					<a href="#" class="btn discrete" id="modal2-close">Dismiss</a>
+					<a href="#" class="btn critical">Destroy</a>
+					<a href="#" class="btn success">Confirm</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	document.getElementById("modal2-open").addEventListener("click", function(event)
+	{
+		event.preventDefault();
+
+		document.body.classList.add("noscroll");
+		document.getElementById("modal2").classList.add("visible");
+	});
+
+	document.getElementById("modal2-close").addEventListener("click", function(e)
+	{
+		event.preventDefault();
+
+		document.body.classList.remove("noscroll");
+		document.getElementById("modal2").classList.remove("visible");
+	});
+
+</script>
+```
+
+--*/
+
+.modal {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	background: var(--ir-modal-bg-color);
+
+	&.visible {
+		display: block;
+	}
+}
+	.modal-cnt {
+		min-width: 100%;
+		min-height: 100%;
+		display: flex;
+		box-sizing: border-box;
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}

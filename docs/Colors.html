@@ -3,9 +3,12 @@
 	<head>
 		<title>Iris CSS Guide</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.png" />
 		<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./prism.css" type="text/css" media="all" />
 		<script type="text/javascript" src="./prism.js"></script>
+		<script type="text/javascript" src="./elasticlunr.min.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 	</head>
 	<body>
@@ -14,123 +17,139 @@
 				<h1 class="ird-page__title">Iris CSS Guide</h1>
 			</div>
 			<div class="flex flex-col@s">
-				<div class="mr-1@l mr-1@m mr-0@s mb-1@s"><div class="ird-page__menu sticky-top cnt-folio inverse"><div class="menu menu-vertical bg-transparent">
+				<div class="mr-1@l mr-1@m mr-0@s mb-1@s">
+			<div class="ird-page__menu sticky-top cnt-folio p-0 inverse">
+				<div class="p-1">
+					<input type="search" placeholder="Search" id="menu-search" />
+				</div>
+				<div class="menu-tree vertical">
 				<div class="menu-item ">
 					<a href="index.html">Iris CSS Guide</a>
 				</div>
 				<div class="menu-item ">
 					<a href="Style-guide.html">Style guide</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography.html">Typography</a>
-					<div class="menu"><div class="menu-item ">
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
 					<a href="Typography-Headings.html">Headings</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Textblocks.html">Textblocks</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Lists.html">Lists</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Format.html">Format</a>
-					
-				</div><div class="menu-item ">
+				</div>
+				<div class="menu-item ">
 					<a href="Typography-Anchors.html">Anchors</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Images.html">Images</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form.html">Form</a>
-					<div class="menu"><div class="menu-item ">
-					<a href="Form-Buttons.html">Buttons</a>
-					
-				</div><div class="menu-item ">
-					<a href="Form-Inputs.html">Inputs</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Message.html">Message</a>
-					
-				</div><div class="menu-item active ">
-					<a href="Colors.html">Colors</a>
-					
-				</div><div class="menu-item ">
-					<a href="Tags.html">Tags</a>
-					
-				</div><div class="menu-item ">
-					<a href="Aspect.html">Aspect</a>
-					
-				</div><div class="menu-item ">
-					<a href="Bars.html">Bars</a>
-					
-				</div><div class="menu-item ">
-					Cursor
-					
-				</div><div class="menu-item ">
-					Menu
-					
-				</div><div class="menu-item ">
-					Grid
-					
-				</div><div class="menu-item ">
-					Layout
-					<div class="menu"><div class="menu-item ">
-					<a href="Layout-Containers.html">Containers</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					Tooltip
-					
-				</div><div class="menu-item ">
-					Position
-					
-				</div><div class="menu-item ">
-					<a href="Progress.html">Progress</a>
-					
-				</div><div class="menu-item ">
-					Display
-					
-				</div><div class="menu-item ">
-					<a href="Pagination.html">Pagination</a>
-					
-				</div><div class="menu-item ">
-					Motion
-					<div class="menu"><div class="menu-item ">
-					<a href="Motion-Animations.html">Animations</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Breadcrumbs.html">Breadcrumbs</a>
-					
-				</div><div class="menu-item ">
-					<i class="fas fa-spinner"></i> Animations
-					<div class="menu"><div class="menu-item ">
-					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
-					
-				</div></div>
-				</div><div class="menu-item ">
-					<a href="Panel.html">Panel</a>
-					
-				</div><div class="menu-item ">
-					Icons
-					
-				</div><div class="menu-item ">
-					Debug
-					
-				</div><div class="menu-item ">
-					Styles
-					<div class="menu"><div class="menu-item ">
-					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
-					
-				</div></div>
+				</div>
 				</div><div class="menu-item ">
 					<a href="Tables.html">Tables</a>
-					
 				</div>
-			</div></div></div>
+				<div class="menu-item ">
+					<a href="Form.html">Form</a>
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Form-Inputs.html">Inputs</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Form-Buttons.html">Buttons</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Images.html">Images</a>
+				</div>
+				<div class="menu-item active ">
+					<a href="Colors.html">Colors</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Tags.html">Tags</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Aspect.html">Aspect</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Bars.html">Bars</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Menu.html">Menu</a>
+				</div>
+				<div class="menu-item ">
+					Grid
+				</div>
+				<div class="menu-item ">
+					Tooltip
+				</div>
+				<div class="menu-item ">
+					<a href="Message.html">Message</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Progress.html">Progress</a>
+				</div>
+				<div class="menu-item ">
+					Cursor
+				</div>
+				<div class="menu-item ">
+					<a href="Pagination.html">Pagination</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Breadcrumbs.html">Breadcrumbs</a>
+				</div>
+				<div class="menu-item ">
+					Layout
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Layout-Containers.html">Containers</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Panel.html">Panel</a>
+				</div>
+				<div class="menu-item ">
+					Position
+				</div>
+				<div class="menu-item ">
+					<a href="Masonry.html">Masonry</a>
+				</div>
+				<div class="menu-item ">
+					Display
+				</div>
+				<div class="menu-item ">
+					Opacity
+				</div>
+				<div class="menu-item ">
+					Motion
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Motion-Animations.html">Animations</a>
+				</div>
+				</div><div class="menu-item ">
+					<i class="fas fa-spinner"></i> Animations
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Animations-Loaders.html"><i class="fas fa-spinner"></i> Loaders</a>
+				</div>
+				</div><div class="menu-item ">
+					Styles
+				</div>
+				<div class="menu-tree" style="--ir-menu-depth: 1;"><div class="menu-item ">
+					<a href="Styles-Backgrounds.html"><i class="fas fa-fill-drip"></i> Backgrounds</a>
+				</div>
+				</div><div class="menu-item ">
+					<a href="Icons.html">Icons</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Debug.html">Debug</a>
+				</div>
+				<div class="menu-item ">
+					<a href="Modal.html">Modal</a>
+				</div>
+				
+			</div>
+			</div>
+		</div>
 				<div class="ird-page__body cnt-folio flex-flexible"><div class="ird-category">
 			<h2>Colors</h2>
 			
@@ -138,18 +157,33 @@
 			
 			<div class="ird-category__items"><div class="ird-comment">
 			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Default Color
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-default</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-nSYJpg7a4GZ" id="tab-nSYJpg7a4GZ-render" checked />
+				<label class="panel-tab" for="tab-nSYJpg7a4GZ-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-default p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-nSYJpg7a4GZ" id="tab-nSYJpg7a4GZ-code" />
+				<label class="panel-tab" for="tab-nSYJpg7a4GZ-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-nSYJpg7a4GZ"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-default p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
 				<h3 class="ird-comment__title">Primary Color Foreground
 </h3>
 			</div>
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-primary</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-gX1mZ4xyJaz" id="tab-gX1mZ4xyJaz-render" checked />
-				<label class="panel-tab" for="tab-gX1mZ4xyJaz-render">Example Render</label>
+				<input type="radio" name="tab-od6g9gGvGpV" id="tab-od6g9gGvGpV-render" checked />
+				<label class="panel-tab" for="tab-od6g9gGvGpV-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-primary p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-gX1mZ4xyJaz" id="tab-gX1mZ4xyJaz-code" />
-				<label class="panel-tab" for="tab-gX1mZ4xyJaz-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-gX1mZ4xyJaz"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-primary p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-od6g9gGvGpV" id="tab-od6g9gGvGpV-code" />
+				<label class="panel-tab" for="tab-od6g9gGvGpV-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-od6g9gGvGpV"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-primary p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -159,12 +193,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-secondary</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-9kTqX92qs2b" id="tab-9kTqX92qs2b-render" checked />
-				<label class="panel-tab" for="tab-9kTqX92qs2b-render">Example Render</label>
+				<input type="radio" name="tab-IplPMgmIOZT" id="tab-IplPMgmIOZT-render" checked />
+				<label class="panel-tab" for="tab-IplPMgmIOZT-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-secondary p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-9kTqX92qs2b" id="tab-9kTqX92qs2b-code" />
-				<label class="panel-tab" for="tab-9kTqX92qs2b-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-9kTqX92qs2b"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-secondary p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-IplPMgmIOZT" id="tab-IplPMgmIOZT-code" />
+				<label class="panel-tab" for="tab-IplPMgmIOZT-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-IplPMgmIOZT"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-secondary p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -174,12 +208,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-accent</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-E04H6MFvglf" id="tab-E04H6MFvglf-render" checked />
-				<label class="panel-tab" for="tab-E04H6MFvglf-render">Example Render</label>
+				<input type="radio" name="tab-IEMQT7ecIpm" id="tab-IEMQT7ecIpm-render" checked />
+				<label class="panel-tab" for="tab-IEMQT7ecIpm-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-accent p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-E04H6MFvglf" id="tab-E04H6MFvglf-code" />
-				<label class="panel-tab" for="tab-E04H6MFvglf-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-E04H6MFvglf"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-accent p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-IEMQT7ecIpm" id="tab-IEMQT7ecIpm-code" />
+				<label class="panel-tab" for="tab-IEMQT7ecIpm-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-IEMQT7ecIpm"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-accent p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -189,12 +223,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-action</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-uuOFRRa1kyz" id="tab-uuOFRRa1kyz-render" checked />
-				<label class="panel-tab" for="tab-uuOFRRa1kyz-render">Example Render</label>
+				<input type="radio" name="tab-ngxukoBzclO" id="tab-ngxukoBzclO-render" checked />
+				<label class="panel-tab" for="tab-ngxukoBzclO-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-action p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-uuOFRRa1kyz" id="tab-uuOFRRa1kyz-code" />
-				<label class="panel-tab" for="tab-uuOFRRa1kyz-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-uuOFRRa1kyz"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-action p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-ngxukoBzclO" id="tab-ngxukoBzclO-code" />
+				<label class="panel-tab" for="tab-ngxukoBzclO-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ngxukoBzclO"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-action p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -204,12 +238,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-action-active</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-C9OPPBYyGCu" id="tab-C9OPPBYyGCu-render" checked />
-				<label class="panel-tab" for="tab-C9OPPBYyGCu-render">Example Render</label>
+				<input type="radio" name="tab-F9opljgdwvx" id="tab-F9opljgdwvx-render" checked />
+				<label class="panel-tab" for="tab-F9opljgdwvx-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-action-active p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-C9OPPBYyGCu" id="tab-C9OPPBYyGCu-code" />
-				<label class="panel-tab" for="tab-C9OPPBYyGCu-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-C9OPPBYyGCu"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-action-active p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-F9opljgdwvx" id="tab-F9opljgdwvx-code" />
+				<label class="panel-tab" for="tab-F9opljgdwvx-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-F9opljgdwvx"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-action-active p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -219,12 +253,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-info</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-WKbQWFQRPzw" id="tab-WKbQWFQRPzw-render" checked />
-				<label class="panel-tab" for="tab-WKbQWFQRPzw-render">Example Render</label>
+				<input type="radio" name="tab-K-qhucpkOHi" id="tab-K-qhucpkOHi-render" checked />
+				<label class="panel-tab" for="tab-K-qhucpkOHi-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-info p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-WKbQWFQRPzw" id="tab-WKbQWFQRPzw-code" />
-				<label class="panel-tab" for="tab-WKbQWFQRPzw-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-WKbQWFQRPzw"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-info p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-K-qhucpkOHi" id="tab-K-qhucpkOHi-code" />
+				<label class="panel-tab" for="tab-K-qhucpkOHi-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-K-qhucpkOHi"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-info p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -234,12 +268,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-success</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-lJB1hchiyRe" id="tab-lJB1hchiyRe-render" checked />
-				<label class="panel-tab" for="tab-lJB1hchiyRe-render">Example Render</label>
+				<input type="radio" name="tab-abgcAcT5pkb" id="tab-abgcAcT5pkb-render" checked />
+				<label class="panel-tab" for="tab-abgcAcT5pkb-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-success p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-lJB1hchiyRe" id="tab-lJB1hchiyRe-code" />
-				<label class="panel-tab" for="tab-lJB1hchiyRe-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-lJB1hchiyRe"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-success p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-abgcAcT5pkb" id="tab-abgcAcT5pkb-code" />
+				<label class="panel-tab" for="tab-abgcAcT5pkb-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-abgcAcT5pkb"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-success p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -249,12 +283,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-warning</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-_8RWQRMNkDB" id="tab-_8RWQRMNkDB-render" checked />
-				<label class="panel-tab" for="tab-_8RWQRMNkDB-render">Example Render</label>
+				<input type="radio" name="tab-YDRYkNdzfP2" id="tab-YDRYkNdzfP2-render" checked />
+				<label class="panel-tab" for="tab-YDRYkNdzfP2-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-warning p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-_8RWQRMNkDB" id="tab-_8RWQRMNkDB-code" />
-				<label class="panel-tab" for="tab-_8RWQRMNkDB-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-_8RWQRMNkDB"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-warning p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-YDRYkNdzfP2" id="tab-YDRYkNdzfP2-code" />
+				<label class="panel-tab" for="tab-YDRYkNdzfP2-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-YDRYkNdzfP2"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-warning p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -264,12 +298,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-critical</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-Wp0iagsnXZx" id="tab-Wp0iagsnXZx-render" checked />
-				<label class="panel-tab" for="tab-Wp0iagsnXZx-render">Example Render</label>
+				<input type="radio" name="tab-L8O12wmy_5k" id="tab-L8O12wmy_5k-render" checked />
+				<label class="panel-tab" for="tab-L8O12wmy_5k-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-critical p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-Wp0iagsnXZx" id="tab-Wp0iagsnXZx-code" />
-				<label class="panel-tab" for="tab-Wp0iagsnXZx-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-Wp0iagsnXZx"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-critical p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-L8O12wmy_5k" id="tab-L8O12wmy_5k-code" />
+				<label class="panel-tab" for="tab-L8O12wmy_5k-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-L8O12wmy_5k"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-critical p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -279,12 +313,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-red</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-0ft8CLmqiPp" id="tab-0ft8CLmqiPp-render" checked />
-				<label class="panel-tab" for="tab-0ft8CLmqiPp-render">Example Render</label>
+				<input type="radio" name="tab-RgyA7kLGonl" id="tab-RgyA7kLGonl-render" checked />
+				<label class="panel-tab" for="tab-RgyA7kLGonl-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-red p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-0ft8CLmqiPp" id="tab-0ft8CLmqiPp-code" />
-				<label class="panel-tab" for="tab-0ft8CLmqiPp-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-0ft8CLmqiPp"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-red p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-RgyA7kLGonl" id="tab-RgyA7kLGonl-code" />
+				<label class="panel-tab" for="tab-RgyA7kLGonl-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-RgyA7kLGonl"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-red p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -294,12 +328,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-orange</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-_6vpkwOsIUt" id="tab-_6vpkwOsIUt-render" checked />
-				<label class="panel-tab" for="tab-_6vpkwOsIUt-render">Example Render</label>
+				<input type="radio" name="tab-CKY31IGYVn7" id="tab-CKY31IGYVn7-render" checked />
+				<label class="panel-tab" for="tab-CKY31IGYVn7-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-orange p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-_6vpkwOsIUt" id="tab-_6vpkwOsIUt-code" />
-				<label class="panel-tab" for="tab-_6vpkwOsIUt-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-_6vpkwOsIUt"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-orange p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-CKY31IGYVn7" id="tab-CKY31IGYVn7-code" />
+				<label class="panel-tab" for="tab-CKY31IGYVn7-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-CKY31IGYVn7"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-orange p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -309,12 +343,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-yellow</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-hal5aME-JfV" id="tab-hal5aME-JfV-render" checked />
-				<label class="panel-tab" for="tab-hal5aME-JfV-render">Example Render</label>
+				<input type="radio" name="tab-fgkK2ALubrm" id="tab-fgkK2ALubrm-render" checked />
+				<label class="panel-tab" for="tab-fgkK2ALubrm-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-yellow p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-hal5aME-JfV" id="tab-hal5aME-JfV-code" />
-				<label class="panel-tab" for="tab-hal5aME-JfV-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-hal5aME-JfV"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-yellow p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-fgkK2ALubrm" id="tab-fgkK2ALubrm-code" />
+				<label class="panel-tab" for="tab-fgkK2ALubrm-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-fgkK2ALubrm"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-yellow p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -324,12 +358,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-green</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-O9bSbKo729y" id="tab-O9bSbKo729y-render" checked />
-				<label class="panel-tab" for="tab-O9bSbKo729y-render">Example Render</label>
+				<input type="radio" name="tab-ptoJhodh8Nb" id="tab-ptoJhodh8Nb-render" checked />
+				<label class="panel-tab" for="tab-ptoJhodh8Nb-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-green p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-O9bSbKo729y" id="tab-O9bSbKo729y-code" />
-				<label class="panel-tab" for="tab-O9bSbKo729y-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-O9bSbKo729y"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-green p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-ptoJhodh8Nb" id="tab-ptoJhodh8Nb-code" />
+				<label class="panel-tab" for="tab-ptoJhodh8Nb-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ptoJhodh8Nb"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-green p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -339,12 +373,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-teal</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-nmKjRk7glZ8" id="tab-nmKjRk7glZ8-render" checked />
-				<label class="panel-tab" for="tab-nmKjRk7glZ8-render">Example Render</label>
+				<input type="radio" name="tab-thH6JJbaprX" id="tab-thH6JJbaprX-render" checked />
+				<label class="panel-tab" for="tab-thH6JJbaprX-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-teal p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-nmKjRk7glZ8" id="tab-nmKjRk7glZ8-code" />
-				<label class="panel-tab" for="tab-nmKjRk7glZ8-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-nmKjRk7glZ8"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-teal p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-thH6JJbaprX" id="tab-thH6JJbaprX-code" />
+				<label class="panel-tab" for="tab-thH6JJbaprX-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-thH6JJbaprX"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-teal p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -354,12 +388,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-sky</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-Ql3XVLUdT1u" id="tab-Ql3XVLUdT1u-render" checked />
-				<label class="panel-tab" for="tab-Ql3XVLUdT1u-render">Example Render</label>
+				<input type="radio" name="tab-Hq6bFWepi9G" id="tab-Hq6bFWepi9G-render" checked />
+				<label class="panel-tab" for="tab-Hq6bFWepi9G-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-sky p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-Ql3XVLUdT1u" id="tab-Ql3XVLUdT1u-code" />
-				<label class="panel-tab" for="tab-Ql3XVLUdT1u-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-Ql3XVLUdT1u"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-sky p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-Hq6bFWepi9G" id="tab-Hq6bFWepi9G-code" />
+				<label class="panel-tab" for="tab-Hq6bFWepi9G-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-Hq6bFWepi9G"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-sky p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -369,12 +403,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-blue</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-omfFoOTKFgi" id="tab-omfFoOTKFgi-render" checked />
-				<label class="panel-tab" for="tab-omfFoOTKFgi-render">Example Render</label>
+				<input type="radio" name="tab-WzjH5_8hrjQ" id="tab-WzjH5_8hrjQ-render" checked />
+				<label class="panel-tab" for="tab-WzjH5_8hrjQ-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-blue p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-omfFoOTKFgi" id="tab-omfFoOTKFgi-code" />
-				<label class="panel-tab" for="tab-omfFoOTKFgi-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-omfFoOTKFgi"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-blue p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-WzjH5_8hrjQ" id="tab-WzjH5_8hrjQ-code" />
+				<label class="panel-tab" for="tab-WzjH5_8hrjQ-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-WzjH5_8hrjQ"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-blue p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -384,12 +418,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-purple</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-cFBJ3hzeq3K" id="tab-cFBJ3hzeq3K-render" checked />
-				<label class="panel-tab" for="tab-cFBJ3hzeq3K-render">Example Render</label>
+				<input type="radio" name="tab-peNQUNCjMZk" id="tab-peNQUNCjMZk-render" checked />
+				<label class="panel-tab" for="tab-peNQUNCjMZk-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-purple p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-cFBJ3hzeq3K" id="tab-cFBJ3hzeq3K-code" />
-				<label class="panel-tab" for="tab-cFBJ3hzeq3K-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-cFBJ3hzeq3K"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-purple p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-peNQUNCjMZk" id="tab-peNQUNCjMZk-code" />
+				<label class="panel-tab" for="tab-peNQUNCjMZk-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-peNQUNCjMZk"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-purple p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -399,12 +433,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-pink</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-j-or95VqFbf" id="tab-j-or95VqFbf-render" checked />
-				<label class="panel-tab" for="tab-j-or95VqFbf-render">Example Render</label>
+				<input type="radio" name="tab-CF8iPkDddNa" id="tab-CF8iPkDddNa-render" checked />
+				<label class="panel-tab" for="tab-CF8iPkDddNa-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-pink p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-j-or95VqFbf" id="tab-j-or95VqFbf-code" />
-				<label class="panel-tab" for="tab-j-or95VqFbf-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-j-or95VqFbf"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-pink p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-CF8iPkDddNa" id="tab-CF8iPkDddNa-code" />
+				<label class="panel-tab" for="tab-CF8iPkDddNa-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-CF8iPkDddNa"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-pink p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -414,12 +448,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-lgray</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-iJOvlXbBERr" id="tab-iJOvlXbBERr-render" checked />
-				<label class="panel-tab" for="tab-iJOvlXbBERr-render">Example Render</label>
+				<input type="radio" name="tab-S7j3rR0oxO0" id="tab-S7j3rR0oxO0-render" checked />
+				<label class="panel-tab" for="tab-S7j3rR0oxO0-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-lgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-iJOvlXbBERr" id="tab-iJOvlXbBERr-code" />
-				<label class="panel-tab" for="tab-iJOvlXbBERr-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-iJOvlXbBERr"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-lgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-S7j3rR0oxO0" id="tab-S7j3rR0oxO0-code" />
+				<label class="panel-tab" for="tab-S7j3rR0oxO0-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-S7j3rR0oxO0"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-lgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -429,12 +463,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-mgray</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-o3doxXrN5ne" id="tab-o3doxXrN5ne-render" checked />
-				<label class="panel-tab" for="tab-o3doxXrN5ne-render">Example Render</label>
+				<input type="radio" name="tab-RQRV0xY-mS4" id="tab-RQRV0xY-mS4-render" checked />
+				<label class="panel-tab" for="tab-RQRV0xY-mS4-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-mgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-o3doxXrN5ne" id="tab-o3doxXrN5ne-code" />
-				<label class="panel-tab" for="tab-o3doxXrN5ne-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-o3doxXrN5ne"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-mgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-RQRV0xY-mS4" id="tab-RQRV0xY-mS4-code" />
+				<label class="panel-tab" for="tab-RQRV0xY-mS4-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-RQRV0xY-mS4"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-mgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -444,12 +478,27 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.fg-dgray</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-qU99MJj7-qV" id="tab-qU99MJj7-qV-render" checked />
-				<label class="panel-tab" for="tab-qU99MJj7-qV-render">Example Render</label>
+				<input type="radio" name="tab-fwGTd1GYLvC" id="tab-fwGTd1GYLvC-render" checked />
+				<label class="panel-tab" for="tab-fwGTd1GYLvC-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="fg-dgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-qU99MJj7-qV" id="tab-qU99MJj7-qV-code" />
-				<label class="panel-tab" for="tab-qU99MJj7-qV-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-qU99MJj7-qV"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-dgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-fwGTd1GYLvC" id="tab-fwGTd1GYLvC-code" />
+				<label class="panel-tab" for="tab-fwGTd1GYLvC-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-fwGTd1GYLvC"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;fg-dgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Default Color Background
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-default</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-FqG5jNODFsS" id="tab-FqG5jNODFsS-render" checked />
+				<label class="panel-tab" for="tab-FqG5jNODFsS-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-default p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-FqG5jNODFsS" id="tab-FqG5jNODFsS-code" />
+				<label class="panel-tab" for="tab-FqG5jNODFsS-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-FqG5jNODFsS"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-default p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -459,12 +508,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-info</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-LOgIQuUjUkM" id="tab-LOgIQuUjUkM-render" checked />
-				<label class="panel-tab" for="tab-LOgIQuUjUkM-render">Example Render</label>
+				<input type="radio" name="tab-R7MYKa0YP1a" id="tab-R7MYKa0YP1a-render" checked />
+				<label class="panel-tab" for="tab-R7MYKa0YP1a-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-info p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-LOgIQuUjUkM" id="tab-LOgIQuUjUkM-code" />
-				<label class="panel-tab" for="tab-LOgIQuUjUkM-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-LOgIQuUjUkM"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-info p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-R7MYKa0YP1a" id="tab-R7MYKa0YP1a-code" />
+				<label class="panel-tab" for="tab-R7MYKa0YP1a-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-R7MYKa0YP1a"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-info p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -474,12 +523,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-success</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-r9_iTxkq0nO" id="tab-r9_iTxkq0nO-render" checked />
-				<label class="panel-tab" for="tab-r9_iTxkq0nO-render">Example Render</label>
+				<input type="radio" name="tab-RpwTHmatlWG" id="tab-RpwTHmatlWG-render" checked />
+				<label class="panel-tab" for="tab-RpwTHmatlWG-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-success p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-r9_iTxkq0nO" id="tab-r9_iTxkq0nO-code" />
-				<label class="panel-tab" for="tab-r9_iTxkq0nO-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-r9_iTxkq0nO"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-success p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-RpwTHmatlWG" id="tab-RpwTHmatlWG-code" />
+				<label class="panel-tab" for="tab-RpwTHmatlWG-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-RpwTHmatlWG"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-success p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -489,12 +538,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-warning</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-c9vXY66jrvc" id="tab-c9vXY66jrvc-render" checked />
-				<label class="panel-tab" for="tab-c9vXY66jrvc-render">Example Render</label>
+				<input type="radio" name="tab-DdrQU8i5voK" id="tab-DdrQU8i5voK-render" checked />
+				<label class="panel-tab" for="tab-DdrQU8i5voK-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-warning p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-c9vXY66jrvc" id="tab-c9vXY66jrvc-code" />
-				<label class="panel-tab" for="tab-c9vXY66jrvc-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-c9vXY66jrvc"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-warning p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-DdrQU8i5voK" id="tab-DdrQU8i5voK-code" />
+				<label class="panel-tab" for="tab-DdrQU8i5voK-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-DdrQU8i5voK"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-warning p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -504,12 +553,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-critical</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-J0vQ7TiIKrT" id="tab-J0vQ7TiIKrT-render" checked />
-				<label class="panel-tab" for="tab-J0vQ7TiIKrT-render">Example Render</label>
+				<input type="radio" name="tab-gqinwop7WKX" id="tab-gqinwop7WKX-render" checked />
+				<label class="panel-tab" for="tab-gqinwop7WKX-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-critical p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-J0vQ7TiIKrT" id="tab-J0vQ7TiIKrT-code" />
-				<label class="panel-tab" for="tab-J0vQ7TiIKrT-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-J0vQ7TiIKrT"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-critical p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-gqinwop7WKX" id="tab-gqinwop7WKX-code" />
+				<label class="panel-tab" for="tab-gqinwop7WKX-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-gqinwop7WKX"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-critical p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -519,12 +568,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-red</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-rYc-hegpYJd" id="tab-rYc-hegpYJd-render" checked />
-				<label class="panel-tab" for="tab-rYc-hegpYJd-render">Example Render</label>
+				<input type="radio" name="tab-bXqzHpsFLYJ" id="tab-bXqzHpsFLYJ-render" checked />
+				<label class="panel-tab" for="tab-bXqzHpsFLYJ-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-red p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-rYc-hegpYJd" id="tab-rYc-hegpYJd-code" />
-				<label class="panel-tab" for="tab-rYc-hegpYJd-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-rYc-hegpYJd"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-red p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-bXqzHpsFLYJ" id="tab-bXqzHpsFLYJ-code" />
+				<label class="panel-tab" for="tab-bXqzHpsFLYJ-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-bXqzHpsFLYJ"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-red p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -534,12 +583,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-orange</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-akae7NiNXl5" id="tab-akae7NiNXl5-render" checked />
-				<label class="panel-tab" for="tab-akae7NiNXl5-render">Example Render</label>
+				<input type="radio" name="tab-t3dvhnuplTt" id="tab-t3dvhnuplTt-render" checked />
+				<label class="panel-tab" for="tab-t3dvhnuplTt-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-orange p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-akae7NiNXl5" id="tab-akae7NiNXl5-code" />
-				<label class="panel-tab" for="tab-akae7NiNXl5-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-akae7NiNXl5"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-orange p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-t3dvhnuplTt" id="tab-t3dvhnuplTt-code" />
+				<label class="panel-tab" for="tab-t3dvhnuplTt-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-t3dvhnuplTt"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-orange p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -549,12 +598,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-yellow</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-ZLUlnZnZu7u" id="tab-ZLUlnZnZu7u-render" checked />
-				<label class="panel-tab" for="tab-ZLUlnZnZu7u-render">Example Render</label>
+				<input type="radio" name="tab-xNmYKykacQv" id="tab-xNmYKykacQv-render" checked />
+				<label class="panel-tab" for="tab-xNmYKykacQv-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-yellow p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-ZLUlnZnZu7u" id="tab-ZLUlnZnZu7u-code" />
-				<label class="panel-tab" for="tab-ZLUlnZnZu7u-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-ZLUlnZnZu7u"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-yellow p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-xNmYKykacQv" id="tab-xNmYKykacQv-code" />
+				<label class="panel-tab" for="tab-xNmYKykacQv-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-xNmYKykacQv"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-yellow p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -564,12 +613,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-green</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-sy0GlVOutfK" id="tab-sy0GlVOutfK-render" checked />
-				<label class="panel-tab" for="tab-sy0GlVOutfK-render">Example Render</label>
+				<input type="radio" name="tab-yB9zvb68iIT" id="tab-yB9zvb68iIT-render" checked />
+				<label class="panel-tab" for="tab-yB9zvb68iIT-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-green p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-sy0GlVOutfK" id="tab-sy0GlVOutfK-code" />
-				<label class="panel-tab" for="tab-sy0GlVOutfK-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-sy0GlVOutfK"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-green p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-yB9zvb68iIT" id="tab-yB9zvb68iIT-code" />
+				<label class="panel-tab" for="tab-yB9zvb68iIT-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-yB9zvb68iIT"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-green p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -579,12 +628,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-teal</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-WaGLwxaXo78" id="tab-WaGLwxaXo78-render" checked />
-				<label class="panel-tab" for="tab-WaGLwxaXo78-render">Example Render</label>
+				<input type="radio" name="tab-HoqRKKD91t6" id="tab-HoqRKKD91t6-render" checked />
+				<label class="panel-tab" for="tab-HoqRKKD91t6-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-teal p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-WaGLwxaXo78" id="tab-WaGLwxaXo78-code" />
-				<label class="panel-tab" for="tab-WaGLwxaXo78-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-WaGLwxaXo78"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-teal p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-HoqRKKD91t6" id="tab-HoqRKKD91t6-code" />
+				<label class="panel-tab" for="tab-HoqRKKD91t6-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-HoqRKKD91t6"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-teal p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -594,12 +643,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-sky</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-PkYgGbMjeOK" id="tab-PkYgGbMjeOK-render" checked />
-				<label class="panel-tab" for="tab-PkYgGbMjeOK-render">Example Render</label>
+				<input type="radio" name="tab-piLrgkxdh0H" id="tab-piLrgkxdh0H-render" checked />
+				<label class="panel-tab" for="tab-piLrgkxdh0H-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-sky p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-PkYgGbMjeOK" id="tab-PkYgGbMjeOK-code" />
-				<label class="panel-tab" for="tab-PkYgGbMjeOK-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-PkYgGbMjeOK"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-sky p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-piLrgkxdh0H" id="tab-piLrgkxdh0H-code" />
+				<label class="panel-tab" for="tab-piLrgkxdh0H-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-piLrgkxdh0H"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-sky p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -609,12 +658,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-blue</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-QUnq3S6LWvO" id="tab-QUnq3S6LWvO-render" checked />
-				<label class="panel-tab" for="tab-QUnq3S6LWvO-render">Example Render</label>
+				<input type="radio" name="tab-KgL19Ca8w2S" id="tab-KgL19Ca8w2S-render" checked />
+				<label class="panel-tab" for="tab-KgL19Ca8w2S-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-blue p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-QUnq3S6LWvO" id="tab-QUnq3S6LWvO-code" />
-				<label class="panel-tab" for="tab-QUnq3S6LWvO-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-QUnq3S6LWvO"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-blue p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-KgL19Ca8w2S" id="tab-KgL19Ca8w2S-code" />
+				<label class="panel-tab" for="tab-KgL19Ca8w2S-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-KgL19Ca8w2S"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-blue p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -624,12 +673,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-purple</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-s76b1WKYMRa" id="tab-s76b1WKYMRa-render" checked />
-				<label class="panel-tab" for="tab-s76b1WKYMRa-render">Example Render</label>
+				<input type="radio" name="tab-2qj7xPkQOf4" id="tab-2qj7xPkQOf4-render" checked />
+				<label class="panel-tab" for="tab-2qj7xPkQOf4-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-purple p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-s76b1WKYMRa" id="tab-s76b1WKYMRa-code" />
-				<label class="panel-tab" for="tab-s76b1WKYMRa-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-s76b1WKYMRa"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-purple p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-2qj7xPkQOf4" id="tab-2qj7xPkQOf4-code" />
+				<label class="panel-tab" for="tab-2qj7xPkQOf4-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-2qj7xPkQOf4"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-purple p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -639,12 +688,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-pink</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-Wtm6pfueNkV" id="tab-Wtm6pfueNkV-render" checked />
-				<label class="panel-tab" for="tab-Wtm6pfueNkV-render">Example Render</label>
+				<input type="radio" name="tab-q718oFqKJF8" id="tab-q718oFqKJF8-render" checked />
+				<label class="panel-tab" for="tab-q718oFqKJF8-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-pink p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-Wtm6pfueNkV" id="tab-Wtm6pfueNkV-code" />
-				<label class="panel-tab" for="tab-Wtm6pfueNkV-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-Wtm6pfueNkV"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-pink p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-q718oFqKJF8" id="tab-q718oFqKJF8-code" />
+				<label class="panel-tab" for="tab-q718oFqKJF8-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-q718oFqKJF8"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-pink p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -654,12 +703,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-lgray</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab--jVRl_xviWq" id="tab--jVRl_xviWq-render" checked />
-				<label class="panel-tab" for="tab--jVRl_xviWq-render">Example Render</label>
+				<input type="radio" name="tab-29Nwla-ba7v" id="tab-29Nwla-ba7v-render" checked />
+				<label class="panel-tab" for="tab-29Nwla-ba7v-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-lgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab--jVRl_xviWq" id="tab--jVRl_xviWq-code" />
-				<label class="panel-tab" for="tab--jVRl_xviWq-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode--jVRl_xviWq"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-lgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-29Nwla-ba7v" id="tab-29Nwla-ba7v-code" />
+				<label class="panel-tab" for="tab-29Nwla-ba7v-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-29Nwla-ba7v"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-lgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -669,12 +718,12 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-mgray</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-ACKycQzvaKj" id="tab-ACKycQzvaKj-render" checked />
-				<label class="panel-tab" for="tab-ACKycQzvaKj-render">Example Render</label>
+				<input type="radio" name="tab-P-Sr6Gh2KFI" id="tab-P-Sr6Gh2KFI-render" checked />
+				<label class="panel-tab" for="tab-P-Sr6Gh2KFI-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-mgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-ACKycQzvaKj" id="tab-ACKycQzvaKj-code" />
-				<label class="panel-tab" for="tab-ACKycQzvaKj-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-ACKycQzvaKj"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-mgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-P-Sr6Gh2KFI" id="tab-P-Sr6Gh2KFI-code" />
+				<label class="panel-tab" for="tab-P-Sr6Gh2KFI-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-P-Sr6Gh2KFI"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-mgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div><div class="ird-comment">
 			<div class="ird-comment__head">
@@ -684,21 +733,277 @@
 			
 			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.bg-dgray</code></p>
 </div><div class="panel panel-tabs">
-				<input type="radio" name="tab-hxqZ9ll8TSY" id="tab-hxqZ9ll8TSY-render" checked />
-				<label class="panel-tab" for="tab-hxqZ9ll8TSY-render">Example Render</label>
+				<input type="radio" name="tab-rBi2pvkx7k2" id="tab-rBi2pvkx7k2-render" checked />
+				<label class="panel-tab" for="tab-rBi2pvkx7k2-render">Example Render</label>
 				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="bg-dgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
-				<input type="radio" name="tab-hxqZ9ll8TSY" id="tab-hxqZ9ll8TSY-code" />
-				<label class="panel-tab" for="tab-hxqZ9ll8TSY-code">Example Code</label>
-				<div class="panel-cnt" id="tabcode-hxqZ9ll8TSY"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-dgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+				<input type="radio" name="tab-rBi2pvkx7k2" id="tab-rBi2pvkx7k2-code" />
+				<label class="panel-tab" for="tab-rBi2pvkx7k2-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-rBi2pvkx7k2"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;bg-dgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Default Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-default</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-1KCZAjBqXM0" id="tab-1KCZAjBqXM0-render" checked />
+				<label class="panel-tab" for="tab-1KCZAjBqXM0-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-default p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-1KCZAjBqXM0" id="tab-1KCZAjBqXM0-code" />
+				<label class="panel-tab" for="tab-1KCZAjBqXM0-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-1KCZAjBqXM0"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-default p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Info Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-info</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-AOM8rNjWTmR" id="tab-AOM8rNjWTmR-render" checked />
+				<label class="panel-tab" for="tab-AOM8rNjWTmR-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-info p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-AOM8rNjWTmR" id="tab-AOM8rNjWTmR-code" />
+				<label class="panel-tab" for="tab-AOM8rNjWTmR-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-AOM8rNjWTmR"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-info p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Success Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-success</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-A6aqf3tEefH" id="tab-A6aqf3tEefH-render" checked />
+				<label class="panel-tab" for="tab-A6aqf3tEefH-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-success p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-A6aqf3tEefH" id="tab-A6aqf3tEefH-code" />
+				<label class="panel-tab" for="tab-A6aqf3tEefH-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-A6aqf3tEefH"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-success p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Warning Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-warning</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-Mmi07yPvVIh" id="tab-Mmi07yPvVIh-render" checked />
+				<label class="panel-tab" for="tab-Mmi07yPvVIh-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-warning p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-Mmi07yPvVIh" id="tab-Mmi07yPvVIh-code" />
+				<label class="panel-tab" for="tab-Mmi07yPvVIh-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-Mmi07yPvVIh"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-warning p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Critical Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-critical</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-s3w1c54J7yr" id="tab-s3w1c54J7yr-render" checked />
+				<label class="panel-tab" for="tab-s3w1c54J7yr-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-critical p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-s3w1c54J7yr" id="tab-s3w1c54J7yr-code" />
+				<label class="panel-tab" for="tab-s3w1c54J7yr-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-s3w1c54J7yr"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-critical p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Red Color v
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-red</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-QpyQ6GpSLtl" id="tab-QpyQ6GpSLtl-render" checked />
+				<label class="panel-tab" for="tab-QpyQ6GpSLtl-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-red p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-QpyQ6GpSLtl" id="tab-QpyQ6GpSLtl-code" />
+				<label class="panel-tab" for="tab-QpyQ6GpSLtl-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-QpyQ6GpSLtl"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-red p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Orange Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-orange</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-3UDuYMwJQbi" id="tab-3UDuYMwJQbi-render" checked />
+				<label class="panel-tab" for="tab-3UDuYMwJQbi-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-orange p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-3UDuYMwJQbi" id="tab-3UDuYMwJQbi-code" />
+				<label class="panel-tab" for="tab-3UDuYMwJQbi-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-3UDuYMwJQbi"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-orange p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Yellow Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-yellow</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-f5kNGkz8CTC" id="tab-f5kNGkz8CTC-render" checked />
+				<label class="panel-tab" for="tab-f5kNGkz8CTC-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-yellow p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-f5kNGkz8CTC" id="tab-f5kNGkz8CTC-code" />
+				<label class="panel-tab" for="tab-f5kNGkz8CTC-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-f5kNGkz8CTC"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-yellow p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Green Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-green</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-1y4FAJPKCfG" id="tab-1y4FAJPKCfG-render" checked />
+				<label class="panel-tab" for="tab-1y4FAJPKCfG-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-green p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-1y4FAJPKCfG" id="tab-1y4FAJPKCfG-code" />
+				<label class="panel-tab" for="tab-1y4FAJPKCfG-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-1y4FAJPKCfG"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-green p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Teal Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-teal</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-302GRXah4MJ" id="tab-302GRXah4MJ-render" checked />
+				<label class="panel-tab" for="tab-302GRXah4MJ-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-teal p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-302GRXah4MJ" id="tab-302GRXah4MJ-code" />
+				<label class="panel-tab" for="tab-302GRXah4MJ-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-302GRXah4MJ"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-teal p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Sky Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-sky</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-M5vEoyBdPki" id="tab-M5vEoyBdPki-render" checked />
+				<label class="panel-tab" for="tab-M5vEoyBdPki-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-sky p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-M5vEoyBdPki" id="tab-M5vEoyBdPki-code" />
+				<label class="panel-tab" for="tab-M5vEoyBdPki-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-M5vEoyBdPki"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-sky p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Blue Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-blue</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-Q3-Yrc7A42L" id="tab-Q3-Yrc7A42L-render" checked />
+				<label class="panel-tab" for="tab-Q3-Yrc7A42L-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-blue p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-Q3-Yrc7A42L" id="tab-Q3-Yrc7A42L-code" />
+				<label class="panel-tab" for="tab-Q3-Yrc7A42L-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-Q3-Yrc7A42L"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-blue p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Purple Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-purple</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-apsYtMJrmso" id="tab-apsYtMJrmso-render" checked />
+				<label class="panel-tab" for="tab-apsYtMJrmso-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-purple p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-apsYtMJrmso" id="tab-apsYtMJrmso-code" />
+				<label class="panel-tab" for="tab-apsYtMJrmso-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-apsYtMJrmso"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-purple p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Pink Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-pink</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-dYxp7bosydw" id="tab-dYxp7bosydw-render" checked />
+				<label class="panel-tab" for="tab-dYxp7bosydw-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-pink p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-dYxp7bosydw" id="tab-dYxp7bosydw-code" />
+				<label class="panel-tab" for="tab-dYxp7bosydw-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-dYxp7bosydw"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-pink p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Light Gray Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-lgray</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-ruXYPLsAxJo" id="tab-ruXYPLsAxJo-render" checked />
+				<label class="panel-tab" for="tab-ruXYPLsAxJo-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-lgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-ruXYPLsAxJo" id="tab-ruXYPLsAxJo-code" />
+				<label class="panel-tab" for="tab-ruXYPLsAxJo-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-ruXYPLsAxJo"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-lgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Mid Gray Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-mgray</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-L2AtNWebpPb" id="tab-L2AtNWebpPb-render" checked />
+				<label class="panel-tab" for="tab-L2AtNWebpPb-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-mgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-L2AtNWebpPb" id="tab-L2AtNWebpPb-code" />
+				<label class="panel-tab" for="tab-L2AtNWebpPb-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-L2AtNWebpPb"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-mgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
+			</div></div>
+		</div><div class="ird-comment">
+			<div class="ird-comment__head">
+				<h3 class="ird-comment__title">Dark Gray Color Border
+</h3>
+			</div>
+			
+			<div class="ird-comment__body"><div class="ird-text"><p><strong>selector</strong>: <code>.rd-dgray</code></p>
+</div><div class="panel panel-tabs">
+				<input type="radio" name="tab-GIL4PYQx197" id="tab-GIL4PYQx197-render" checked />
+				<label class="panel-tab" for="tab-GIL4PYQx197-render">Example Render</label>
+				<div class="panel-cnt"><div class="ird-example__render cnt-border bg-chess"><p class="rd-5 rd-dgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p></div></div>
+				<input type="radio" name="tab-GIL4PYQx197" id="tab-GIL4PYQx197-code" />
+				<label class="panel-tab" for="tab-GIL4PYQx197-code">Example Code</label>
+				<div class="panel-cnt" id="tabcode-GIL4PYQx197"><pre><code data-lang="html" class="language-html">&lt;p class=&quot;rd-5 rd-dgray p-1&quot;&gt;Nulla vitae elit libero, &lt;b&gt;a pharetra augue&lt;/b&gt;.&lt;/p&gt;</code></pre></div>
 			</div></div>
 		</div></div>
 		</div></div>
 			</div>
 			<div class="ird-page__foot">
 				<p class="ird-page__disclaimer">
-			Generated with Iris Docs v 0.2.0<br/>
+			Generated with Iris Docs v 0.3.0<br/>
 			Styled with Iris CSS<br/>
-			Syntax highlight by <a href="https://prismjs.com/" target="_blank">prism.js</a>
+			Syntax highlight with <a href="https://prismjs.com/" target="_blank">prism.js</a><br/>
+			Text Search with <a href="http://elasticlunr.com/" target="_blank">elasticlunr.js</a>
 		</p>
 			</div>
 		</div>

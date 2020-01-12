@@ -1,0 +1,1001 @@
+// TODO: responsive
+
+/*--
+
+@title:		Default Color
+@category:	Colors
+
+**selector**: `.fg-default`
+
+```example:html
+<p class="fg-default p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-default {
+	color: var(--ir-fg-color);
+}
+
+
+/*--
+
+	@title:		Primary Color Foreground
+	@category:	Colors
+
+	**selector**: `.fg-primary`
+
+	```example:html
+	<p class="fg-primary p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+	```
+
+	--*/
+
+.fg-primary {
+	color: var(--ir-primary-color-m);
+}
+
+/*--
+
+@title:		Secondary Color Foreground
+@category:	Colors
+
+**selector**: `.fg-secondary`
+
+```example:html
+<p class="fg-secondary p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-secondary {
+	color: var(--ir-secondary-color-m);
+}
+
+/*--
+
+@title:		Accent Color Foreground
+@category:	Colors
+
+**selector**: `.fg-accent`
+
+```example:html
+<p class="fg-accent p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-accent {
+	color: var(--ir-accent-color-m);
+}
+
+/*--
+
+@title:		Action Color Foreground
+@category:	Colors
+
+**selector**: `.fg-action`
+
+```example:html
+<p class="fg-action p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-action {
+	color: var(--ir-action-color);
+}
+
+/*--
+
+@title:		Action Active Color Foreground
+@category:	Colors
+
+**selector**: `.fg-action-active`
+
+```example:html
+<p class="fg-action-active p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-action-active {
+	color: var(--ir-action-active-color);
+}
+
+/*--
+
+@title:		Info Color Foreground
+@category:	Colors
+
+**selector**: `.fg-info`
+
+```example:html
+<p class="fg-info p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-info {
+	color: var(--ir-info-color-m);
+}
+
+/*--
+
+@title:		Success Color Foreground
+@category:	Colors
+
+**selector**: `.fg-success`
+
+```example:html
+<p class="fg-success p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-success {
+	color: var(--ir-success-color-m);
+}
+
+/*--
+
+@title:		Warning Color Foreground
+@category:	Colors
+
+**selector**: `.fg-warning`
+
+```example:html
+<p class="fg-warning p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-warning {
+	color: var(--ir-warning-color-m);
+}
+
+/*--
+
+@title:		Critical Color Foreground
+@category:	Colors
+
+**selector**: `.fg-critical`
+
+```example:html
+<p class="fg-critical p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-critical {
+	color: var(--ir-critical-color-m);
+}
+
+/*--
+
+@title:		Red Color Foreground
+@category:	Colors
+
+**selector**: `.fg-red`
+
+```example:html
+<p class="fg-red p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-red {
+	color: var(--ir-red-color-m);
+}
+
+
+/*--
+
+@title:		Orange Color Foreground
+@category:	Colors
+
+**selector**: `.fg-orange`
+
+```example:html
+<p class="fg-orange p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-orange {
+	color: var(--ir-orange-color-m);
+}
+
+/*--
+
+@title:		Yellow Color Foreground
+@category:	Colors
+
+**selector**: `.fg-yellow`
+
+```example:html
+<p class="fg-yellow p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-yellow {
+	color: var(--ir-yellow-color-m);
+}
+
+/*--
+
+@title:		Green Color Foreground
+@category:	Colors
+
+**selector**: `.fg-green`
+
+```example:html
+<p class="fg-green p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-green {
+	color: var(--ir-green-color-m);
+}
+
+/*--
+
+@title:		Teal Color Foreground
+@category:	Colors
+
+**selector**: `.fg-teal`
+
+```example:html
+<p class="fg-teal p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-teal {
+	color: var(--ir-teal-color-m);
+}
+
+/*--
+
+@title:		Sky Color Foreground
+@category:	Colors
+
+**selector**: `.fg-sky`
+
+```example:html
+<p class="fg-sky p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-sky {
+	color: var(--ir-sky-color-m);
+}
+
+/*--
+
+@title:		Blue Color Foreground
+@category:	Colors
+
+**selector**: `.fg-blue`
+
+```example:html
+<p class="fg-blue p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-blue {
+	color: var(--ir-blue-color-m);
+}
+
+/*--
+
+@title:		Purple Color Foreground
+@category:	Colors
+
+**selector**: `.fg-purple`
+
+```example:html
+<p class="fg-purple p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-purple {
+	color: var(--ir-purple-color-m);
+}
+
+/*--
+
+@title:		Pink Color Foreground
+@category:	Colors
+
+**selector**: `.fg-pink`
+
+```example:html
+<p class="fg-pink p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-pink {
+	color: var(--ir-pink-color-m);
+}
+
+
+// TODO: gray color => neutral
+
+/*--
+
+@title:		Light Gray Color Foreground
+@category:	Colors
+
+**selector**: `.fg-lgray`
+
+```example:html
+<p class="fg-lgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-lgray {
+	color: var(--ir-lgray-color-m);
+}
+
+/*--
+
+@title:		Mid Gray Color Foreground
+@category:	Colors
+
+**selector**: `.fg-mgray`
+
+```example:html
+<p class="fg-mgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-mgray {
+	color: var(--ir-mgray-color-m);
+}
+
+/*--
+
+@title:		Dark Gray Color Foreground
+@category:	Colors
+
+**selector**: `.fg-dgray`
+
+```example:html
+<p class="fg-dgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.fg-dgray {
+	color: var(--ir-dgray-color-m);
+}
+
+
+/*--
+
+@title:		Default Color Background
+@category:	Colors
+
+**selector**: `.bg-default`
+
+```example:html
+<p class="bg-default p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-default {
+	background-color: var(--ir-bg-color);
+}
+
+
+/*--
+
+@title:		Info Color Background
+@category:	Colors
+
+**selector**: `.bg-info`
+
+```example:html
+<p class="bg-info p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-info {
+	background-color: var(--ir-info-color-l);
+}
+
+
+/*--
+
+@title:		Success Color Background
+@category:	Colors
+
+**selector**: `.bg-success`
+
+```example:html
+<p class="bg-success p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-success {
+	background-color: var(--ir-success-color-l);
+}
+
+
+/*--
+
+@title:		Warning Color Background
+@category:	Colors
+
+**selector**: `.bg-warning`
+
+```example:html
+<p class="bg-warning p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-warning {
+	background-color: var(--ir-warning-color-l);
+}
+
+
+/*--
+
+@title:		Critical Color Background
+@category:	Colors
+
+**selector**: `.bg-critical`
+
+```example:html
+<p class="bg-critical p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-critical {
+	background-color: var(--ir-critical-color-l);
+}
+
+
+/*--
+
+@title:		Red Color Background
+@category:	Colors
+
+**selector**: `.bg-red`
+
+```example:html
+<p class="bg-red p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-red {
+	background-color: var(--ir-red-color-l);
+}
+
+
+/*--
+
+@title:		Orange Color Background
+@category:	Colors
+
+**selector**: `.bg-orange`
+
+```example:html
+<p class="bg-orange p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-orange {
+	background-color: var(--ir-orange-color-l);
+}
+
+
+/*--
+
+@title:		Yellow Color Background
+@category:	Colors
+
+**selector**: `.bg-yellow`
+
+```example:html
+<p class="bg-yellow p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-yellow {
+	background-color: var(--ir-yellow-color-l);
+}
+
+
+/*--
+
+@title:		Green Color Background
+@category:	Colors
+
+**selector**: `.bg-green`
+
+```example:html
+<p class="bg-green p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-green {
+	background-color: var(--ir-green-color-l);
+}
+
+
+/*--
+
+@title:		Teal Color Background
+@category:	Colors
+
+**selector**: `.bg-teal`
+
+```example:html
+<p class="bg-teal p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-teal {
+	background-color: var(--ir-teal-color-l);
+}
+
+
+/*--
+
+@title:		Sky Color Background
+@category:	Colors
+
+**selector**: `.bg-sky`
+
+```example:html
+<p class="bg-sky p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-sky {
+	background-color: var(--ir-sky-color-l);
+}
+
+
+/*--
+
+@title:		Blue Color Background
+@category:	Colors
+
+**selector**: `.bg-blue`
+
+```example:html
+<p class="bg-blue p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-blue {
+	background-color: var(--ir-blue-color-l);
+}
+
+
+/*--
+
+@title:		Purple Color Background
+@category:	Colors
+
+**selector**: `.bg-purple`
+
+```example:html
+<p class="bg-purple p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-purple {
+	background-color: var(--ir-purple-color-l);
+}
+
+
+/*--
+
+@title:		Pink Color Background
+@category:	Colors
+
+**selector**: `.bg-pink`
+
+```example:html
+<p class="bg-pink p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-pink {
+	background-color: var(--ir-pink-color-l);
+}
+
+
+/*--
+
+@title:		Light Gray Color Background
+@category:	Colors
+
+**selector**: `.bg-lgray`
+
+```example:html
+<p class="bg-lgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-lgray {
+	background-color: var(--ir-lgray-color-l);
+}
+
+
+/*--
+
+@title:		Mid Gray Color Background
+@category:	Colors
+
+**selector**: `.bg-mgray`
+
+```example:html
+<p class="bg-mgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-mgray {
+	background-color: var(--ir-mgray-color-l);
+}
+
+
+/*--
+
+@title:		Dark Gray Color Background
+@category:	Colors
+
+**selector**: `.bg-dgray`
+
+```example:html
+<p class="bg-dgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.bg-dgray {
+	background-color: var(--ir-dgray-color-l);
+}
+
+
+
+
+
+
+
+
+
+/*--
+
+@title:		Default Color Border
+@category:	Colors
+
+**selector**: `.rd-default`
+
+```example:html
+<p class="rd-5 rd-default p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-default {
+	border-color: currentColor;
+}
+
+
+/*--
+
+@title:		Info Color Border
+@category:	Colors
+
+**selector**: `.rd-info`
+
+```example:html
+<p class="rd-5 rd-info p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-info {
+	border-color: var(--ir-info-color-m);
+}
+
+
+/*--
+
+@title:		Success Color Border
+@category:	Colors
+
+**selector**: `.rd-success`
+
+```example:html
+<p class="rd-5 rd-success p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-success {
+	border-color: var(--ir-success-color-m);
+}
+
+
+/*--
+
+@title:		Warning Color Border
+@category:	Colors
+
+**selector**: `.rd-warning`
+
+```example:html
+<p class="rd-5 rd-warning p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-warning {
+	border-color: var(--ir-warning-color-m);
+}
+
+
+/*--
+
+@title:		Critical Color Border
+@category:	Colors
+
+**selector**: `.rd-critical`
+
+```example:html
+<p class="rd-5 rd-critical p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-critical {
+	border-color: var(--ir-critical-color-m);
+}
+
+
+/*--
+
+@title:		Red Color v
+@category:	Colors
+
+**selector**: `.rd-red`
+
+```example:html
+<p class="rd-5 rd-red p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-red {
+	border-color: var(--ir-red-color-m);
+}
+
+
+/*--
+
+@title:		Orange Color Border
+@category:	Colors
+
+**selector**: `.rd-orange`
+
+```example:html
+<p class="rd-5 rd-orange p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-orange {
+	border-color: var(--ir-orange-color-m);
+}
+
+
+/*--
+
+@title:		Yellow Color Border
+@category:	Colors
+
+**selector**: `.rd-yellow`
+
+```example:html
+<p class="rd-5 rd-yellow p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-yellow {
+	border-color: var(--ir-yellow-color-m);
+}
+
+
+/*--
+
+@title:		Green Color Border
+@category:	Colors
+
+**selector**: `.rd-green`
+
+```example:html
+<p class="rd-5 rd-green p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-green {
+	border-color: var(--ir-green-color-m);
+}
+
+
+/*--
+
+@title:		Teal Color Border
+@category:	Colors
+
+**selector**: `.rd-teal`
+
+```example:html
+<p class="rd-5 rd-teal p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-teal {
+	border-color: var(--ir-teal-color-m);
+}
+
+
+/*--
+
+@title:		Sky Color Border
+@category:	Colors
+
+**selector**: `.rd-sky`
+
+```example:html
+<p class="rd-5 rd-sky p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-sky {
+	border-color: var(--ir-sky-color-m);
+}
+
+
+/*--
+
+@title:		Blue Color Border
+@category:	Colors
+
+**selector**: `.rd-blue`
+
+```example:html
+<p class="rd-5 rd-blue p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-blue {
+	border-color: var(--ir-blue-color-m);
+}
+
+
+/*--
+
+@title:		Purple Color Border
+@category:	Colors
+
+**selector**: `.rd-purple`
+
+```example:html
+<p class="rd-5 rd-purple p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-purple {
+	border-color: var(--ir-purple-color-m);
+}
+
+
+/*--
+
+@title:		Pink Color Border
+@category:	Colors
+
+**selector**: `.rd-pink`
+
+```example:html
+<p class="rd-5 rd-pink p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-pink {
+	border-color: var(--ir-pink-color-m);
+}
+
+
+/*--
+
+@title:		Light Gray Color Border
+@category:	Colors
+
+**selector**: `.rd-lgray`
+
+```example:html
+<p class="rd-5 rd-lgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-lgray {
+	border-color: var(--ir-lgray-color-m);
+}
+
+
+/*--
+
+@title:		Mid Gray Color Border
+@category:	Colors
+
+**selector**: `.rd-mgray`
+
+```example:html
+<p class="rd-5 rd-mgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-mgray {
+	border-color: var(--ir-mgray-color-m);
+}
+
+
+/*--
+
+@title:		Dark Gray Color Border
+@category:	Colors
+
+**selector**: `.rd-dgray`
+
+```example:html
+<p class="rd-5 rd-dgray p-1">Nulla vitae elit libero, <b>a pharetra augue</b>.</p>
+```
+
+--*/
+
+.rd-dgray {
+	border-color: var(--ir-dgray-color-m);
+}
+
+
